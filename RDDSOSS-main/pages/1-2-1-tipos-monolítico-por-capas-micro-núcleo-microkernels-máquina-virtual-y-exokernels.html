@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="es">
+    <!------------------------------------------HEAD------------------------------------------------>  
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>1.2.1 Tipos: monolítico, por capas, micro núcleo (microkernels),  máquina virtual y exokernels</title>
+
+
+        <!--BOOTSTRAP CSS-->  
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!--BOOTSTRAP CSS-->  
+
+          <link rel="stylesheet" type="text/css" href="../css/headerImages.css">
+          <link rel="stylesheet" type="text/css" href="../css/header.css">
+          <link rel="stylesheet" type="text/css" href="../css/hoverU1.css">
+          <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+          <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
+          <link rel="stylesheet" type="text/css" href="../css/sidebarItem_u1_8.css">
+          <link rel="stylesheet" type="text/css" href="../css/accordionBtn.css">
+          <link rel="stylesheet" type="text/css" href="../css/cardTitle.css">
+          <link rel="stylesheet" type="text/css" href="../css/carrouselBtn.css">
+          <link rel="stylesheet" type="text/css" href="../css/footerBG.css">
+
+          <!-- Favicon-->
+          <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+          <!-- Core theme CSS (includes Bootstrap)-->
+          <link href="../css/styles.css" rel="stylesheet" />
+
+    </head>
+
+    <!------------------------------------------HEAD------------------------------------------------>
+
+
+
+
+
+
+    <!------------------------------------------BODY------------------------------------------------>
+    <body>
+
+      <!------------------------------------------HEADER-------------------------------------------->
+      <header >
+            <div class="column">
+                <img src="../images/logoBlancoESCOM.png" class="img-fluid" alt="..." id="logoESCOM">
+            </div>
+            <div class="column" >
+                <h2>Instituto Politécnico Nacional</h2>
+                <h3>Escuela Superior de Cómputo</h3>
+                <h4>Recurso Didáctico Digital</h4>
+                <h5>Unidad 1: Estructura de un sistema operativo</h5>
+            </div>
+            <div class="column" >
+                <img src="../images/logoBlancoIPN.png" class="img-fluid" alt="..." id="logoIPN">
+            </div>
+      </header>
+      <!------------------------------------------HEADER-------------------------------------------->
+
+
+
+
+
+
+
+        <!------------------------------------------WRAPPER----------------------------------------->
+        <div class="d-flex" id="wrapper">
+            <!--------------------------------------SIDEBAR---------------------------------------->
+            <div class="border-end bg-secondary" id="sidebar-wrapper">
+
+
+              <div class="list-group list-group-flush">
+
+                 
+              <a
+              class="list-group-item list-group-item-action list-group-item-light p-3 disabled"
+              id="sidebarBtnDisabled"
+              href="unidad-1-estructura-de-un-sistema-operativo.html"
+              >&#8544;. Estructura de un sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnIntroduccion"
+              href="unidad-1-estructura-de-un-sistema-operativo.html"
+              >Introducción</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnPUA"
+              href="proposito-de-la-unidad-de-aprendizaje.html"
+              >Propósito de la unidad de aprendizaje</a
+            >
+
+            <!-- <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtn11ObjComp"
+            href="1-1-objetivos-y-competencias.html"
+            >1.1 Objetivos</a
+          > -->
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU11"
+              href="1-1-aspectos-basicos-del-sistema-operativo.html"
+              >1.1 Aspectos básicos del sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU111"
+              href="1-1-1-objetivos.html"
+              >1.1.1 Objetivos
+            </a>
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU112"
+              href="1-1-2-evolucion.html"
+              >1.1.2 Evolución</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU113"
+              href="1-1-3-tipos-monolítico-por-capas-micro-núcleo-máquina-virtual.html"
+              >1.1.3 Tipos: mainframe, servidor, multiprocesador, embebidos y tiempo real</a
+            >
+            
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnAct1"
+            href="actividad-1.html"
+            >Actividad de aprendizaje 1: introducción a los sistemas operativos</a
+          >
+
+            <!-- <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtn12ObjComp"
+            href="1-2-objetivos-y-competencias.html"
+            >1.2 Objetivos</a
+          > -->
+
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU12"
+              href="1-2-fundamentos-del-nucleo-del-sistema-operativo.html"
+              >1.2 Fundamentos del núcleo del sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU121"
+              href="1-2-1-tipos-monolítico-por-capas-micro-núcleo-microkernels-máquina-virtual-y-exokernels.html"
+              >1.2.1 Tipos: monolítico, por capas, micro núcleo,
+              máquina virtual</a
+            >
+
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnAct2"
+            href="actividad-2.html"
+            >Actividad de aprendizaje 2: introducción a los sistemas operativos</a
+          >
+
+        
+
+          <!-- <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtn13ObjComp"
+          href="1-3-objetivos-y-competencias.html"
+          >1.3 Objetivos</a
+        > -->
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU13"
+              href="1-3-modos-de-operación-de-un-sistema-operativo.html"
+              >1.3 Modos de operación de un sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU131"
+              href="1-3-1-interrupciones.html"
+              >1.3.1 Interrupciones</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU132"
+              href="1-3-2-usuario-y-kernel.html"
+              >1.3.2 Usuario y Kernel</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU133"
+              href="1-3-3-contadores.html"
+              >1.3.3 Controladores</a
+            >
+
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnAct3"
+            href="actividad-3.html"
+            >Actividad de aprendizaje 3: Modos de operación de un sistema operativo</a
+          >
+<!-- 
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtn14ObjComp"
+            href="1-4-objetivos-y-competencias.html"
+            >1.4 Objetivos</a
+          > -->
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU14"
+              href="1-4-llamadas-al-sistema.html"
+              >1.4 Llamadas a sistema</a
+            >
+  
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU141"
+              href="1-4-1-procesos-y-senales.html"
+              >1.4.1 Procesos y señales</a
+            >
+  
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU142"
+              href="1-4-2-directorios-y-archivos.html"
+              >1.4.2 Directorios y archivos</a
+            >
+  
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU143"
+            href="1-4-3-proteccion.html"
+            >1.4.3 Protección</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU144"
+            href="1-4-4-diversos.html"
+            >1.4.4 Diversos</a
+          >
+
+          <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtnAct4"
+          href="actividad-4.html"
+          >Actividad de aprendizaje 4: Llamadas al sistema</a
+        >
+
+          <!-- <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtn15ObjComp"
+          href="1-5-objetivos-y-competencias.html"
+          >1.5 Objetivos</a
+        > -->
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU15"
+            href="1-5-shell.html"
+            >1.5 Shell</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU151"
+            href="1-5-1-argumentos-y-variables.html"
+            >1.5.1 Argumentos y variables</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU152"
+            href="1-5-2-estructuras-de-control.html"
+            >1.5.2 Estructuras de control</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU153"
+            href="1-5-3-manipulacion-de-cadenas.html"
+            >1.5.3 Manipulación de cadenas</a
+          >
+
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU154"
+            href="1-5-4-funciones.html"
+            >1.5.4 Funciones</a
+          >
+
+          <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtnAct5"
+          href="actividad-5.html"
+          >Actividad de aprendizaje 5: Fundamentos de shell</a
+        >
+
+            
+  
+            
+              <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnEv"
+              href="evaluacion2.html"
+              >Evaluación</a
+            >
+            
+
+              </div>
+          </div>
+            <!--------------------------------------SIDEBAR---------------------------------------->
+
+            <!----------------------------------CONTENIDO DE WRAPPER-------------------------------->
+            <div id="page-content-wrapper">
+                <!------------------------------------NAVBAR------------------------------------>
+                <nav class="navbar navbar-expand-lg navbar-light bg-gradient border-bottom">
+
+                    <div class="container-fluid">
+
+                        <!------------------------------------TOGGLERSIDEBAR------------------------------------>
+                        <button class="btn btn-dark" type="submit"id="sidebarToggle" style="font-size: auto; vertical-align: center;">&#9868;
+                        </button>
+                        <!------------------------------------TOGGLERSIDEBAR------------------------------------>
+                     
+                        <!------------------------------------TOGGLERNAVBAR------------------------------------>
+                        <button class="navbar-toggler" id="toggler1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                          <span class="navbar-toggler-icon"></span>
+
+                        </button>
+                        <!------------------------------------TOGGLERNAVBAR------------------------------------>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+
+                                <li class="nav-item active">
+
+                                  <div class="container" id="containerInicio">
+                                    <a class="nav-link active" href="../index.html">
+                                      
+                                        Inicio
+                                      
+                                    </a>  
+                                  </div>
+                                  
+                                  
+                                </li>
+                                <!--------------------------DROPDOWN MENU---------------------------->
+                                <li class="nav-item dropdown">
+                                    
+                                    <div class="container nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="containerDropdown">
+
+                                        
+                                          <!--Unidades de aprendizaje (proximamente)-->
+                                          Contenido
+                                        
+                                      
+                                    </div>
+                                    
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
+                                        <!--------------------------UNIDAD 1------------------------->
+                                        <a class="dropdown-item" href="unidad-1-estructura-de-un-sistema-operativo.html">
+                                          &#8544;. Estructura de un sistema operativo
+                                        </a>
+                                        <!--------------------------UNIDAD 1------------------------->
+
+                                        <!--------------------------UNIDAD 2------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-2-administracion-de-procesos.html">
+                                          &#8545;. Administración de procesos
+                                        </a>
+                                        <!--------------------------UNIDAD 2------------------------->
+
+                                        <!--------------------------UNIDAD 3------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-3-administracion-de-memoria.html">
+                                          &#8546;.  Administración de memoria
+                                        </a>
+                                        <!--------------------------UNIDAD 3------------------------->
+
+                                        <!--------------------------UNIDAD 4------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-4-sistema-de-archivos.html">
+                                          &#8548;. Sistema de archivos
+                                        </a>                                 
+                                        <!--------------------------UNIDAD 4------------------------->      
+                                        <!--------------------------UNIDAD 5------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-5-dispositivos-de-entrada-y-salida.html">
+                                          &#8549;. Dispositivos de entrada y salida
+                                        </a>                               
+                                        <!--------------------------UNIDAD 5------------------------->
+
+                                        <!--------------------------UNIDAD 6------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-6-seguridad-y-virtualizacion.html">
+                                          &#8549;. Seguridad y virtualización
+                                        </a>                               
+                                        <!--------------------------UNIDAD 6------------------------->
+
+                                    </div>
+                                </li>
+                                <!--------------------------DROPDOWN MENU---------------------------->                                
+                                <li class="nav-item active">
+                                  <div class="container" id="containerBibRec">
+                                    <a class="nav-link" href="bibliografia-y-recursos.html">Bibliografía y recursos</a>  
+                                  </div>
+                                </li>
+
+                                <li class="nav-item active">
+                                  <div class="container" id="containerGlosario">
+                                    <a class="nav-link" href="glosario.html">Glosario</a>  
+                                  </div>
+                                </li>
+
+
+                                          <!--
+
+                                  <li class="nav-item active">
+                                  <div class="container" id="containerContactos">
+                                    <a class="nav-link" href="pages/contactos.html">Contactos</a>
+                                  </div>
+                                </li>
+
+                                -->
+
+                                <li class="nav-item active">
+                                  <div class="container" id="containerManual">
+                                   <a class="nav-link" href="manual.html" >Manual de usuario</a>
+                                  </div>
+                                </li>
+                                
+
+
+
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!------------------------------------NAVBAR------------------------------------>
+
+                <!--------------------------------CONTENIDO PRINCIPAL-------------------->
+                <div class="container-fluid">
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--------------------------------SECTION-------------------->   
+                    <section>
+
+                          <div class="container">
+
+                                <div class="card" id="cardBigTitle">
+                              
+
+                                    1.2.1 Tipos: Monolítico, por capas, micro núcleo y máquina virtual
+
+                                 
+                                </div>    
+
+                          </div>
+
+
+                              <div class="container">
+                                <div class="card" id="cardConcept">
+                                  <div class="card-body" id="cardTextConcept">
+                                    <p class="card-text">
+                                      <b>Las estructuras internas de los sistemas operativos</b> son importantes para el buen funcionamiento y se clasifican en:
+                                    </p>
+
+                                    <!----------------------ACORDEON------------------------>
+                                    <div class="accordion" id="accordionExample">
+
+
+
+
+
+                                      <!----------------------ITEM1------------------------>
+                                      <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                          <button class="accordion-button" id="accordion-btn2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                          a) Sistemas monolíticos
+                                          </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                          <div class="accordion-body" id="cardBtnConcept">
+                                            <p>
+                                              <b>Este sistema es conocido como el más común debido a que todo el sistema operativo se ejecuta con un solo programa en modo kernel</b>, en donde este se genera por medio de procedimientos enlazados entre sí en un solo programa binario ejecutable en forma extensa.
+                                            </p>
+                                            <p>
+                                              Cuando se utiliza este tipo de procedimiento o técnica el sistema tiene la libertad de llamar a cualquiera en otro proceso.
+                                            </p>
+                                            <p>
+                                              Los sistemas monolíticos son la estructura más simple para un Sistema Operativo, <b>también llamados de Estructura Modular</b>, fueron escritos para proporcionar una máxima funcionalidad dentro del menor espacio posible. <b>Se caracterizan porque no tienen una estructura totalmente clara</b>, con esto nos referimos a sus rutinas y funcionalidades (ej. manejo de drivers, sistemas de archivos, gestión de memoria, etc.), se encuentran agrupados en un solo programa <b>(Sistema Operativo)</b>.
+                                            </p>
+                                            <p>
+                                              Ahora bien, <b>para construir el programa objeto del sistema operativo se debe de utilizar un diseño que permita la compilación en forma individual para después vincularlos y ejecutarlos como un archivo en conjunto</b>, esto con el fin de que los procedimientos sean visibles para cualquier otro procedimiento.
+                                            </p>
+                                            <p>
+                                              <b>Sin embargo, hasta en los sistemas monolíticos es posible tener cierta estructura</b>, para poder solicitar los servicios(llamadas al sistema) que proporciona el sistema operativo, en donde los parámetros se colocan en lugares bien definidos por ejemplo un pila, y posteriormente se ejecuta una instrucción conocida como <b>TRAP</b>; <b></b>esta instrucción se encarga de cambiar el modo de usuario a modo kernel y transfiere el control al sistema operativo, con ello este obtiene los parámetros y determina cual es la llamada al sistema que se ejecutar.
+                                            </p>
+                                            <p>
+                                              <b>Este tipo de organización requiere</b> una estructura básica para el sistema operativo que es:
+                                              <ol>
+                                                <li><b>Un programa principal</b> que invoque al procedimiento del servicio solicitado.</li>
+                                                <li><b>Un conjunto de procedimientos de servicio</b> que lleven a cabo las llamadas al sistema.</li>
+                                                <li><b>Un conjunto de procedimientos</b> utilitarios que ayudan al procedimiento de servicio.</li>
+                                              </ol>
+                                            </p>
+                                            <p>
+                                              <b>En este modelo</b>, para cada llamada al sistema hay un procedimiento de servicio que se encarga de la llamada y la ejecuta. Los procedimientos utilitarios realizan acciones que requieren varios procedimientos de servicios, como por ejemplo obtener datos de los programas de usuario, por ello existen tres niveles para esta división de procesos que son:
+                                            </p>
+                                            <div class="text-center">
+                                              <img src="../images/fig_5_modelo_estructura.png" class="img-fluid" style="width: 70%;">
+                                              <p>
+                                                <b>Fig 5. Un modelo de estructura simple para un sistema monolítico</b>
+                                              </p>
+                                            </div>
+                                            <p>
+                                              <b>Por lo que el núcleo del sistema operativo es el que se encarga de arrancar la computadora</b>, por lo que muchos sistemas operativos soportan extensiones que se pueden cargar, como los drivers de dispositivos de Entrada y Salida y sistemas de archivos.
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!----------------------ITEM1------------------------>
+
+
+
+
+
+
+
+
+
+                                      <!----------------------ITEM2------------------------>
+                                      <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                          <button class="accordion-button collapsed" id="accordion-btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            b) Sistema de capas o niveles.
+                                          </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                          <div class="accordion-body" id="cardBtnConcept">
+                                            <p>
+                                              <b>La estructura del sistema operativo queda definida por divisiones en capas</b> o niveles cuya organización se establece por jerarquía de capas en donde cada capa ofrece una interfaz clara y bien definida, la capa superior utiliza los servicios y funciones que ofrece la capa inferior, es decir, la capa n solo se comunica para obtener lo requerido con la capa n 1 donde la capa inferior es la de mayores privilegios. Por lo que el responsable de que exista comunicación entre las capas adyacentes es el procesador.
+                                            </p>
+                                            <p>
+                                              <b>La capa más interna o inferior capa 0 corresponde al hardware</b>, muestran que la más alta o externa corresponde a la interfaz del usuario.
+                                            </p>
+                                            <p>
+                                              <b>El primer sistema</b> construido de esta manera fue el sistema <b>THE (<i>Technische Hogeschool Eindhoven</i>)</b>, desarrollado en Holanda por E. W. Dijkstra (1968) y sus estudiantes; el cual consta de 6 capas que son:
+
+                                              <ul>
+                                                <li>
+                                                  <b>Capa 5:</b> <b>Se encuentra la interfaz de usuario</b>. La cual provee una interfaz de comunicación entre los usuarios y el sistema operativo. Esta capa utiliza las facilidades provistas por las capas anteriores para aceptar comandos de un usuario. <b>Los sistemas operativos modernos proveen una interfaz gráfica de usuario (GUI)</b>. Las GUI suministran un entorno gráfico para que los usuarios se comuniquen con el sistema operativo.
+                                                </li>
+                                                <li>
+                                                  <b>Capa 4:</b> <b>Aloja los programas de usuario y el sistema de archivos</b>, en donde la funciones para la gestión de la información son implementadas en esta capa. Formas más sofisticadas para la reserva y distribución de espacio y para el acceso a datos en dispositivos de almacenamiento secundarios, que aquellas provistas por la capa 3, son implementadas en esta capa.
+                                                </li>
+                                                <li>
+                                                  <b>Capa 3:</b> <b>Se controlan los dispositivos E/S (entrada y salida)</b>. En donde se provee funcionalidades para el manejo de dispositivos de almacenamiento secundario, así como el intercambio de memoria.
+                                                </li>
+                                                <li>
+                                                  <b>Capa 2:</b> <b>Se administra la comunicación inter-proceso y la consola del operador</b>, así mismo como la gestión de memoria y las funciones para el manejo de memoria son implementadas en esta capa. Se reserva memoria para que las aplicaciones puedan ser cargadas y ejecutadas, y se libera cuando no se necesita más.
+                                                </li>
+                                                <li>
+                                                  <b>Capa 1:</b> <b>Administración de memoria y discos y Kernel</b>, donde se usa los objetos y operaciones provistas por el hardware. Las funciones típicas de un kernel son:
+                                                  <ul>
+                                                    <li><b>Gestión de procesos</b></li>
+                                                    <li><b>Manejo de interrupciones</b></li>
+                                                    <li><b>Intercambio de memoria</b></li>
+                                                    <li><b>Gestión de memoria virtual</b></li>
+                                                    <li><b>Comunicación inter-procesos</b></li>
+                                                    <li><b>Mecanismos de red</b></li>
+                                                    <li><b>Gestión de entradas/salidas</b></li>
+                                                  </ul>
+                                                </li>
+                                                <li>
+                                                  <b>Capa 0:</b> <b>Correspondiente al hardware</b>, realizando asignación del procesador, también alterna entre procesos cuando ocurren interrupciones o se han expirado y proporciona multiprogramación básica de la CPU, como se muestra en la siguiente imagen.
+
+                                                  <div class="text-center">
+
+                                                    <img src="../images/fig_6_modelo_jerarquico.png" class="img-fluid" style="width: 50%;">
+                                                    <p><b>Fig 6. Modelo jerárquico de un sistema operativo</b></p>
+                                                    
+                                                  </div>
+
+                                                </li>
+                                              </ul>
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!----------------------ITEM2------------------------>
+
+
+
+
+
+
+
+
+
+
+                                      <!----------------------ITEM3------------------------>
+                                      <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree">
+                                          <button class="accordion-button collapsed" id="accordion-btn2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            c) Microkernels
+                                          </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample" >
+                                          <div class="accordion-body" id="cardBtnConcept">
+                                            <p>
+                                              <b>Los microkernels tienen como proceso el de gestionar las funciones básicas de la computadora </b> en donde administra las interrupciones y las excepciones de los dispositivos, así mismo administra los procesos en tiempo real como son sus comunicaciones, basado en el modelo cliente servidor, repartiendo la memoria y los multiprocesadores en donde controlar el número de procesadores que se estén ejecutando por el usuario.
+                                            </p>
+
+                                            <p>
+                                              <b>El diseño inicial del microkernel debe contener una alta confiabilidad</b> al dividir el sistema operativo en módulos pequeños y bien definidos, sólo uno de los cuales (el microkernel) se ejecuta en modo kernel y el resto se ejecuta como procesos de usuario ordinarios, al ejecutar cada driver de dispositivo y sistema de archivos como un proceso de usuario separado por lo que  un error en alguno de estos procesos puede hacer que falle ese componente, pero no puede hacer que falle todo el sistema en su totalidad.
+                                            </p>
+                                            <p>
+                                              <b>La estructura de microkernels, permite que el núcleo sea pequeño dentro del sistema operativo</b>, así con ello contiene sólo las operaciones esenciales de las funciones del sistema operativo, por lo que muchos de servicios son subsistemas externos como son:
+                                              <ul>
+                                                <li><b>Controladores de dispositivos.</b></li>
+                                                <li><b>Sistemas de archivos.</b></li>
+                                                <li><b>Manejo de la memoria virtual.</b></li>
+                                                <li><b>Sistemas de ventanas.</b></li>
+                                                <li><b>Servicios de seguridad.</b></li>
+                                              </ul>
+                                            </p>
+                                            <p>
+                                              Esto conlleva a la estructura del kernel como se muestra en la siguiente figura
+                                            </p>
+                                            <div class="text-center">
+                                              <img src="../images/fig7_estructura_de_kernel.png" style="width:85%;">
+                                              <p>
+                                                <b>Fig 7. Estructura del Kernel</b>
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!----------------------ITEM3------------------------>
+
+
+
+
+
+
+
+                                      <!----------------------ITEM4------------------------>
+                                      <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFour">
+                                          <button class="accordion-button collapsed" id="accordion-btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            d) Sistema cliente servidor
+                                          </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                          <div class="accordion-body" id="cardBtnConcept">
+                                            <p>
+                                              Dentro de un cliente servidor los microkernel tienen una variación en diferenciar dos clases de procesos: 
+                                              <ul>
+                                                <li>
+                                                  <b>Servidor:</b> En donde cada uno proporciona cierto servicio, y los clientes, que utilizan estos servicios.
+                                                </li>
+                                                <li>
+                                                  <b>Cliente:</b> Son quienes utilizan dichos servicios.
+                                                </li>
+                                              </ul> 
+                                            </p>
+
+                                            <p>
+                                              <b>Este modelo se conoce como cliente-servidor</b>. esto parte de la capa inferior el cual se encuentra el microkernel y su esencia es la presencia de procesos cliente y procesos servidor.
+                                            </p>
+                                            <p>
+                                              <b>La comunicación entre clientes y servidores se lleva a cabo comúnmente mediante el paso de mensajes</b>. Para obtener un servicio, un proceso llamado cliente construye un mensaje indicando lo que desea y lo envía al servicio apropiado. Después el servicio hace el trabajo y envía de vuelta la respuesta.
+                                            </p>
+                                            <p>
+                                              <b>Si el cliente y el servidor se ejecutan en el mismo equipo se pueden hacer ciertas optimizaciones</b>, considerando que cada uno de ellos se ejecutan en máquinas diferentes en donde estas se encuentran conectadas mediante una red de área local o amplia, como se describe muestra en la siguiente imagen.
+
+                                            </p>
+                                            <div class="text-center">
+                                              <img class="img-fluid" src="../images/Fig 8 El modelo cliente-servidor sobre una red.png">
+                                              <p><b>Fig 8. El modelo cliente-servidor sobre una red</b></p>
+                                            </div>
+                                            <p>
+                                              Como los clientes se comunican con los servidores mediante el envío de mensajes, <b>no necesitan saber si los mensajes se manejan en forma local en sus propios equipos o si se envían a través de una red a servidores en un equipo remoto</b>. 
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!----------------------ITEM4------------------------>
+
+
+
+
+
+
+
+
+
+                                      <!----------------------ITEM5------------------------>
+                                      <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFive">
+                                          <button class="accordion-button collapsed" id="accordion-btn2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            e) Máquinas virtuales
+                                          </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                          <div class="accordion-body" id="cardBtnConcept">
+                                            <p>
+                                              Dentro del funcionamiento de los sistemas operativos, <b>la máquina virtual es considerada como la abstracción del hardware de una computadora</b> en varios ambientes en ejecución, creando con ello que cada ambiente se ejecute con su propia computadora, por lo que  provee de una interfaz que permite presentar diferentes procesos y en donde cada uno se ejecuta utilizando su propio procesador con su memoria virtual.
+                                            </p>
+                                            <p>
+                                              <b>Sus antecedentes  surgen con IBM en 1972</b> en los mainframes de esa época en donde su principal función era de tener varios ambientes en ejecución y pudiesen compartir el mismo hardware y asu vez se protegieran uno al otro en una forma controlada y en donde compartieran archivos por medio del uso de la red.
+                                            </p>
+                                            <p>
+                                              <b>Open Virtual Machine Format, se estableció como un formato estándar de máquinas virtuales (VM), en donde permite  correr dentro de diferentes plataformas (host) de cada máquina virtuales, como lo muestra la siguiente imagen.</b>
+                                            </p>
+                                            <div class="text-center">
+                                              <img class="img-fluid" src="../images/Fig  9 Maquinas Virtuales.png" style="width: 90%;">
+                                              <p>
+                                                <b>Fig 9. Máquinas Virtuales</b>
+                                              </p>
+                                            </div>
+                                            <p>
+                                              <b>Las VM, crean, administran y ejecutan computadoras virtuales</b> en donde tiene una clasificación que son:
+                                              <ul>
+                                                <b>Tipo 0:</b>  <b>Son soluciones basadas en el hardware</b> y provee de soporte para la creación y administración vía el firmware o  soporte lógico inalterable con de es un conjunto de instrucciones de un programa informático básico que controla los circuitos electrónicos de cualquier dispositivo. Gracias a dicho software, se puede proporcionar un entorno para que funcione un sistema operativo interno, como se muestra en la siguiente imagen.
+                                                <div class="text-center">
+                                                  <img class="img-fluid" src="../images/Fig 10 Máquina virtual tipo 0.png" style="width: 80%;">
+                                                  <p>
+                                                    <b>Fig 10. Máquina virtual tipo 0</b>
+                                                  </p>
+                                                </div>
+                                              </ul>
+                                              <ul>
+                                                <b>Tipo 1: Hypervisors o monitor de máquinas virtuales</b>  <b>son aquellos que se ejecutan directamente sobre el hardware de la computadora por medio de un proceso</b> que crea y ejecuta, en el cual permite que una máquina <b>(host/anfitrión)</b> preste soporte a VM invitadas mediante el uso compartido de sus recursos como son la memoria y el procesamiento, como se muestra en la siguiente imagen.
+                                                <div class="text-center">
+                                                  <img class="img-fluid" src="../images/Fig 11. Maquina virtual tipo 1.png" style="width: 50%;">
+                                                  <p>
+                                                    <b>Fig 11. Máquina virtual tipo 1</b>
+                                                  </p>
+                                                </div>
+                                              </ul>
+                                              <ul>
+                                                <b>Tipo 2: Hypervisors</b>  Se ejecuta sobre el sistema operativo host que provee los servicios de virtualización.
+                                                <div class="text-center">
+                                                  <img class="img-fluid" src="../images/Fig 12. Maquina virtual tipo 2.png" style="width: 50%;">
+                                                  <p>
+                                                    <b>Fig 12. Máquina virtual tipo 2</b>
+                                                  </p>
+                                                </div>
+                                              </ul>
+                                              <b>Para la virtualización se utiliza una técnica en la cual el sistema operativo es invitado a trabajar en cooperación con VMM(Administrador de máquinas virtuales)</b> para optimizar su rendimiento, por lo que los invitados deben de ser modificados para que puedan correr en un hardware y así  puedan ser virtualizados, una gran ventaja del uso de esto es que se alcanza su mayor eficiencia en el uso de los recursos y una capa de virtualización de menor tamaño.
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!----------------------ITEM5------------------------>
+
+
+
+
+
+
+
+
+                                      <!----------------------ITEM6------------------------>
+                                      <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingSix">
+                                          <button class="accordion-button collapsed" id="accordion-btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                            f) Exokernels
+                                          </button>
+                                        </h2>
+                                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                          <div class="accordion-body" id="cardBtnConcept">
+                                            <p>
+                                                
+                                                <b>Su trabajo principal es asignar recursos a las máquinas virtuales y verificar los intentos de utilizarlos</b> para asegurarse de que ninguna máquina trate de usar los recursos de la otra.
+
+                                              </p>
+                                            <p>
+                                              La <b>ventaja</b> del esquema del exokernel es que ahora en la asignación, ya que en otros diseños cada máquina virtual piensa que tiene su propio disco con bloques que van desde 0 hasta un valor máximo, por lo que el monitor debe mantener las tablas para asignar las direcciones del disco y todos los demás recursos requeridos, pero no es necesario ya que solo necesita llevar el control del registro para saber a cuál máquina virtual pertenece.
+                                            </p>
+                                            <p>
+                                              Por lo que la ventaja es <b>separar la multiprogramación del código del sistema operativo del usuario</b>, pero el exokernel solo debe mantener las máquinas virtuales separadas una de la otra, lo que reduce la sobrecarga.
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!----------------------ITEM6------------------------>
+
+
+
+
+                                    </div>
+                                    <!----------------------ACORDEON------------------------>
+
+
+                                    
+                                  </div>
+
+
+                                </div>
+
+                              </div>
+
+                          
+
+                        
+                    </section>
+                    <!--------------------------------SECTION--------------------> 
+
+
+
+
+
+
+                </div>
+                <!--------------------------------CONTENIDO PRINCIPAL-------------------->
+            </div>
+
+            <!----------------------------------CONTENIDO DE WRAPPER-------------------------------->            
+        </div>
+              <!--------------------------------------FOOTER--------------------------------------->
+
+              <footer>
+    
+                <div class="footerBG">
+            
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                    <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"/>
+                  </a>
+                  <br />
+                  <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">
+                    Unidad 1 - Estructura de un sistema operativo
+                  </span>
+                  por</a>, Israel Salas Ramírez, Benjamín Cruz Torres y Tanibet Pérez de los Santos Mondragón. <br>Se distribuye bajo una 
+                  <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"> -->
+                    <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+                    Licencia Creative Commons Atribución-NoComercial 4.0 Internacional
+                  </a>.
+                  <br> Basada en una obra en 
+                 <a rel="license" href="https://www.comunidad.escom.ipn.mx/israelsr/RDD_SO_U1/index.html">
+                    https://www.comunidad.escom.ipn.mx/israelsr/RDD_SO_U1/index.html
+                  </a>.
+            
+                  <br>Fecha de elaboración: Julio de 2023
+            
+                </div>
+            
+              </footer>
+
+  <!--------------------------------------FOOTER--------------------------------------->
+        <!------------------------------------------WRAPPER----------------------------------------->
+
+
+
+
+
+        <!--------------------------------SCRIPTS------------------------------------------------->
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+        </script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+
+
+        <!--------------------------------SCRIPTS------------------------------------------------->
+
+
+
+
+    </body>
+    <!------------------------------------------BODY------------------------------------------------>
+</html>

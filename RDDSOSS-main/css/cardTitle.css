@@ -1,0 +1,92 @@
+
+#cardBigTitle{
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	
+
+	font-size: 35px;
+
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+
+	background-color: #307BCF;
+	border-radius: 10px;
+
+
+}
+
+
+#cardBigTitle, h1{
+	color: white;
+	font-weight: bold;
+	padding-top: 2px;
+	text-align: center;
+}
+
+
+#cardConcept{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+	
+}
+
+
+#cardConcept .card-header{
+
+	font-weight: bold;
+	color: white;
+	background-color: #50A5E6;
+
+}
+
+
+#cardTextConcept{
+	font-size: 20px;
+	line-height: 35px;
+	background-color: #DFDFDF;
+	color: black;
+}
+
+
+#cardConcept .card-body{
+	text-align: justify;
+}
+
+
+#cardContactos{
+
+	margin: 0px 50px 5px 50px;
+	background-color: #DFDFDF;
+
+
+}
+
+
+/*----------------------------cardCode---------------------------*/
+
+#cardCode{
+	padding: 10px;
+	background-color: #303030;
+}
+
+#cardCode > code{
+	font-size: 20px;
+}
+
+#cardCode > .codeComment{
+	color: #999999;
+	white-space: nowrap;
+}
+
+#cardCode > .codeNormal{
+	color: #4591EF;
+	white-space: nowrap;
+}
+
+
+/*----------------------------cardCode---------------------------*/

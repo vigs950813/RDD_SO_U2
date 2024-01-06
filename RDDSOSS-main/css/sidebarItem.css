@@ -1,0 +1,146 @@
+/*-----------------------FONDOSIDEBAR-------------------------------*/
+#sidebar-wrapper{
+	--bs-bg-opacity: 0.15;
+}
+/*-----------------------FONDOSIDEBAR-------------------------------*/
+
+
+/*-----------------------ESTILOS BOTONES SIDEBAR-------------------------------*/
+.list-group-item{
+	margin-top: 1px;
+	margin-bottom: 15px;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+}
+/*-----------------------ESTILOS BOTONES SIDEBAR-------------------------------*/
+
+
+/*-----------------------TITULOUNIDAD-------------------------------*/
+#sidebarBtnDisabled{
+	color: white;
+	font-weight: bold; 
+	background-color: #598099;
+}
+/*-----------------------TITULOUNIDAD-------------------------------*/
+
+
+
+
+/*-----------------------BTNINTRODUCCION-------------------------------*/
+#sidebarBtnIntroduccion{
+
+	font-weight: bold;
+	background-color: #7B8992;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnIntroduccion:hover{
+
+	font-weight: bold;
+	background-color: #6FA6CA;
+
+}
+
+/*-----------------------BTNINTRODUCCION-------------------------------*/
+
+
+/*-----------------------PROPOSITO UA-------------------------------*/
+#sidebarBtnPUA{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnPUA:hover{
+
+	background-color: #7B8992;
+
+}
+
+
+
+/*-----------------------PROPOSITO UA-------------------------------*/
+
+
+
+/*-----------------------U111-------------------------------*/
+#sidebarBtnU111{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU111:hover{
+
+	background-color: #7B8992;
+
+}
+
+/*-----------------------U111-------------------------------*/
+
+
+/*-----------------------U112-------------------------------*/
+#sidebarBtnU112{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU112:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U112-------------------------------*/
+
+
+/*-----------------------U113-------------------------------*/
+#sidebarBtnU113{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU113:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U113-------------------------------*/
+
+
+/*-----------------------EV-------------------------------*/
+#sidebarBtnEv{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnEv:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------EV-------------------------------*/

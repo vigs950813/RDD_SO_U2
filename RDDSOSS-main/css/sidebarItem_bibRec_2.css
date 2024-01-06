@@ -1,0 +1,73 @@
+
+/*-----------------------FONDOSIDEBAR-------------------------------*/
+#sidebar-wrapper{
+	--bs-bg-opacity: 0.15;
+}
+/*-----------------------FONDOSIDEBAR-------------------------------*/
+
+
+/*-----------------------ESTILOS BOTONES SIDEBAR-------------------------------*/
+.list-group-item{
+	text-shadow: 1px 1px 2px black;
+	font-size: 18px;
+	margin-top: 1px;
+	margin-bottom: 15px;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+}
+/*-----------------------ESTILOS BOTONES SIDEBAR-------------------------------*/
+
+
+/*-----------------------TITULO-------------------------------*/
+#sidebarBtnDisabled{
+	color: white;
+	font-weight: bold; 
+	background-color: #598099;
+}
+/*-----------------------TITULO-------------------------------*/
+
+
+
+
+/*-----------------------TITULO LIBROS-------------------------------*/
+#sidebarBtnLibros{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnLibros:hover{
+
+	background-color: #7B8992;
+    font-weight: bold;
+	
+
+}
+
+/*-----------------------TITULO LIBROS-------------------------------*/
+
+
+/*-----------------------TITULO IMAGENES-------------------------------*/
+#sidebarBtnImagenes{
+
+	color: white;
+	font-weight: bold;
+	background-color: #7B8992;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnImagenes:hover{
+
+	font-weight: bold;
+	background-color: #6FA6CA;
+
+}
+
+/*-----------------------TITULO IMAGENES-------------------------------*/
+

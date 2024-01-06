@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="es">
+    <!------------------------------------------HEAD------------------------------------------------>  
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>1.3.3 Controladores</title>
+
+
+        <!--BOOTSTRAP CSS-->  
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!--BOOTSTRAP CSS-->  
+
+          <link rel="stylesheet" type="text/css" href="../css/headerImages.css">
+          <link rel="stylesheet" type="text/css" href="../css/header.css">
+          <link rel="stylesheet" type="text/css" href="../css/hoverU1.css">
+          <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+          <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
+          <link rel="stylesheet" type="text/css" href="../css/sidebarItem_u1_12.css">
+          <link rel="stylesheet" type="text/css" href="../css/accordionBtn.css">
+          <link rel="stylesheet" type="text/css" href="../css/cardTitle.css">
+          <link rel="stylesheet" type="text/css" href="../css/carrouselBtn.css">
+          <link rel="stylesheet" type="text/css" href="../css/footerBG.css">
+
+          <!-- Favicon-->
+          <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+          <!-- Core theme CSS (includes Bootstrap)-->
+          <link href="../css/styles.css" rel="stylesheet" />
+
+    </head>
+
+    <!------------------------------------------HEAD------------------------------------------------>
+
+
+
+
+
+
+    <!------------------------------------------BODY------------------------------------------------>
+    <body>
+
+      <!------------------------------------------HEADER-------------------------------------------->
+      <header >
+            <div class="column">
+                <img src="../images/logoBlancoESCOM.png" class="img-fluid" alt="..." id="logoESCOM">
+            </div>
+            <div class="column" >
+                <h2>Instituto Politécnico Nacional</h2>
+                <h3>Escuela Superior de Cómputo</h3>
+                <h4>Recurso Didáctico Digital</h4>
+                <h5>Unidad 1: Estructura de un sistema operativo</h5>
+            </div>
+            <div class="column" >
+                <img src="../images/logoBlancoIPN.png" class="img-fluid" alt="..." id="logoIPN">
+            </div>
+      </header>
+      <!------------------------------------------HEADER-------------------------------------------->
+
+
+
+
+
+
+
+        <!------------------------------------------WRAPPER----------------------------------------->
+        <div class="d-flex" id="wrapper">
+            <!--------------------------------------SIDEBAR---------------------------------------->
+            <div class="border-end bg-secondary" id="sidebar-wrapper">
+
+
+              <div class="list-group list-group-flush">
+
+                 
+              <a
+              class="list-group-item list-group-item-action list-group-item-light p-3 disabled"
+              id="sidebarBtnDisabled"
+              href="unidad-1-estructura-de-un-sistema-operativo.html"
+              >&#8544;. Estructura de un sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnIntroduccion"
+              href="unidad-1-estructura-de-un-sistema-operativo.html"
+              >Introducción</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnPUA"
+              href="proposito-de-la-unidad-de-aprendizaje.html"
+              >Propósito de la unidad de aprendizaje</a
+            >
+
+            <!-- <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtn11ObjComp"
+            href="1-1-objetivos-y-competencias.html"
+            >1.1 Objetivos</a
+          > -->
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU11"
+              href="1-1-aspectos-basicos-del-sistema-operativo.html"
+              >1.1 Aspectos básicos del sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU111"
+              href="1-1-1-objetivos.html"
+              >1.1.1 Objetivos
+            </a>
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU112"
+              href="1-1-2-evolucion.html"
+              >1.1.2 Evolución</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU113"
+              href="1-1-3-tipos-monolítico-por-capas-micro-núcleo-máquina-virtual.html"
+              >1.1.3 Tipos: mainframe, servidor, multiprocesador, embebidos y tiempo real</a
+            >
+
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnAct1"
+            href="actividad-1.html"
+            >Actividad de aprendizaje 1: introducción a los sistemas operativos</a
+          >
+
+            <!-- <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtn12ObjComp"
+            href="1-2-objetivos-y-competencias.html"
+            >1.2 Objetivos</a
+          > -->
+
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU12"
+              href="1-2-fundamentos-del-nucleo-del-sistema-operativo.html"
+              >1.2 Fundamentos del núcleo del sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU121"
+              href="1-2-1-tipos-monolítico-por-capas-micro-núcleo-microkernels-máquina-virtual-y-exokernels.html"
+              >1.2.1 Tipos: monolítico, por capas, micro núcleo,
+              máquina virtual</a
+            >
+
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnAct2"
+            href="actividad-2.html"
+            >Actividad de aprendizaje 2: introducción a los sistemas operativos</a
+          >
+
+
+          
+
+          <!-- <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtn13ObjComp"
+          href="1-3-objetivos-y-competencias.html"
+          >1.3 Objetivos</a
+        > -->
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU13"
+              href="1-3-modos-de-operación-de-un-sistema-operativo.html"
+              >1.3 Modos de operación de un sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU131"
+              href="1-3-1-interrupciones.html"
+              >1.3.1 Interrupciones</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU132"
+              href="1-3-2-usuario-y-kernel.html"
+              >1.3.2 Usuario y Kernel</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU133"
+              href="1-3-3-contadores.html"
+              >1.3.3 Controladores</a
+            >
+
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnAct3"
+            href="actividad-3.html"
+            >Actividad de aprendizaje 3: Modos de operación de un sistema operativo</a
+          >
+<!-- 
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtn14ObjComp"
+            href="1-4-objetivos-y-competencias.html"
+            >1.4 Objetivos</a
+          > -->
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU14"
+              href="1-4-llamadas-al-sistema.html"
+              >1.4 Llamadas a sistema</a
+            >
+  
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU141"
+              href="1-4-1-procesos-y-senales.html"
+              >1.4.1 Procesos y señales</a
+            >
+  
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU142"
+              href="1-4-2-directorios-y-archivos.html"
+              >1.4.2 Directorios y archivos</a
+            >
+  
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU143"
+            href="1-4-3-proteccion.html"
+            >1.4.3 Protección</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU144"
+            href="1-4-4-diversos.html"
+            >1.4.4 Diversos</a
+          >
+
+          <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtnAct4"
+          href="actividad-4.html"
+          >Actividad de aprendizaje 4: Llamadas al sistema</a
+        >
+
+          <!-- <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtn15ObjComp"
+          href="1-5-objetivos-y-competencias.html"
+          >1.5 Objetivos</a
+        > -->
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU15"
+            href="1-5-shell.html"
+            >1.5 Shell</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU151"
+            href="1-5-1-argumentos-y-variables.html"
+            >1.5.1 Argumentos y variables</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU152"
+            href="1-5-2-estructuras-de-control.html"
+            >1.5.2 Estructuras de control</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU153"
+            href="1-5-3-manipulacion-de-cadenas.html"
+            >1.5.3 Manipulación de cadenas</a
+          >
+
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU154"
+            href="1-5-4-funciones.html"
+            >1.5.4 Funciones</a
+          >
+
+          <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtnAct5"
+          href="actividad-5.html"
+          >Actividad de aprendizaje 5: Fundamentos de shell</a
+        >
+
+            
+  
+            
+              <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnEv"
+              href="evaluacion2.html"
+              >Evaluación</a
+            >
+            
+
+              </div>
+          </div>
+            <!--------------------------------------SIDEBAR---------------------------------------->
+
+            <!----------------------------------CONTENIDO DE WRAPPER-------------------------------->
+            <div id="page-content-wrapper">
+                <!------------------------------------NAVBAR------------------------------------>
+                <nav class="navbar navbar-expand-lg navbar-light bg-gradient border-bottom">
+
+                    <div class="container-fluid">
+
+                        <!------------------------------------TOGGLERSIDEBAR------------------------------------>
+                        <button class="btn btn-dark" type="submit"id="sidebarToggle" style="font-size: auto; vertical-align: center;">&#9868;
+                        </button>
+                        <!------------------------------------TOGGLERSIDEBAR------------------------------------>
+                     
+                        <!------------------------------------TOGGLERNAVBAR------------------------------------>
+                        <button class="navbar-toggler" id="toggler1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                          <span class="navbar-toggler-icon"></span>
+
+                        </button>
+                        <!------------------------------------TOGGLERNAVBAR------------------------------------>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+
+                                <li class="nav-item active">
+
+                                  <div class="container" id="containerInicio">
+                                    <a class="nav-link active" href="../index.html">
+                                      
+                                        Inicio
+                                      
+                                    </a>  
+                                  </div>
+                                  
+                                  
+                                </li>
+                                <!--------------------------DROPDOWN MENU---------------------------->
+                                <li class="nav-item dropdown">
+                                    
+                                    <div class="container nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="containerDropdown">
+
+                                        
+                                          <!--Unidades de aprendizaje (proximamente)-->
+                                          Contenido
+                                        
+                                      
+                                    </div>
+                                    
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
+                                        <!--------------------------UNIDAD 1------------------------->
+                                        <a class="dropdown-item" href="unidad-1-estructura-de-un-sistema-operativo.html">
+                                          &#8544;. Estructura de un sistema operativo
+                                        </a>
+                                        <!--------------------------UNIDAD 1------------------------->
+
+                                        <!--------------------------UNIDAD 2------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-2-administracion-de-procesos.html">
+                                          &#8545;. Administración de procesos
+                                        </a>
+                                        <!--------------------------UNIDAD 2------------------------->
+
+                                        <!--------------------------UNIDAD 3------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-3-administracion-de-memoria.html">
+                                          &#8546;.  Administración de memoria
+                                        </a>
+                                        <!--------------------------UNIDAD 3------------------------->
+
+                                        <!--------------------------UNIDAD 4------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-4-sistema-de-archivos.html">
+                                          &#8548;. Sistema de archivos
+                                        </a>                                 
+                                        <!--------------------------UNIDAD 4------------------------->      
+                                        <!--------------------------UNIDAD 5------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-5-dispositivos-de-entrada-y-salida.html">
+                                          &#8549;. Dispositivos de entrada y salida
+                                        </a>                               
+                                        <!--------------------------UNIDAD 5------------------------->
+
+                                        <!--------------------------UNIDAD 6------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-6-seguridad-y-virtualizacion.html">
+                                          &#8549;. Seguridad y virtualización
+                                        </a>                               
+                                        <!--------------------------UNIDAD 6------------------------->
+
+                                    </div>
+                                </li>
+                                <!--------------------------DROPDOWN MENU---------------------------->                                
+                                <li class="nav-item active">
+                                  <div class="container" id="containerBibRec">
+                                    <a class="nav-link" href="bibliografia-y-recursos.html">Bibliografía y recursos</a>  
+                                  </div>
+                                </li>
+
+                                <li class="nav-item active">
+                                  <div class="container" id="containerGlosario">
+                                    <a class="nav-link" href="glosario.html">Glosario</a>  
+                                  </div>
+                                </li>
+
+
+                                         <!--
+
+                                  <li class="nav-item active">
+                                  <div class="container" id="containerContactos">
+                                    <a class="nav-link" href="pages/contactos.html">Contactos</a>
+                                  </div>
+                                </li>
+
+                                -->
+
+                                <li class="nav-item active">
+                                  <div class="container" id="containerManual">
+                                   <a class="nav-link" href="manual.html" >Manual de usuario</a>
+                                  </div>
+                                </li>
+                                
+
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!------------------------------------NAVBAR------------------------------------>
+
+                <!--------------------------------CONTENIDO PRINCIPAL-------------------->
+                <div class="container-fluid">
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--------------------------------SECTION-------------------->   
+                    <section>
+
+                          <div class="container">
+
+                                <div class="card" id="cardBigTitle">
+                                
+                                  1.3.3 Controladores
+
+                                </div>    
+
+                          </div>
+
+
+                              <div class="container">
+                                <div class="card" id="cardConcept">
+                                  <div class="card-body" id="cardTextConcept">
+                                    <p class="card-text">
+                                      El controlador de interrupciones es un componente adicional y un sistema con controladores de interrupciones que se utiliza para gestionar las peticiones de interrupciones. Cada módulo de entrada y salida tiene líneas de petición de interrupción y reconocimiento conectadas al controlador de interrupciones; De esta manera, el procesador solo debe tener una línea de petición de interrupción y una de reconocimiento conectadas al controlador de interrupción para gestionar las peticiones de entrada y salida.
+                                    </p>
+                                    <p>
+                                      <b>Las funciones del controlador de interrupción</b> son las siguientes:
+                                      <ul>
+                                        <li>
+                                          <b>Establecer una política de prioridades</b> para los módulos de entrada y salida del controlador.
+                                        </li>
+                                        <li>
+                                          <b>Hay que destacar</b> qué módulo de entrada y salida necesita atención e informe al procesador.
+                                        </li>
+                                        <li>
+                                          <b>La gestión de interrupciones de este sistema es similar a la gestión de interrupciones con un solo módulo de entrada y salida</b>, por lo que debe de ajustar la etapa de reconocimiento de interrupciones para administrar las prioridades y determinar qué atención periférica necesita.
+                                        </li>
+                                      </ul>
+                                      Como se muestra en la siguiente imagen
+                                    </p>
+                                    <div class="text-center">
+
+                                      <img class="img-fluid" src="../images/Fig 16 Sistema con controladores de interrupciones.png" style="width: 85%;">
+                                      <p>
+                                        <b>Fig 16. Sistema con controladores de interrupciones</b>
+                                      </p>
+                                      
+                                    </div>
+                                    
+                                    <p>
+                                      <b>El siguiente es el procedimiento utilizado para reconocer una interrupción</b>.
+                                    </p>
+
+                                    <p>
+                                      <b>Se crea un sistema de vectorización en el cual no es necesario que el módulo de entrada y salida tenga un registro vectorial</b>. Esto significa que el controlador de interrupciones tiene un conjunto de registros vectoriales donde se guardan los vectores de interrupción asociados, a cada línea.
+                                    </p>
+ 
+                                    <p>
+                                      El controlador de interrupciones hace la petición de prioridad al procesador activando la señal INT, y el procesador responde activando la señal INTA. Cuando el controlador de interrupciones recibe la señal INTA, coloca el vector de interrupción, correspondiente al módulo de entrada y salida solicitado, en el bus de datos.
+                                    </p>
+                                    
+                                    <p>
+                                      El vector luego es leído por el procesador. De esta manera, el procesador puede obtener la dirección de RSI e iniciar la ejecución de la rutina para realizar la transferencia de datos, comunicándose directamente con el módulo de entrada y salida. y el controlador de interrupciones no controla la transferencia de datos.
+                                    </p>
+
+                                    <p>
+                                      <b>Los principales beneficios de este sistema</b> en comparación con un controlador de la gestión de prioridades flexible y la identificación inmediata del periférico hacen que el procesador solo necesite una línea INT y una INTA para administrar múltiples módulos de entrada y salida.
+                                    </p>
+
+                                    <p>
+                                      <b>La desventaja de la gestión de prioridades</b> es que requiere la ejecución de un pequeño programa que acceda al nivel de ejecución para que el controlador lo haga automáticamente la interrupción, lo que hace que el estado sea más lento, como se muestra en la imagen siguiente. 
+                                    </p>
+                                  
+                                    <div class="text-center">
+
+                                      <img class="img-fluid" src="../images/Fig 17 Proceso reconocimiento de la interrupción.png" style="width: 85%;">
+                                      <p>
+                                        <b>Fig 17. Proceso reconocimiento de la interrupción</b>
+                                      </p>
+                                      
+                                    </div>
+                                    <p>
+                                      Si queremos aumentar el número de módulos de entrada y salida en un sistema que utiliza controladores de interrupción, debemos conectar el controlador de interrupción en cascada. Sin embargo, es importante que los controladores se encuentren diseñados específicamente para conectarse de esta manera.
+                                    </p>
+                                    
+                                  </div>
+
+
+                                </div>
+
+                              </div>
+
+                          
+
+                        
+                    </section>
+                    <!--------------------------------SECTION--------------------> 
+
+
+
+
+
+                </div>
+                <!--------------------------------CONTENIDO PRINCIPAL-------------------->
+            </div>
+
+            <!----------------------------------CONTENIDO DE WRAPPER-------------------------------->            
+        </div>
+             <!--------------------------------------FOOTER--------------------------------------->
+
+             <footer>
+    
+              <div class="footerBG">
+          
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                  <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"/>
+                </a>
+                <br />
+                <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">
+                  Unidad 1 - Estructura de un sistema operativo
+                </span>
+                por</a>, Israel Salas Ramírez, Benjamín Cruz Torres y Tanibet Pérez de los Santos Mondragón. <br>Se distribuye bajo una 
+                <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"> -->
+                  <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+                    Licencia Creative Commons Atribución-NoComercial 4.0 Internacional
+                  </a>.
+                <br> Basada en una obra en 
+               <a rel="license" href="https://www.comunidad.escom.ipn.mx/israelsr/RDD_SO_U1/index.html">
+                  https://www.comunidad.escom.ipn.mx/israelsr/RDD_SO_U1/index.html
+                </a>.
+          
+                <br>Fecha de elaboración: Julio de 2023
+          
+              </div>
+          
+            </footer>
+
+
+  <!--------------------------------------FOOTER--------------------------------------->
+        <!------------------------------------------WRAPPER----------------------------------------->
+
+
+
+
+
+        <!--------------------------------SCRIPTS------------------------------------------------->
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+        </script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+
+
+        <!--------------------------------SCRIPTS------------------------------------------------->
+
+
+
+
+    </body>
+    <!------------------------------------------BODY------------------------------------------------>
+</html>
