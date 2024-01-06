@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página principal</title>
 </head>
 <body>
-    <h1>TITULO</h1>
+    <div id="header-container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const headerContainer = document.getElementById('header-container');
+
+            fetch('header.html') // Ruta al archivo header.html
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Hubo un problema al cargar el header:', error);
+                });
+        });
+    </script>
+
+    <!-- El resto del contenido de tu página va aquí -->
+    <main>
+        <h1>Contenido de la página principal</h1>
+        <p>Bienvenido a mi página principal.</p>
+    </main>
 </body>
 </html>
