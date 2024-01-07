@@ -1,10 +1,10 @@
-.sidebar-heading.border-bottom.bg-light{
+#sidebar-wrapper>.sidebar-heading.border-bottom.bg-light{
     font-size: 14px;
     font-weight: bold;
 }
 
 
-.btn-group>.btn.btn-secondary.btn-lg{
+#sidebar-wrapper>.btn.btn-secondary.btn-lg{
     font-size: 14px;
     font-weight: bold;
 }
