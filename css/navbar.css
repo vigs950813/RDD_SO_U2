@@ -1,15 +1,14 @@
-nav{
-	font-size: 14px;
-	font-weight: bold;
-}
 
 .navbar{
+	font-size: 15px;
 	background-color: #8A9FB9;
+	color: white;
 }
 
-.navbar-brand{
-	opacity: 0;
-	cursor: none;
+.navbar-toggler{
+	background-color: #4895D7;
+	color: black;
+	font-weight: bold;
 }
 
 form>.container{
