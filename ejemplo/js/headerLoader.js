@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const headerContainer = document.getElementById('header-container');
 
-    fetch('pages/header.html') // Ruta al archivo header.html
+    fetch('header.html') // Ruta al archivo header.html
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');

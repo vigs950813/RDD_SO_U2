@@ -1,0 +1,14 @@
+/*
+	Estilo para las imagenes del header
+	unicamente aplica para los identificadores de
+	las imagenes que contiene el header
+*/
+
+
+#logoESCOM{
+	width: 30%;
+}
+
+#logoIPN{
+	width: 20%;
+}

@@ -1,0 +1,717 @@
+/*-----------------------FONDOSIDEBAR-------------------------------*/
+#sidebar-wrapper{
+	--bs-bg-opacity: 0.15;
+}
+/*-----------------------FONDOSIDEBAR-------------------------------*/
+
+
+/*-----------------------ESTILOS BOTONES SIDEBAR-------------------------------*/
+.list-group-item{
+	text-shadow: 1px 1px 2px black;
+	font-size: 18px;
+	margin-top: 1px;
+	margin-bottom: 15px;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+}
+/*-----------------------ESTILOS BOTONES SIDEBAR-------------------------------*/
+
+
+/*-----------------------TITULOUNIDAD-------------------------------*/
+#sidebarBtnDisabled{
+	color: white;
+	font-weight: bold; 
+	background-color: #598099;
+}
+/*-----------------------TITULOUNIDAD-------------------------------*/
+
+
+
+
+/*-----------------------BTNINTRODUCCION-------------------------------*/
+#sidebarBtnIntroduccion{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnIntroduccion:hover{
+
+	font-weight: bold;
+	background-color: #7B8992;
+	
+
+}
+
+/*-----------------------BTNINTRODUCCION-------------------------------*/
+
+
+/*-----------------------PROPOSITO UA-------------------------------*/
+#sidebarBtnPUA{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnPUA:hover{
+
+	background-color: #7B8992;
+
+}
+
+
+
+/*-----------------------PROPOSITO UA-------------------------------*/
+
+
+/*-----------------------1.1 ObjComp-------------------------------*/
+#sidebarBtn11ObjComp{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtn11ObjComp:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------1.1 ObjComp-------------------------------*/
+
+
+
+
+
+/*-----------------------U11-------------------------------*/
+#sidebarBtnU11{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU11:hover{
+
+	background-color: #7B8992;
+
+}
+
+/*-----------------------U11-------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------U111-------------------------------*/
+#sidebarBtnU111{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;	
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU111:hover{
+
+	background-color: #7B8992;
+	
+
+}
+
+/*-----------------------U111-------------------------------*/
+
+
+/*-----------------------U112-------------------------------*/
+#sidebarBtnU112{
+
+	color: white;
+	font-weight: bold;
+	background-color: #7B8992;	
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU112:hover{
+
+	background-color: #6FA6CA;
+
+}
+/*-----------------------U112-------------------------------*/
+
+
+/*-----------------------U113-------------------------------*/
+#sidebarBtnU113{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;	
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU113:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U113-------------------------------*/
+
+
+
+/*-----------------------1.2 ObjComp-------------------------------*/
+#sidebarBtn12ObjComp{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtn12ObjComp:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------1.2 ObjComp-------------------------------*/
+
+
+/*-----------------------U12-------------------------------*/
+#sidebarBtnU12{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU12:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U112-------------------------------*/
+
+/*-----------------------U121-------------------------------*/
+#sidebarBtnU121{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU121:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U1121-------------------------------*/
+
+/*-----------------------Act1Res-------------------------------*/
+#sidebarBtnAct1{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnAct1:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------Act1Res-------------------------------*/
+
+
+
+
+/*-----------------------Act2Res-------------------------------*/
+#sidebarBtnAct2{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnAct2:hover{
+
+	background-color: #7B8992;
+
+}
+
+/*-----------------------Act2Res-------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------Act3Res-------------------------------*/
+#sidebarBtnAct3{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnAct3:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------Act3Res-------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------Act4Res-------------------------------*/
+#sidebarBtnAct4{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnAct4:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------Act4Res-------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/*-----------------------Act5Res-------------------------------*/
+#sidebarBtnAct5{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnAct5:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------Act5Res-------------------------------*/
+
+
+
+
+
+/*-----------------------1.3 ObjComp-------------------------------*/
+#sidebarBtn13ObjComp{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtn13ObjComp:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------1.3 ObjComp-------------------------------*/
+
+/*-----------------------U13-------------------------------*/
+#sidebarBtnU13{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU13:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U13-------------------------------*/
+
+/*-----------------------U131-------------------------------*/
+#sidebarBtnU131{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU131:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U1131-------------------------------*/
+
+/*-----------------------U132-------------------------------*/
+#sidebarBtnU132{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU132:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U1132-------------------------------*/
+
+/*-----------------------U133-------------------------------*/
+#sidebarBtnU133{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU133:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U1133-------------------------------*/
+
+
+/*-----------------------1.4 ObjComp-------------------------------*/
+#sidebarBtn14ObjComp{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtn14ObjComp:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------1.4 ObjComp-------------------------------*/
+
+/*-----------------------U14-------------------------------*/
+#sidebarBtnU14{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU14:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U14-------------------------------*/
+
+/*-----------------------U141-------------------------------*/
+#sidebarBtnU141{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU141:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U141-------------------------------*/
+
+
+/*-----------------------U142-------------------------------*/
+#sidebarBtnU142{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU142:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U142-------------------------------*/
+
+
+/*-----------------------U143-------------------------------*/
+#sidebarBtnU143{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU143:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U143-------------------------------*/
+
+
+/*-----------------------U144-------------------------------*/
+#sidebarBtnU144{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU144:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U144-------------------------------*/
+
+
+/*-----------------------1.5 ObjComp-------------------------------*/
+#sidebarBtn15ObjComp{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtn15ObjComp:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------1.5 ObjComp-------------------------------*/
+
+/*-----------------------U15-------------------------------*/
+#sidebarBtnU15{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU15:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U15-------------------------------*/
+
+/*-----------------------U151-------------------------------*/
+#sidebarBtnU151{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU151:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U151-------------------------------*/
+
+/*-----------------------U152-------------------------------*/
+#sidebarBtnU152{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU152:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U152-------------------------------*/
+
+/*-----------------------U153-------------------------------*/
+#sidebarBtnU153{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU153:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U153-------------------------------*/
+
+/*-----------------------U154-------------------------------*/
+#sidebarBtnU154{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnU154:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------U154-------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------EV-------------------------------*/
+#sidebarBtnEv{
+
+	color: white;
+	font-weight: bold;
+	background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+
+}
+
+
+#sidebarBtnEv:hover{
+
+	background-color: #7B8992;
+
+}
+/*-----------------------EV-------------------------------*/

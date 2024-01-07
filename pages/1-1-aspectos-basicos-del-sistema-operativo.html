@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="es">
+    <!------------------------------------------HEAD------------------------------------------------>  
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>1.1 Aspectos básicos del sistema operativo</title>
+
+
+        <!--BOOTSTRAP CSS-->  
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!--BOOTSTRAP CSS-->  
+
+          <link rel="stylesheet" type="text/css" href="../css/headerImages.css">
+          <link rel="stylesheet" type="text/css" href="../css/header.css">
+          <link rel="stylesheet" type="text/css" href="../css/hoverU1.css">
+          <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+          <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
+          <link rel="stylesheet" type="text/css" href="../css/sidebarItem_u1_3.css">
+          <link rel="stylesheet" type="text/css" href="../css/cardTitle.css">
+          <link rel="stylesheet" type="text/css" href="../css/accordionBtn.css">
+          <link rel="stylesheet" type="text/css" href="../css/carrouselBtn.css">
+          <link rel="stylesheet" type="text/css" href="../css/footerBG.css">
+
+          <!-- Favicon-->
+          <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+          <!-- Core theme CSS (includes Bootstrap)-->
+          <link href="../css/styles.css" rel="stylesheet" />
+
+    </head>
+
+    <!------------------------------------------HEAD------------------------------------------------>
+
+
+
+
+
+
+    <!------------------------------------------BODY------------------------------------------------>
+    <body>
+
+      <!------------------------------------------HEADER-------------------------------------------->
+      <header >
+            <div class="column">
+                <img src="../images/logoBlancoESCOM.png" class="img-fluid" alt="..." id="logoESCOM">
+            </div>
+            <div class="column" >
+                <h2>Instituto Politécnico Nacional</h2>
+                <h3>Escuela Superior de Cómputo</h3>
+                <h4>Recurso Didáctico Digital</h4>
+                <h5>Sistemas Operativos</h5>
+            </div>
+            <div class="column" >
+                <img src="../images/logoBlancoIPN.png" class="img-fluid" alt="..." id="logoIPN">
+            </div>
+      </header>
+      <!------------------------------------------HEADER-------------------------------------------->
+
+
+
+
+
+
+
+        <!------------------------------------------WRAPPER----------------------------------------->
+        <div class="d-flex" id="wrapper">
+            <!--------------------------------------SIDEBAR---------------------------------------->
+            <div class="border-end bg-secondary" id="sidebar-wrapper">
+
+
+              <div class="list-group list-group-flush">
+
+                 
+              <a
+              class="list-group-item list-group-item-action list-group-item-light p-3 disabled"
+              id="sidebarBtnDisabled"
+              href="unidad-1-estructura-de-un-sistema-operativo.html"
+              >&#8544;. Estructura de un sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnIntroduccion"
+              href="unidad-1-estructura-de-un-sistema-operativo.html"
+              >Introducción</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnPUA"
+              href="proposito-de-la-unidad-de-aprendizaje.html"
+              >Propósito de la unidad de aprendizaje</a
+            >
+
+            <!-- <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtn11ObjComp"
+            href="1-1-objetivos-y-competencias.html"
+            >1.1 Objetivos</a
+          > -->
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU11"
+              href="1-1-aspectos-basicos-del-sistema-operativo.html"
+              >1.1 Aspectos básicos del sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU111"
+              href="1-1-1-objetivos.html"
+              >1.1.1 Objetivos
+            </a>
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU112"
+              href="1-1-2-evolucion.html"
+              >1.1.2 Evolución</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU113"
+              href="1-1-3-tipos-monolítico-por-capas-micro-núcleo-máquina-virtual.html"
+              >1.1.3 Tipos: mainframe, servidor, multiprocesador, embebidos y tiempo real</a
+            >
+
+            
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnAct1"
+            href="actividad-1.html"
+            >Actividad de aprendizaje 1: introducción a los sistemas operativos</a
+          >
+
+            <!-- <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtn12ObjComp"
+            href="1-2-objetivos-y-competencias.html"
+            >1.2 Objetivos</a
+          > -->
+
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU12"
+              href="1-2-fundamentos-del-nucleo-del-sistema-operativo.html"
+              >1.2 Fundamentos del núcleo del sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU121"
+              href="1-2-1-tipos-monolítico-por-capas-micro-núcleo-microkernels-máquina-virtual-y-exokernels.html"
+              >1.2.1 Tipos: monolítico, por capas, micro núcleo,
+              máquina virtual</a
+            >
+
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnAct2"
+            href="actividad-2.html"
+            >Actividad de aprendizaje 2: introducción a los sistemas operativos</a
+          >
+
+
+          <!-- <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtn13ObjComp"
+          href="1-3-objetivos-y-competencias.html"
+          >1.3 Objetivos</a
+        > -->
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU13"
+              href="1-3-modos-de-operación-de-un-sistema-operativo.html"
+              >1.3 Modos de operación de un sistema operativo</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU131"
+              href="1-3-1-interrupciones.html"
+              >1.3.1 Interrupciones</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU132"
+              href="1-3-2-usuario-y-kernel.html"
+              >1.3.2 Usuario y Kernel</a
+            >
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU133"
+              href="1-3-3-contadores.html"
+              >1.3.3 Controladores</a
+            >
+
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnAct3"
+            href="actividad-3.html"
+            >Actividad de aprendizaje 3: Modos de operación de un sistema operativo</a
+          >
+<!-- 
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtn14ObjComp"
+            href="1-4-objetivos-y-competencias.html"
+            >1.4 Objetivos</a
+          > -->
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU14"
+              href="1-4-llamadas-al-sistema.html"
+              >1.4 Llamadas a sistema</a
+            >
+  
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU141"
+              href="1-4-1-procesos-y-senales.html"
+              >1.4.1 Procesos y señales</a
+            >
+  
+  
+            <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnU142"
+              href="1-4-2-directorios-y-archivos.html"
+              >1.4.2 Directorios y archivos</a
+            >
+  
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU143"
+            href="1-4-3-proteccion.html"
+            >1.4.3 Protección</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU144"
+            href="1-4-4-diversos.html"
+            >1.4.4 Diversos</a
+          >
+
+          <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtnAct4"
+          href="actividad-4.html"
+          >Actividad de aprendizaje 4: Llamadas al sistema</a
+        >
+
+          <!-- <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtn15ObjComp"
+          href="1-5-objetivos-y-competencias.html"
+          >1.5 Objetivos</a
+        > -->
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU15"
+            href="1-5-shell.html"
+            >1.5 Shell</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU151"
+            href="1-5-1-argumentos-y-variables.html"
+            >1.5.1 Argumentos y variables</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU152"
+            href="1-5-2-estructuras-de-control.html"
+            >1.5.2 Estructuras de control</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU153"
+            href="1-5-3-manipulacion-de-cadenas.html"
+            >1.5.3 Manipulación de cadenas</a
+          >
+
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            id="sidebarBtnU154"
+            href="1-5-4-funciones.html"
+            >1.5.4 Funciones</a
+          >
+
+          <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          id="sidebarBtnAct5"
+          href="actividad-5.html"
+          >Actividad de aprendizaje 5: Fundamentos de shell</a
+        >
+
+            
+  
+            
+              <a
+              class="list-group-item list-group-item-action list-group-item-light p-3"
+              id="sidebarBtnEv"
+              href="evaluacion2.html"
+              >Evaluación</a
+            >
+            
+
+              </div>
+          </div>
+            <!--------------------------------------SIDEBAR---------------------------------------->
+
+            <!----------------------------------CONTENIDO DE WRAPPER-------------------------------->
+            <div id="page-content-wrapper">
+                <!------------------------------------NAVBAR------------------------------------>
+                <nav class="navbar navbar-expand-lg navbar-light bg-gradient border-bottom">
+
+                    <div class="container-fluid">
+
+                        <!------------------------------------TOGGLERSIDEBAR------------------------------------>
+                        <button class="btn btn-dark" type="submit"id="sidebarToggle" style="font-size: auto; vertical-align: center;">&#9868;
+                        </button>
+                        <!------------------------------------TOGGLERSIDEBAR------------------------------------>
+                     
+                        <!------------------------------------TOGGLERNAVBAR------------------------------------>
+                        <button class="navbar-toggler" id="toggler1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                          <span class="navbar-toggler-icon"></span>
+
+                        </button>
+                        <!------------------------------------TOGGLERNAVBAR------------------------------------>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+
+                                <li class="nav-item active">
+
+                                  <div class="container" id="containerInicio">
+                                    <a class="nav-link active" href="../index.html">
+                                      
+                                        Inicio
+                                      
+                                    </a>  
+                                  </div>
+                                  
+                                  
+                                </li>
+                                <!--------------------------DROPDOWN MENU---------------------------->
+                                <li class="nav-item dropdown">
+                                    
+                                    <div class="container nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="containerDropdown">
+
+                                        
+                                          <!--Unidades de aprendizaje (proximamente)-->
+                                          Contenido
+                                        
+                                      
+                                    </div>
+                                    
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
+                                        <!--------------------------UNIDAD 1------------------------->
+                                        <a class="dropdown-item" href="unidad-1-estructura-de-un-sistema-operativo.html">
+                                          &#8544;. Estructura de un sistema operativo
+                                        </a>
+                                        <!--------------------------UNIDAD 1------------------------->
+
+                                        <!--------------------------UNIDAD 2------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-2-administracion-de-procesos.html">
+                                          &#8545;. Administración de procesos
+                                        </a>
+                                        <!--------------------------UNIDAD 2------------------------->
+
+                                        <!--------------------------UNIDAD 3------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-3-administracion-de-memoria.html">
+                                          &#8546;.  Administración de memoria
+                                        </a>
+                                        <!--------------------------UNIDAD 3------------------------->
+
+                                        <!--------------------------UNIDAD 4------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-4-sistema-de-archivos.html">
+                                          &#8548;. Sistema de archivos
+                                        </a>                                 
+                                        <!--------------------------UNIDAD 4------------------------->      
+                                        <!--------------------------UNIDAD 5------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-5-dispositivos-de-entrada-y-salida.html">
+                                          &#8549;. Dispositivos de entrada y salida
+                                        </a>                               
+                                        <!--------------------------UNIDAD 5------------------------->
+
+                                        <!--------------------------UNIDAD 6------------------------->
+                                        <a class="dropdown-item disabled" href="unidad-6-seguridad-y-virtualizacion.html">
+                                          &#8549;. Seguridad y virtualización
+                                        </a>                               
+                                        <!--------------------------UNIDAD 6------------------------->
+
+                                    </div>
+                                </li>
+                                <!--------------------------DROPDOWN MENU---------------------------->                                
+                                <li class="nav-item active">
+                                  <div class="container" id="containerBibRec">
+                                    <a class="nav-link" href="bibliografia-y-recursos.html">Bibliografía y recursos</a>  
+                                  </div>
+                                </li>
+
+                                <li class="nav-item active">
+                                  <div class="container" id="containerGlosario">
+                                    <a class="nav-link" href="glosario.html">Glosario</a>  
+                                  </div>
+                                </li>
+
+
+                                              <!--
+
+                                  <li class="nav-item active">
+                                  <div class="container" id="containerContactos">
+                                    <a class="nav-link" href="pages/contactos.html">Contactos</a>
+                                  </div>
+                                </li>
+
+                                -->
+
+                                <li class="nav-item active">
+                                  <div class="container" id="containerManual">
+                                   <a class="nav-link" href="manual.html" >Manual de usuario</a>
+                                  </div>
+                                </li>
+                                
+
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!------------------------------------NAVBAR------------------------------------>
+
+                <!--------------------------------CONTENIDO PRINCIPAL-------------------->
+                <div class="container-fluid">
+
+
+
+                    <!--------------------SECTION1-------------------->                  
+                    <section>
+
+
+                      
+
+
+                        <!--------------------------------ASPECTOSBASICOSSO-------------------->
+
+
+                               <div class="container">
+
+                                      <div class="card" id="cardBigTitle">
+                                        1.1 Aspectos básicos del sistema operativo
+                                        
+                                      </div>    
+
+                               </div>
+
+
+                                  <div class="container">
+                                        <div class="card" id="cardConcept">
+                                          <div class="card-body" id="cardTextConcept">
+                                            
+                                            
+                                            <div class="container">
+
+                                              <p>
+                                                <b>Objetivos</b>
+                                              </p>
+                                              <p>
+                                                Con el estudio de este tema comprenderás la importancia que tiene el sistema operativo con relación al funcionamiento de los elementos que conforman a los equipos de cómputo, así como sus antecedentes históricos.
+                                              </p>
+
+                                              <div class="card" id="cardConcept">
+
+                                                <h2 class="card-header">¿Qué es un sistema operativo?</h2>
+
+                                                <div class="card-body" id="cardTextConcept">
+
+                                                  <p class="card-text">
+                                                    Es un conjunto de programas informáticos diseñados para administrar y controlar los recursos de una computadora, el cual coordina y dirige a todas las partes del equipo de cómputo para que trabajen adecuadamente.
+                                                  </p>
+
+                                                </div>
+
+                                              </div>  
+
+                                            </div>
+
+                                            <div class="container">
+
+                                              <div class="card" id="cardConcept">
+
+                                                <h2 class="card-header">Componentes del sistema operativo</h2>
+
+                                                <div class="card-body" id="cardTextConcept">
+
+                                                  <p class="card-text">
+                                                    <!--Los componentes trabajan juntos para proporcionar un entorno estable y eficiente en el que las aplicaciones pueden ejecutarse y los usuarios pueden interactuar con la computadora de manera efectiva. Cabe mencionar que la arquitectura y los componentes pueden variar según el tipo de sistema operativo (como Windows, macOS, Linux, Android, etc.) y su propósito (servidores, sistemas embebidos, dispositivos móviles, etc.).-->
+                                                    
+                                                    <!--<p>Sus componentes son:</p>--->
+
+                                                    
+
+                                                    <!----------------------ACORDEON------------------------>
+                                                    <div class="accordion" id="accordionExample">
+
+
+
+
+
+                                                      <!----------------------ITEM1------------------------>
+                                                      <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                          <button class="accordion-button" id="accordion-btn2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                          Kernel
+                                                          </button>
+                                                        </h2>
+                                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                          <div class="accordion-body" id="cardBtnConcept">
+                                                            <p>
+                                                              El Kernel, es una parte esencial del sistema operativo conocida como núcleo del sistema la cual se encarga de administrar los del recursos del hardware y le ofrece servicios básicos a otros programas, además de controlar la administración de memoria, planificación de procesos y gestión de dispositivos.
+                                                            </p>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <!----------------------ITEM1------------------------>
+
+
+
+
+
+
+
+
+
+                                                      <!----------------------ITEM2------------------------>
+                                                      <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingTwo">
+                                                          <button class="accordion-button collapsed" id="accordion-btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            Gestor de procesos
+                                                          </button>
+                                                        </h2>
+                                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                          <div class="accordion-body" id="cardBtnConcept">
+                                                            <p>
+                                                              Este componente se encarga de administrar la ejecución de los procesos del sistema. Incluye la planificación de procesos, la asignación de recursos y el cambio de contexto entre procesos.
+                                                            </p>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <!----------------------ITEM2------------------------>
+
+
+
+
+
+
+
+
+
+
+                                                      <!----------------------ITEM3------------------------>
+                                                      <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingThree">
+                                                          <button class="accordion-button collapsed" id="accordion-btn2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            Gestor de memoria
+                                                          </button>
+                                                        </h2>
+                                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample" >
+                                                          <div class="accordion-body" id="cardBtnConcept">
+                                                            <p>
+                                                              Es aquel que se encarga de la asignación y liberación de la memoria del sistema, ya sea física o virtual.
+                                                            </p>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <!----------------------ITEM3------------------------>
+
+
+
+
+
+
+
+                                                      <!----------------------ITEM4------------------------>
+                                                      <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingFour">
+                                                          <button class="accordion-button collapsed" id="accordion-btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                            Sistema de archivos
+                                                          </button>
+                                                        </h2>
+                                                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                          <div class="accordion-body" id="cardBtnConcept">
+                                                            <p>
+                                                              Permite la organización y el acceso a los datos almacenados en el disco duro u otros medios de almacenamiento. Gestiona la creación, eliminación, lectura y escritura de archivos.
+                                                            </p>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <!----------------------ITEM4------------------------>
+
+
+
+
+
+
+
+
+
+                                                      <!----------------------ITEM5------------------------>
+                                                      <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingFive">
+                                                          <button class="accordion-button collapsed" id="accordion-btn2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                            Gestor de dispositivos
+                                                          </button>
+                                                        </h2>
+                                                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                                          <div class="accordion-body" id="cardBtnConcept">
+                                                            <p>
+                                                              Administra los dispositivos de hardware conectados al sistema; como impresoras, discos duros, tarjetas de red, etc. Proporciona una interfaz unificada para que los programas puedan comunicarse con los dispositivos.
+                                                            </p>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <!----------------------ITEM5------------------------>
+
+
+
+
+
+
+
+
+                                                      <!----------------------ITEM6------------------------>
+                                                      <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingSix">
+                                                          <button class="accordion-button collapsed" id="accordion-btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                            Interfaz de usuario
+                                                          </button>
+                                                        </h2>
+                                                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                                          <div class="accordion-body" id="cardBtnConcept">
+                                                            <p>
+                                                              Es una forma para que los usuarios interactúen con el sistema operativo y las aplicaciones, en la cual utiliza la interfaz de línea de comandos (CLI) o interfaz gráfica de usuario (GUI) para su funcionamiento.
+                                                            </p>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <!----------------------ITEM6------------------------>
+
+
+
+
+
+
+
+
+
+
+                                                      <!----------------------ITEM7------------------------>
+                                                      <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingSeven">
+                                                          <button class="accordion-button collapsed" id="accordion-btn2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                            Sistema de seguridad
+                                                          </button>
+                                                        </h2>
+                                                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                                          <div class="accordion-body" id="cardBtnConcept">
+                                                            <p>
+                                                              Controla el acceso, los permisos de los usuarios, los programas para garantizar la integridad y la seguridad del sistema.  Esto puede incluir autenticación, autorización, cifrado y auditoría.
+                                                            </p>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <!----------------------ITEM7------------------------>
+
+
+
+
+
+
+
+
+
+
+                                                      <!----------------------ITEM8------------------------>
+                                                      <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingEight">
+                                                          <button class="accordion-button collapsed" id="accordion-btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                                            Gestor de archivos
+                                                          </button>
+                                                        </h2>
+                                                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                                                          <div class="accordion-body" id="cardBtnConcept">
+                                                            <p>
+                                                              Proporciona operaciones de nivel superior para administrar archivos y directorios; como copiar, mover, renombrar y eliminar.
+                                                            </p>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <!----------------------ITEM8------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+                                                      <!----------------------ITEM9------------------------>
+                                                      <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingNine">
+                                                          <button class="accordion-button collapsed" id="accordion-btn2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                                            Redes y conectividad
+                                                          </button>
+                                                        </h2>
+                                                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                                                          <div class="accordion-body" id="cardBtnConcept">
+                                                            <p>
+                                                              Facilita la comunicación entre sistemas a través de redes, lo que permite compartir recursos y datos. Incluye protocolos de red, servicios de red y configuración de interfaces de red.
+                                                            </p>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <!----------------------ITEM9------------------------>
+
+
+
+
+
+
+
+
+
+                                                      <!----------------------ITEM10------------------------>
+                                                      <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingTen">
+                                                          <button class="accordion-button collapsed" id="accordion-btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                                            Sistema de entrada/salida
+                                                          </button>
+                                                        </h2>
+                                                        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                                                          <div class="accordion-body" id="cardBtnConcept">
+                                                            <p>
+                                                              Es aquel que se encarga de administrar la comunicación entre el sistema operativo con los dispositivos de entrada/salida; como teclados, ratones, monitores y otros periféricos.
+                                                            </p>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <!----------------------ITEM10------------------------>
+
+                                                    </div>
+                                                    <!----------------------ACORDEON------------------------>
+
+
+                                                  </p>
+                                                  
+                                                </div>
+
+                                              </div>  
+
+                                            </div>
+
+                                            
+                                          </div>
+
+
+                                        </div>
+
+                                  </div>                          
+
+
+
+                        <!--------------------------------ASPECTOSBASICOSSO-------------------->
+                    </section>
+                    <!--------------------SECTION1-------------------->                  
+
+
+
+
+
+
+                    <!--------------------SECTION2-------------------->       
+                    <section>
+
+
+
+
+
+
+                              <div class="container">
+
+                                <div class="card" id="cardBigTitle">
+                                  Propósitos del sistema operativo
+                                </div>    
+
+                              </div>
+
+
+
+                              <div class="container">
+
+                                <div class="card" id="cardConcept">
+
+                                  <div class="card-body" id="cardTextConcept">
+
+                                    <p>
+
+                                      La funcionalidad del sistema operativo se establece por dos tipos de programas:
+
+                                            <!----------------------ACORDEON------------------------>
+                                            <div class="accordion" id="accordionExample">
+
+
+
+
+
+                                              <!----------------------ITEM1------------------------>
+                                              <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne1">
+                                                  <button class="accordion-button" id="accordion-btn2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                                  Programas de sistema
+                                                  </button>
+                                                </h2>
+                                                <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                  <div class="accordion-body" id="cardBtnConcept">
+                                                    <p>
+                                                      Son aquellos que controlan el funcionamiento de la computadora.
+                                                    </p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <!----------------------ITEM1------------------------>
+
+
+
+
+
+
+
+
+
+                                              <!----------------------ITEM2------------------------>
+                                              <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne2">
+                                                  <button class="accordion-button" id="accordion-btn2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                                                  Programas de aplicación
+                                                  </button>
+                                                </h2>
+                                                <div id="collapseOne2" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                  <div class="accordion-body" id="cardBtnConcept">
+                                                    <p>
+                                                       Son aquellos que se encargan de resolver los problemas de los usuarios, presentados específicamente para cada tipo de problema o falla.
+                                                    </p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <!----------------------ITEM2------------------------>
+
+                                            </div>
+                                            <!----------------------ACORDEON------------------------>
+
+                                      
+                                    </p>
+
+                                  </div>    
+                                  
+                                </div>
+   
+                              
+                              </div>
+
+                      
+                    </section>
+                    <!--------------------SECTION2-------------------->       
+
+
+
+
+                    <!--------------------SECTION3-------------------->       
+                    <section>
+
+                              <div class="container">
+
+                                <div class="card" id="cardBigTitle">
+                                  Funciones básicas de un sistema operativos
+                                 
+                                </div>    
+
+                              </div>
+
+
+                              <div class="container">
+
+                                <div class="card" id="cardConcept">
+
+                                  <div class="card-body" id="cardTextConcept">
+
+                                    <p>
+                                      Las funciones básicas del sistema operativo se pueden agrupar en las tres categorías siguientes:
+                                    </p>
+
+
+                                                      <p>
+                                                        <b>a) Gestión de los recursos de computadoras</b>: El sistema operativo se encarga de asignar recursos a los programas en ejecución, manteniendo una estructura que le permita identificar y conocer qué recursos se están utilizando; aunado a ello, aquellos que se encuentran libres para poderlos asignar a cada programa, en donde esto dependerá de la prioridad del programas  y la opción de resolver  problemas con peticiones simultáneas.
+                                                      </p>
+                                                      <p>
+                                                        Existen dos tipos de recurso, los cuales son:
+                                                      </p>
+                                                      <p>
+                                                        <ul>
+
+                                                        <li>Elementos físicos (procesador, memoria principal y los periféricos).</li>
+                                                        <li>Elementos lógicos (archivos y puertos de comunicación).</li>
+                                                        
+                                                      </ul>
+                                                    </p>
+
+                                                      <p>
+                                                        <b>b) Ejecución de servicios para los programas</b>
+                                                      </p>
+
+                                                      <p>
+                                                        <b>c) Ejecución de los mandatos o instrucciones de los usuarios</b>
+                                                      </p>
+
+                                    
+
+                                  </div>    
+                                  
+                                </div>
+   
+                              
+                              </div>
+
+                      
+                    </section>
+                    <!--------------------SECTION3-------------------->       
+
+
+
+                </div>
+                <!--------------------------------CONTENIDO PRINCIPAL-------------------->
+            </div>
+
+        </div>
+                <!--------------------------------------FOOTER--------------------------------------->
+
+                <footer>
+    
+                  <div class="footerBG">
+              
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                      <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"/>
+                    </a>
+                    <br />
+                    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">
+                      Unidad 1 - Estructura de un sistema operativo
+                    </span>
+                    por</a>, Israel Salas Ramírez, Benjamín Cruz Torres y Tanibet Pérez de los Santos Mondragón. <br>Se distribuye bajo una 
+                    <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"> -->
+                      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+                      Licencia Creative Commons Atribución-NoComercial 4.0 Internacional
+                    </a>.
+                    <br> Basada en una obra en 
+                   <a rel="license" href="https://www.comunidad.escom.ipn.mx/israelsr/RDD_SO_U1/index.html">
+                      https://www.comunidad.escom.ipn.mx/israelsr/RDD_SO_U1/index.html
+                    </a>.
+              
+                    <br>Fecha de elaboración: Julio de 2023
+              
+                  </div>
+              
+                </footer>
+
+
+  <!--------------------------------------FOOTER--------------------------------------->
+        <!------------------------------------------WRAPPER----------------------------------------->
+
+
+
+
+
+        <!--------------------------------SCRIPTS------------------------------------------------->
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+        </script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+
+
+        <!--------------------------------SCRIPTS------------------------------------------------->
+
+
+
+
+    </body>
+    <!------------------------------------------BODY------------------------------------------------>
+</html>

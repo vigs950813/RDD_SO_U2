@@ -1,0 +1,42 @@
+#prevBtnBG, #nextBtnBG{
+
+	opacity: .3;
+
+}
+
+
+#prevBtnBG:hover, #nextBtnBG:hover{
+
+	opacity: 1;
+
+}
+
+
+
+#prevBtnBG:active{
+
+	outline: none;
+	.carousel-indicator-active-opacity:  1;
+
+} 
+
+
+#nextBtnBG:active{
+
+	outline: none;
+
+}
+
+
+
+
+.carousel-control-prev-icon-bg,
+.carousel-control-next-icon-bg{
+
+	
+	font-size: 150px;
+	color:  white;
+
+}
+
+
