@@ -9,6 +9,7 @@ nav{
 
 .navbar-brand{
 	opacity: 0;
+	cursor: none;
 }
 
 form>.container{
