@@ -1,9 +1,9 @@
-#sidebar-wrapper{
+#sidebar-wrapper>.sidebar-heading.border-bottom.bg-light{
     font-size: 14px;
     font-weight: bold;
 }
 
 
 #sidebar-wrapper>.btn-group{
-    margin: 5px;
+    margin-bottom: 5px;
 }
