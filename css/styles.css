@@ -10836,36 +10836,12 @@ textarea.form-control-lg {
 
 #sidebar-wrapper .sidebar-heading {
   padding: 0.875rem 1.25rem;
-  font-size: 14px;
-  color: white;
-  background-color: #084298;
+  font-size: 1.2rem;
 }
 
 #sidebar-wrapper .list-group {
   width: 15rem;
 }
-
-#sidebar-wrapper .btn-group {
-  background-color: #0b5ed7;
-  margin-top: 10px;
-  color: white;
-}
-
-#sidebar-wrapper .btn {
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#sidebar-wrapper .btn-arrow{
-  background-color: #0b5ed7;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  width: 30px;
-}
-
-
 
 #page-content-wrapper {
   min-width: 100vw;
