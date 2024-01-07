@@ -1,4 +1,4 @@
-.border-end.bg-white{
-    font-size: 14px;
+.sidebar-heading, .list-group-item, .btn-group{
+    font-size: 20px;
     background-color: #f8f9fa;
 }
