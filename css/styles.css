@@ -10843,6 +10843,11 @@ textarea.form-control-lg {
   width: 15rem;
 }
 
+#sidebar-wrapper .btn-group {
+  background-color: #0b5ed7;
+  margin-top: 10px;
+}
+
 #page-content-wrapper {
   min-width: 100vw;
 }
