@@ -2,4 +2,27 @@
 .btn {
     font-size: 14px;
     font-weight: bold;
+    color: white;
+}
+
+
+.sidebar-heading{
+    background-color: #598099;
+}
+
+.btn-group{
+    margin-top: 5px;
+}
+
+.btn{
+    background-color: #6FA6CA;
+	transition: background-color 0.15s linear 0s;
+}
+
+.btn:hover{
+    background-color: #7B8992;
+}
+
+.btn:active{
+    background-color: #7B8992;
 }
