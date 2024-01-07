@@ -1,11 +1,12 @@
 /*-----------------------FONDOSIDEBAR-------------------------------*/
 #sidebar-wrapper{
+	background-color: black;
 	--bs-bg-opacity: 0.15;
 }
 /*-----------------------FONDOSIDEBAR-------------------------------*/
 
 /*-----------------------ESTILOS BOTONES SIDEBAR-------------------------------*/
-.list-group-item{
+.list-group{
     font-size: 15px;
 	margin-top: 1px;
 	margin-bottom: 15px;
