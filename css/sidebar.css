@@ -1,7 +1,9 @@
-
+.sidebar-heading{
+	font-size: 14px;
+}
 
 .btn-group> button{
-	margin-top: 1px;
+	margin-top: 5px;
 	background-color: #6FA6CA;
 	font-size: 14px;
 	font-weight: bold;
