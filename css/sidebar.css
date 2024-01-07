@@ -2,6 +2,6 @@
     background-color: #f8f9fa;
 }
 
-.sidebar-heading, .list-group-item, .btn-group{
+#sidebar-wrapper>.sidebar-heading.border-bottom.bg-light, .list-group-item, .btn{
     font-size: 12px;
 }
