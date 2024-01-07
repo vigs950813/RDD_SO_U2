@@ -1,4 +1,7 @@
-.sidebar-heading, .list-group-item, .btn-group{
-    font-size: 16px;
+#sidebar-wrapper{
     background-color: #f8f9fa;
+}
+
+.sidebar-heading, .list-group-item, .btn-group{
+    font-size: 12px;
 }
