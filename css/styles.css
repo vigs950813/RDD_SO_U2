@@ -10857,6 +10857,14 @@ textarea.form-control-lg {
   font-weight: bold;
 }
 
+#sidebar-wrapper .btn-arrow{
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 15px;
+}
+
+
 
 #page-content-wrapper {
   min-width: 100vw;
