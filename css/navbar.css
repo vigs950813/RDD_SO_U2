@@ -8,11 +8,17 @@ nav{
 }
 
 .navbar-a{
-	font-size: 14px;
+	font-size: 20px;
 	text-align: center;
 	text-decoration: none;
 	color: white;
 }
+
+
+.navbar-a:hover{
+	color: white;
+}
+
 
 form>.container-fluid{
 	border-radius: 10px;
