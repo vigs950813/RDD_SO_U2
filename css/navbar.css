@@ -1,10 +1,12 @@
+nav{
+	font-size: 14px;
+	font-weight: bold;
+}
 
+.navbar{
+	background-color: gray;
+}
 
-/* Estilos para todas las clases juntas */
-.navbar.navbar-expand-lg.navbar-light.bg-gradient.border-bottom {
-	/* Tus estilos aquí */
-	/* Por ejemplo: */
-	background-color: #f8f9fa;
-	border-bottom: 1px solid #dee2e6;
-	/* Otros estilos */
-  }
+nav>a{
+	text-decoration: none;
+}
