@@ -1,13 +1,9 @@
-.sidebar-heading,
-.btn {
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-}
-
 
 .sidebar-heading{
     background-color: #598099;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
 }
 
 .btn-group{
@@ -15,14 +11,19 @@
 }
 
 .btn{
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
     background-color: #6FA6CA;
 	transition: background-color 0.15s linear 0s;
 }
 
 .btn:hover{
     background-color: #7B8992;
+    color: white;
 }
 
 .btn:active{
     background-color: #7B8992;
+    color: white;
 }
