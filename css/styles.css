@@ -10848,9 +10848,15 @@ textarea.form-control-lg {
 #sidebar-wrapper .btn-group {
   background-color: #0b5ed7;
   margin-top: 10px;
-  font-size: 14px;
   color: white;
 }
+
+#sidebar-wrapper .btn {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 
 #page-content-wrapper {
   min-width: 100vw;
