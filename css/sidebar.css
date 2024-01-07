@@ -5,5 +5,8 @@
 #sidebar-wrapper>.sidebar-heading.border-bottom.bg-light, .list-group-item, .btn{
     font-size: 12px;
     font-weight: bold;
-    text-align: right;
+}
+
+#sidebar-wrapper>.btn{
+    text-align: left;
 }
