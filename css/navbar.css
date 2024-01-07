@@ -1,8 +1,6 @@
 
 .navbar{
-	font-size: 15px;
 	background-color: #8A9FB9;
-	color: white;
 }
 
 .navbar-toggler{
@@ -11,32 +9,9 @@
 	font-weight: bold;
 }
 
-form>.container{
-	border-radius: 10px;
-	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.20);
-	margin-right: 5px;
-	background-color: #4895D7;
-	transition: background-color 0.15s linear 0s;
-}
-
-.text-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.text-center>.navbar-a{
-	text-decoration: none;
-	font-size: 14px;
+.nav-link{
+	font-size: 15px;
 	font-weight: bold;
 	color: white;
 }
 
-
-
-form>.container:hover{
-	
-	background-color: #648AAB;
-	
-}
