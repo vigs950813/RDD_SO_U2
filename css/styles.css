@@ -10837,6 +10837,8 @@ textarea.form-control-lg {
 #sidebar-wrapper .sidebar-heading {
   padding: 0.875rem 1.25rem;
   font-size: 14px;
+  color: white;
+  background-color: #084298;
 }
 
 #sidebar-wrapper .list-group {
@@ -10846,6 +10848,8 @@ textarea.form-control-lg {
 #sidebar-wrapper .btn-group {
   background-color: #0b5ed7;
   margin-top: 10px;
+  font-size: 14px;
+  color: white;
 }
 
 #page-content-wrapper {
