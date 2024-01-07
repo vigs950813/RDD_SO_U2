@@ -20,12 +20,18 @@ form>.container{
 	transition: background-color 0.15s linear 0s;
 }
 
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .text-center>.navbar-a{
 	text-decoration: none;
 	font-size: 14px;
 	font-weight: bold;
 	color: white;
-	vertical-align: middle;
 }
 
 
