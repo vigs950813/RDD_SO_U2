@@ -1,11 +1,6 @@
-#sidebar-wrapper>.sidebar-heading.border-bottom.bg-light{
+#sidebar-wrapper>.sidebar-heading.border-bottom.bg-light, #sidebar-wrapper>.btn.btn-secondary.btn-lg{
     font-size: 14px;
     font-weight: bold;
 }
 
-
-#sidebar-wrapper>.btn.btn-secondary.btn-lg{
-    font-size: 14px;
-    font-weight: bold;
-}
 
