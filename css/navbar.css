@@ -1,4 +1,10 @@
-.navbar{
-	background-color: #8A9FB9;
-	margin-top: 1px;
-}
+
+
+/* Estilos para todas las clases juntas */
+.navbar.navbar-expand-lg.navbar-light.bg-gradient.border-bottom {
+	/* Tus estilos aquí */
+	/* Por ejemplo: */
+	background-color: #f8f9fa;
+	border-bottom: 1px solid #dee2e6;
+	/* Otros estilos */
+  }
