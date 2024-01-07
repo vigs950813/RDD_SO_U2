@@ -10858,10 +10858,11 @@ textarea.form-control-lg {
 }
 
 #sidebar-wrapper .btn-arrow{
+  background-color: #0b5ed7;
   color: white;
   font-size: 14px;
   font-weight: bold;
-  width: 15px;
+  width: 30px;
 }
 
 
