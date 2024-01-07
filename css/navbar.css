@@ -7,7 +7,11 @@ nav{
 	background-color: #8A9FB9;
 }
 
-form>.container-fluid{
+.navbar-brand{
+	opacity: 0;
+}
+
+form>.container{
 	border-radius: 10px;
 	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.20);
 	margin-right: 5px;
@@ -15,8 +19,16 @@ form>.container-fluid{
 	transition: background-color 0.15s linear 0s;
 }
 
+form>.navbar-link{
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+}
 
-form>.container-fluid:hover{
+
+
+form>.container:hover{
 	
 	background-color: #648AAB;
 	
