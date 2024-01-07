@@ -6,7 +6,3 @@ nav{
 .navbar{
 	background-color: gray;
 }
-
-nav>a{
-	text-decoration: none;
-}
