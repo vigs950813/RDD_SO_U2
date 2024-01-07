@@ -1,4 +1,5 @@
-#sidebar-wrapper>.sidebar-heading.border-bottom.bg-light, #sidebar-wrapper>.btn{
+.sidebar-heading.border-bottom.bg-light, .btn-group>.btn.btn-secondary.btn-lg{
     font-size: 14px;
     font-weight: bold;
 }
+
