@@ -1,78 +1,23 @@
-<!------------------------------------NAVBAR------------------------------------>
-<nav class="navbar navbar-expand-lg navbar-light bg-gradient border-bottom">
-
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
     <div class="container-fluid">
-
-        <!------------------------------------TOGGLERSIDEBAR------------------------------------>
-        <button class="btn btn-dark" type="submit" id="sidebarToggle" style="font-size: auto; vertical-align: center;">&#9868;
-        </button>
-        <!------------------------------------TOGGLERSIDEBAR------------------------------------>
-
-        <button class="navbar-toggler" id="toggler1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-          <span class="navbar-toggler-icon"></span>
-
-        </button>
-
+        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-
-                <li class="nav-item active">
-
-                  
-                    <a class="nav-link active" href="#">
-                      
-                        Inicio
-                      
-                    </a>  
-                  
-                  
-                  
-                </li>
-                <!--------------------------DROPDOWN MENU---------------------------->
+                <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
                 <li class="nav-item dropdown">
-                    
-                    <div class="container nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="containerDropdown">
-
-                        
-                          Contenido
-                        
-                      
-                    </div>
-                    
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-
-                        <!--------------------------UNIDAD 1------------------------->
-                        <a class="dropdown-item" href="#">
-                          &#8544;. Administración de procesos
-                        </a>
-                        <!--------------------------UNIDAD 1------------------------->
+                        <a class="dropdown-item" href="#!">Action</a>
+                        <a class="dropdown-item" href="#!">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#!">Something else here</a>
                     </div>
                 </li>
-                <!--------------------------DROPDOWN MENU---------------------------->                                
-                <li class="nav-item active">
-                  
-                    <a class="nav-link" href="#">Bibliografía y recursos</a>  
-                  
-                </li>
-
-                <li class="nav-item active">
-                  
-                    <a class="nav-link" href="#">Glosario</a>  
-                  
-                </li>
-
-
-                <li class="nav-item active">
-                  
-                    <a class="nav-link" href="#" >Manual de usuario</a>
-                  
-                </li>
-                
-
             </ul>
         </div>
     </div>
 </nav>
-<!------------------------------------NAVBAR------------------------------------>
+<!-- Navbar -->
