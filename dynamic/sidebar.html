@@ -8,6 +8,48 @@
         <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
         <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
         <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            Button with data-bs-target
+        </button>
+
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                Some placeholder content for the collapse component. This panel is hidden by default but revealed when
+                the user activates the relevant trigger.
+            </div>
+        </div>
+
+        <!-- Large button groups (default and split) -->
+        <div class="btn-group">
+            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Large button
+            </button>
+            <ul class="dropdown-menu">
+                ...
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-secondary btn-lg" type="button">
+                Large split button
+            </button>
+            <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                ...
+            </ul>
+        </div>
+
+
+
     </div>
 </div>
 <!-- Sidebar -->
