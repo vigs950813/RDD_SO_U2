@@ -4,9 +4,6 @@
 
 #sidebar-wrapper>.sidebar-heading.border-bottom.bg-light, .list-group-item, .btn{
     font-size: 12px;
-}
-
-#sidebar-wrapper>.btn{
-    text-align: justify;
-    text-shadow: black;
+    font-weight: bold;
+    text-align: right;
 }
