@@ -7,5 +7,6 @@
 }
 
 #sidebar-wrapper>.btn{
-    text-align: left;
+    text-align: justify;
+    text-shadow: black;
 }
