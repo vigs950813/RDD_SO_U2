@@ -1,4 +1,6 @@
-
+.border-end.bg-white{
+    background-color: blueviolet;
+}
 
 #sidebar-wrapper>.sidebar-heading.border-bottom.bg-light, .list-group-item, .btn{
     font-size: 15px;
@@ -7,5 +9,5 @@
 
 #sidebar-wrapper>.list-group-item{
     margin: 5px;
-    background-color: blueviolet;
+    
 }
