@@ -3,11 +3,11 @@
 }
 
 #sidebar-wrapper>.sidebar-heading.border-bottom.bg-light, .list-group-item, .btn{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
 }
 
-#sidebar-wrapper>.btn{
+#sidebar-wrapper>.btn.btn-secondary.btn-lg{
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.20);
     background-color: #4895D7;
