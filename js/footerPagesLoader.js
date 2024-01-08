@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const navbarIndexContainer = document.getElementById('navbarIndex-container');
+    const footerContainer = document.getElementById('footer-container');
 
-    fetch('../dynamic/navbarIndex.html') // Ruta al archivo header.html
+    fetch('../dynamic/footerPages.html') // Ruta al archivo footer.html
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.text();
         })
         .then(data => {
-            navbarIndexContainer.innerHTML = data;
+            footerContainer.innerHTML = data;
         })
         .catch(error => {
-            console.error('Hubo un problema al cargar el navbar del index:', error);
+            console.error('Hubo un problema al cargar el footer:', error);
         });
 });

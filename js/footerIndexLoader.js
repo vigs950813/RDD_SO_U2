@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const headerContainer = document.getElementById('header-container');
+    const footerContainer = document.getElementById('footer-container');
 
-    fetch('dynamic/header.html') // Ruta al archivo header.html
+    fetch('dynamic/footerIndex.html') // Ruta al archivo footer.html
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.text();
         })
         .then(data => {
-            headerContainer.innerHTML = data;
+            footerContainer.innerHTML = data;
         })
         .catch(error => {
-            console.error('Hubo un problema al cargar el header:', error);
+            console.error('Hubo un problema al cargar el footer:', error);
         });
 });
