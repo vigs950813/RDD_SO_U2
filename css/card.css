@@ -8,7 +8,7 @@
 .card-header{
     background-color: #307BCF;
     text-align: center;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     color: white;
 }
@@ -19,7 +19,7 @@
 
 
 .card-text{
-    font-size: 18px;
+    font-size: 20px;
     text-align: justify;
 }
 
