@@ -1,3 +1,4 @@
-.carousel-control-next{
+.carousel-control-next, .carousel-control-next{
     background-color: black;
+    font-size: 50px;
 }
