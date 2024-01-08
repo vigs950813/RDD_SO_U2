@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const navbarIndexContainer = document.getElementById('navbarIndex-container');
 
-    fetch('../dynamic/navbarIndexPages.html') // Ruta al archivo header.html
+    fetch('../dynamic/navbarPages.html') // Ruta al archivo header.html
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
