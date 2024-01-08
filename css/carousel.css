@@ -3,7 +3,8 @@
 }
 
 
-.carousel-control-prev-icon::before {
+.carousel-control-prev-icon::before, .carousel-control-next::before {
     content: "\10094"; /* Código Unicode para el carácter '◂' */
+    font-size: 25px;
     /* Agrega otros estilos según sea necesario */
 }
