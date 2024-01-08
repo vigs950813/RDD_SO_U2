@@ -8,10 +8,19 @@
 .card-header{
     background-color: #307BCF;
     text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.card-body{
+    background-color: #DFDFDF;
 }
 
 
 .card-text{
     font-size: 16px;
-    background-color: #DFDFDF;
+    text-align: justify;
+    line-height: 3px;
 }
+
