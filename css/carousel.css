@@ -1,6 +1,9 @@
 .carousel-control-next, .carousel-control-prev{
-    background-color: black;
-    font-size: 50px;
-    outline: none;
-    opacity: .3;
+    background-color: black;    
+}
+
+
+.carousel-control-prev-icon::before {
+    content: "\10094"; /* Código Unicode para el carácter '◂' */
+    /* Agrega otros estilos según sea necesario */
 }
