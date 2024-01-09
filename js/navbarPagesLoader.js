@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const navbarIndexContainer = document.getElementById('navbarIndex-container');
+    const navbarPagesContainer = document.getElementById('navbarPages-container');
 
     fetch('../dynamic/navbarPages.html') // Ruta al archivo header.html
         .then(response => {
