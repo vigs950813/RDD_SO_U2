@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.text();
         })
         .then(data => {
-            navbarContentContainer.innerHTML = data;
+            navbarContainer.innerHTML = data;
         })
         .catch(error => {
             console.error('Hubo un problema al cargar el navbar del index:', error);
