@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const navbarIndexContainer = document.getElementById('offcanvas-container');
+    const offcanvasContainer = document.getElementById('offcanvas-container');
 
     fetch('../dynamic/offcanvas.html') // Ruta al archivo header.html
         .then(response => {
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.text();
         })
         .then(data => {
-            navbarIndexContainer.innerHTML = data;
+            offcanvasContainer.innerHTML = data;
         })
         .catch(error => {
             console.error('Hubo un problema al cargar el offcanvas:', error);

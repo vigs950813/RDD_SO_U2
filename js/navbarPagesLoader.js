@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const navbarPagesContainer = document.getElementById('navbar-container');
+    const navbarContainer = document.getElementById('navbar-container');
 
     fetch('../dynamic/navbarPages.html') // Ruta al archivo header.html
         .then(response => {
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.text();
         })
         .then(data => {
-            navbarIndexContainer.innerHTML = data;
+            navbarContainer.innerHTML = data;
         })
         .catch(error => {
             console.error('Hubo un problema al cargar el navbar de pages:', error);
