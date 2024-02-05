@@ -1,28 +1,46 @@
-
 .navbar{
 	background-color: #8A9FB9;
 	margin-top: 1px;
 }
 
 .navbar-toggler{
-	background-color: #4895D7;
+	background-color: #93C6B7;
 	color: black;
 	font-weight: bold;
 }
 
-.btn{
-	background-color: transparent;
+.navbar .dropdown-menu{
+	background-color: #DBE5E2;
 }
 
-.nav-a{
-	text-decoration: none;
-	font-size: 20px;
+.navbar .dropdown-item{
 	font-weight: bold;
+	font-size: 16px;
+}
+
+
+.navbar .btn{
+	background-color: #93C6B7;
+	color: black;
+	width: 100%;
+}
+
+.navbar .btn:hover{
+	background-color: #5C7C72;
 	color: white;
 }
 
 
-.nav-a:hover{
+
+.navbar .nav-a{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	color: black;
+}
+
+
+.navbar .nav-a:hover{
 	color: white;
 	text-decoration: none;
 }
