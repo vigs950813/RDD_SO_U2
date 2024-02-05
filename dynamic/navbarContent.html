@@ -1,112 +1,82 @@
 <!------------------------------------NAVBAR------------------------------------>
 <nav class="navbar navbar-expand-lg navbar-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      id="toggler1"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  
-    
-  
-
-    <div class="container-fluid">
-      <button
-        class="navbar-toggler"
-        id="toggler1"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
         
-        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-
-          
-      
-          <!-- Inicio -->
+        <li class="nav-item">
+          <div class="btn-group">
+            <button class="btn btn-secondary btn-lg" type="button">
+              <a class="nav-a" href="../index.html">Inicio</a>
+            </button>
+            <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="intencion-educativa">Intención educativa</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="unidad-de-competencia.html">Unidad de competencia</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="proposito-de-la-unidad-de-aprendizaje.html">Propósito de la unidad de aprendizaje</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="metodologia.html">Metodología</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="requerimientos.html">Requerimientos</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="contactos.html">Contactos</a></li>
+            </ul>
+          </div>
+        </li>
+        <!-- Inicio -->
+        <!-- Contenido -->
+        <li class="nav-item">
+          <!-- <div class="btn-group"> -->
+            <button type="button" class="btn btn-secondary btn-lg"><a class="nav-a" href="introduccion.html">Contenido</a></button>
+          <!-- </div> -->
+          <!-- Offcanvas -->
           <li class="nav-item">
-            <div class="btn-group">
-                
-                
-              <button class="btn " type="button">
-                <a class="nav-a" href="../index.html">Inicio</a>
-              </button>
-              <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="visually-hidden">Toggle Dropdown</span>
-              </button>
-              
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="unidad-de-competencia.html">Unidad de competencia</a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="metodologia.html">Metodología</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="requerimientos.html">Requerimientos</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="contactos.html">Contactos</a></li>
-              </ul>
-            </div>
+            <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">&#10148;</button>
           </li>
-          <!-- Inicio -->
-          
-          <!-- Contenido -->
-          
-
-            <li class="nav-item">
-            
-              <div class="btn-group">
-                <button type="button" class="btn "><a class="nav-a" href="introduccion.html">Contenido</a></button>
-                <button type="button" class="btn " data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">&#10148;</button>
-              </div>
-            
-            </li>
-
-          
-          <!-- Contenido -->
-          
-
-            <!-- Bibliografía y recursos -->
-          <li class="nav-item">
-            <!-- <div class="btn-group"> -->
-              <button type="button" class="btn "><a class="nav-a" href="bibliografia.html">Bibliografía y recursos</a></button>
-            <!-- </div> -->
-          </li>
-          <!-- Bibliografía y recursos -->
-
-          
-          
-          
-
-            <!-- Glosario -->
-          <li class="nav-item">
-            <!-- <div class="btn-group"> -->
-              <button type="button" class="btn "><a class="nav-a" href="glosario.html">Glosario</a></button>
-            <!-- </div> -->
-          </li>
-          <!-- Glosario -->
-
-          
-          
-          
-
-            <!-- Manual de usuario -->
-          <li class="nav-item">
-            <!-- <div class="btn-group"> -->
-              <button type="button" class="btn "><a class="nav-a" href="manual-de-usuario.html">Manual de usuario</a></button>
-            <!-- </div> -->
-          </li>
-          <!-- Manual de usuario -->
-
-          
-          
-        </ul>
-      </div>
-
+        <!-- Offcanvas -->
+        </li>
+        <!-- Bibliografía y recursos -->
+        <li class="nav-item">
+          <!-- <div class="btn-group"> -->
+            <button type="button" class="btn btn-secondary btn-lg"><a class="nav-a" href="bibliografia-y-recursos.html" id="btnWidth">Lista de referencias bibliográficas</a></button>
+          <!-- </div> -->
+        </li>
+        <!-- Bibliografía y recursos -->
+        <!-- Glosario -->
+        <li class="nav-item">
+          <!-- <div class="btn-group"> -->
+            <button type="button" class="btn btn-secondary btn-lg"><a class="nav-a" href="glosario.html" id="btnWidth">Glosario</a></button>
+          <!-- </div> -->
+        </li>
+        <!-- Glosario -->
+        <!-- Manual de usuario -->
+        <li class="nav-item">
+          <!-- <div class="btn-group"> -->
+            <button type="button" class="btn btn-secondary btn-lg"><a class="nav-a" href="manual-de-usuario.html" id="btnWidth">Manual de usuario</a></button>
+          <!-- </div> -->
+        </li>
+        <!-- Manual de usuario -->
+      </ul>
     </div>
-    
-  </nav>
-  <!------------------------------------NAVBAR------------------------------------>
-  
+  </div>
+</nav>
+<!------------------------------------NAVBAR------------------------------------>
