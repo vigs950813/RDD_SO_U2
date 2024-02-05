@@ -20,14 +20,14 @@
 
 
 .navbar .btn{
-	background-color: #8A9FB9;
+	background-color: #D3DBE5;
 	color: black;
 	width: 100%;
 }
 
 .navbar .btn:hover{
-	background-color: #E2E7ED;
-	color: black;
+	background-color: #68778B;
+	color: white;
 }
 
 
@@ -41,6 +41,6 @@
 
 
 .navbar .nav-a:hover{
-	color: black;
+	color: white;
 	text-decoration: none;
 }
