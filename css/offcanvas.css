@@ -14,23 +14,23 @@
 
 .offcanvas .btn{
 	background-color: #68778B;
-	color: black;
+	color: white;
 	font-weight: bold;
 }
 
 .offcanvas .btn:hover{
-	background-color: #5C7C72;
-	color: white;
+	background-color: #D3DBE5;
+	color: black;
 }
 
 .offcanvas .nav-a{
     font-size: 18px;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .offcanvas .nav-a:hover{
-    color: white;
+    color: black;
 }
 
 
@@ -39,15 +39,15 @@
     text-decoration: none;
     font-weight: bold;
     color: black;
-    background-color: #C2CECA;
+    background-color: #D9DDE2;
 }
 
 .offcanvas .dropdown-item:hover{
-    background-color: #ADBEB9;
+    background-color: #A1AAB7;
     color: black;
 }
 
 
 .offcanvas .dropdown-menu{
-	background-color: #ADBEB9;
+	background-color: #ECEEF1;
 }
