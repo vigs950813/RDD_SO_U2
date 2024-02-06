@@ -18,11 +18,15 @@
 	font-size: 16px;
 }
 
+.navbar .dropdown-item:hover{
+	font-weight: bold;
+	font-size: 16px;
+}
+
 
 .navbar .btn{
-	background-color: #D3DBE5;
-	color: black;
-	width: 100%;
+	background-color: #A1AAB7;
+    color: white;
 }
 
 .navbar .btn:hover{
