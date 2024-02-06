@@ -19,6 +19,11 @@
 	background-color: #A1AAB7;
 }
 
+.navbar .dropdown-item:hover{
+	color: black;
+	background-color: #D3DBE5;
+}
+
 
 .navbar .btn{
 	background-color: #D3DBE5;
