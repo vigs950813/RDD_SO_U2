@@ -10,12 +10,13 @@
 }
 
 .navbar .dropdown-menu{
-	background-color: #DBE5E2;
+	background-color: #ECEEF1;
 }
 
 .navbar .dropdown-item{
 	font-weight: bold;
 	font-size: 16px;
+	background-color: #A1AAB7;
 }
 
 
