@@ -16,7 +16,6 @@
 .navbar .dropdown-item{
 	font-weight: bold;
 	font-size: 16px;
-	background-color: #A1AAB7;
 }
 
 .navbar .dropdown-item:hover{
@@ -26,16 +25,9 @@
 
 
 .navbar .btn{
-	background-color: #D3DBE5;
 	color: black;
 	width: 100%;
 }
-
-.navbar .btn:hover{
-	background-color: #68778B;
-	color: white;
-}
-
 
 
 .navbar .nav-a{
