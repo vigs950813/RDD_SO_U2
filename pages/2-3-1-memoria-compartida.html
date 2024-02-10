@@ -53,23 +53,35 @@
     <section>
       <div class="card">
         <h5 class="card-header">2.3.1 Memoria compartida</h5>
-        <div class="card-body">
-          <p class="card-text">
-            En construcción
-          </p>
+        <div class="card-body m-5">
 
-          <ul class="pagination justify-content-end">
-            <li class="page-item">
-              <a class="page-link" href="2-2-modelo-multi-hilo.html">Anterior</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="2-3-comunicacion-entre-procesos.html">1</a></li>
-            <li class="page-item active"><a class="page-link" href="2-3-1-memoria-compartida.html">2</a></li>
-            <li class="page-item"><a class="page-link" href="2-3-2-paso-de-mensajes.html">3</a></li>
-            <li class="page-item"><a class="page-link" href="2-3-3-tuberias.html">4</a></li>
-            <li class="page-item">
-              <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Siguiente</a>
-            </li>
-          </ul>
+            <p class="card-text" style="text-align: justify;"><strong><span style="font-size:12pt;">2.3.1 Memoria compartida</span></strong></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">La memoria compartida es un medio que permite establecer una zona com&uacute;n de memoria entre varias aplicaciones.</span></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">La memoria convencional que puede direccionar un proceso a trav&eacute;s de su espacio de direcciones virtuales es local a ese proceso, cualquier intento de direccionar esa memoria desde otro proceso va a provocar una violaci&oacute;n de segmento.</span></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">El mecanismo de memoria compartida permite a dos o m&aacute;s procesos compartir un segmento de memoria, y por consiguiente, los datos que hay en &eacute;l. Es por ello el m&eacute;todo m&aacute;s r&aacute;pido de comunicaci&oacute;n entre procesos.</span></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Al ser el objetivo de este tipo de comunicaci&oacute;n la transferencia de datos entre varios procesos,</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">los programas que utilizan memoria compartida deben normalmente establecer alg&uacute;n tipo de protocolo para el bloqueo. Este protocolo puede ser la utilizaci&oacute;n de sem&aacute;foros, que es a su vez otro tipo de comunicaci&oacute;n (sincronizaci&oacute;n) entre procesos.</span></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">La memoria que maneja un proceso, y tambi&eacute;n la compartida, va a ser virtual, por lo que su direcci&oacute;n f&iacute;sica puede variar con el tiempo. Esto no va a plantear ning&uacute;n problema, ya que los procesos no generan direcciones f&iacute;sicas, sino virtuales, y es el n&uacute;cleo (con su gestor de memoria) el encargado de traducir unas a otras.</span></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Por lo que la memoria compartida administra los procesos a realizar es muy importante en la gesti&oacute;n de memoria principal y de archivos, la cual se centra en optimizar la ejecuci&oacute;n de trabajos sin intervenci&oacute;n del usuario. La gesti&oacute;n de memoria implica cargar y descargar programas eficientemente para maximizar la utilizaci&oacute;n de recursos. En cuanto a la gesti&oacute;n de archivos, asegura que los datos necesarios est&eacute;n disponibles para los programas en lotes. La planificaci&oacute;n cuidadosa de recursos garantiza que m&uacute;ltiples trabajos se ejecuten de manera eficiente, optimizando el rendimiento del sistema.</span></p>
+
+            <ul class="pagination justify-content-end">
+                <li class="page-item">
+                    <a class="page-link" href="2-2-modelo-multi-hilo.html">Anterior</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="2-3-comunicacion-entre-procesos.html">1</a></li>
+                <li class="page-item active"><a class="page-link" href="2-3-1-memoria-compartida.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="2-3-2-paso-de-mensajes.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="2-3-3-tuberias.html">4</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Siguiente</a>
+                </li>
+            </ul>
 
         </div>
       </div>

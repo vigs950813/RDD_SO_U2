@@ -53,23 +53,53 @@
     <section>
       <div class="card">
         <h5 class="card-header">2.3 Comunicación entre procesos</h5>
-        <div class="card-body">
-          <p class="card-text">
-            En construcción
-          </p>
+        <div class="card-body m-5">
 
-          <ul class="pagination justify-content-end">
-            <li class="page-item">
-              <a class="page-link" href="2-2-modelo-multi-hilo.html">Anterior</a>
-            </li>
-            <li class="page-item active"><a class="page-link" href="2-3-comunicacion-entre-procesos.html">1</a></li>
-            <li class="page-item"><a class="page-link" href="2-3-1-memoria-compartida.html">2</a></li>
-            <li class="page-item"><a class="page-link" href="2-3-2-paso-de-mensajes.html">3</a></li>
-            <li class="page-item"><a class="page-link" href="2-3-3-tuberias.html">4</a></li>
-            <li class="page-item">
-              <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Siguiente</a>
-            </li>
-          </ul>
+            <p class="card-text" style="text-align: justify;"><strong><span style="font-size:12pt;">2.3 Comunicaci&oacute;n entre procesos</span></strong></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Todos los procesos requieren comunicarse con otros procesos, dado que se necesita de una canalizaci&oacute;n del shell en el cual la salida del primer proceso se debe pasar al segundo proceso y as&iacute; sucesivamente. Por lo que existe una necesidad de comunicaci&oacute;n entre ellos, de tal forma que esto sucede estructuradamente sin utilizar interrupciones, es por ello que la comunicaci&oacute;n entre proceso requiere de un origen a un destino.</span></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Ahora bien, hay que considerar las siguientes situaciones:</span></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">1) Un proceso puede pasar informaci&oacute;n a otro</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">2) Uno o m&aacute;s procesos no se interpongan entre s&iacute; y</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">3) Debe de existir una secuencia apropiada cuando hay dependencias presentes, es decir si el proceso A produce datos y el proceso B los imprime, B tiene que esperar hasta que A haya producido algunos datos antes de empezar a imprimir o realizar alg&uacute;n proceso.</span></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Ahora bien, algo que se debe de considerar en la comunicaci&oacute;n de procesos es su estado por lo que la cola de procesos representa las diferentes etapas por las que pasa un proceso desde su creaci&oacute;n hasta su finalizaci&oacute;n. Los estados t&iacute;picos son:</span></p>
+            <p><br></p>
+            <ol>
+                <li style="list-style-type:lower-alpha;font-size:12pt;">
+                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Listo (Ready): El proceso est&aacute; listo para ejecutarse, pero est&aacute; esperando su turno en la cola.</span></p>
+                </li>
+                <li style="list-style-type:lower-alpha;font-size:12pt;">
+                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Ejecuci&oacute;n (Running): El proceso est&aacute; actualmente siendo ejecutado por la CPU.</span></p>
+                </li>
+                <li style="list-style-type:lower-alpha;font-size:12pt;">
+                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Bloqueado (Blocked): El proceso est&aacute; temporalmente detenido, es cuando est&aacute; esperando la finalizaci&oacute;n de una operaci&oacute;n de entrada/salida.</span></p>
+                </li>
+                <li style="list-style-type:lower-alpha;font-size:12pt;">
+                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">La funci&oacute;n de los estados de cola es coordinar la ejecuci&oacute;n de procesos, optimizar la utilizaci&oacute;n de la CPU y garantizar una transici&oacute;n eficiente entre las diversas etapas del ciclo de vida de un proceso.</span></p>
+                </li>
+            </ol>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Por lo que el entorno de multiprograma en procesos permite la ejecuci&oacute;n concurrente de varios programas. Mientras un programa est&aacute; en espera (por ejemplo, realizando operaciones de entrada/salida), otros pueden ejecutarse, mejorando la eficiencia del sistema. El entorno asegura que la CPU est&eacute; ocupada la mayor parte del tiempo, reduciendo los tiempos de inactividad y mejorando la capacidad de respuesta del sistema. La planificaci&oacute;n cuidadosa de procesos, combinada con la gesti&oacute;n eficiente de la memoria y los archivos, contribuye a un entorno m&aacute;s efectivo en sistemas operativos por lotes y en la comunicaci&oacute;n de procesos.</span></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Cabe resaltar que la IPC (Interproceso de Comunicaci&oacute;n) permite la comunicaci&oacute;n y el intercambio de datos entre procesos en un sistema operativo. Existen varios mecanismos de IPC, como colas de mensajes, sem&aacute;foros y memoria compartida. La comunicaci&oacute;n entre procesos es esencial cuando los programas necesitan colaborar o compartir informaci&oacute;n. Por ejemplo, un proceso podr&iacute;a producir datos que otro proceso necesita consumir. El IPC proporciona m&eacute;todos seguros y eficientes para que los procesos se comuniquen y compartan recursos.</span></p>
+            <p><br></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Las colas de mensajes son un mecanismo muy similar a las FIFO. Una cola se puede ver como una lista enlazada de mensajes dentro del espacio de direccionamiento del n&uacute;cleo. Una aplicaci&oacute;n, siempre que tenga los derechos necesarios, puede depositar un mensaje (de cualquier tipo) en ella, y otras aplicaciones podr&aacute;n leerlo. Es posible asignar atributos a los mensajes, de forma que se puedan mantener ordenados por prioridad en lugar de por orden de llegada.</span></p>
+
+            <ul class="pagination justify-content-end">
+                <li class="page-item">
+                    <a class="page-link" href="2-2-modelo-multi-hilo.html">Anterior</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="2-3-comunicacion-entre-procesos.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="2-3-1-memoria-compartida.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="2-3-2-paso-de-mensajes.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="2-3-3-tuberias.html">4</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Siguiente</a>
+                </li>
+            </ul>
 
         </div>
       </div>

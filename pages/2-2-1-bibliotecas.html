@@ -54,23 +54,44 @@
       <div class="card">
         <h5 class="card-header">2.2.1 Bibliotecas</h5>
         <div class="card-body">
-          <p class="card-text">
-            En construcción
-          </p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Una biblioteca de hilos proporciona al programador una API para crear y administrar hilos.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">● Hay dos formas principales de implementarla:</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">○ Primer enfoque: proporcionar una biblioteca ubicada en el espacio de usuario sin soporte de</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">kernel.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">■ C&oacute;digos y estructuras de datos para la biblioteca en espacio de usuario.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">■ Invocar una funci&oacute;n en la biblioteca da como resultado una llamada de funci&oacute;n local en</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">el espacio del usuario y no una llamada de sistema.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">○ Segundo enfoque: implementar una biblioteca a nivel de kernel soportada directamente por</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">el SO.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">■ C&oacute;digos y estructuras de datos para la biblioteca en espacio de kernel.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">■ Invocar una funci&oacute;n en la API para la biblioteca generalmente resulta en una llamada de</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">sistema al kernel.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Existen dos estrategias generales para crear m&uacute;ltiples hilos:</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">○ Hilos asincr&oacute;nicos: una vez que el padre crea un hilo hijo, el padre reanuda su ejecuci&oacute;n, de</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">modo que el padre y el hijo se ejecutan de manera simult&aacute;nea e independiente uno del otro.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">■ Debido a que los hilos son independientes, generalmente hay poco intercambio de</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">datos entre ellos.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">○ Hilos sincr&oacute;nicos: se produce cuando el hilo principal crea uno o m&aacute;s hilos hijos y luego debe</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">esperar a que todos sus hilos hijos finalicen antes de reanudarse.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">■ Los hilos hijos realizan el trabajo en simult&aacute;neo, pero el padre no puede continuar</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">hasta que este trabajo se haya completado.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">■ Una vez finalizado cada hilo hijo se une (joins) con su padre. Solo despu&eacute;s de que todos los hijos se hayan unido (joined), el padre puede reanudar la ejecuci&oacute;n.</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">■ Por lo general, los hilos sincr&oacute;nicos implican un intercambio de datos significativo entre</span></p>
+            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">ellos. Por ej.: el hilo padre puede combinar los resultados por sus hijos.</span></p>
 
-          
-          <ul class="pagination justify-content-end">
-            <li class="page-item">
-              <a class="page-link" href="2-1-modelo-de-procesos.html">Anterior</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="2-2-modelo-multi-hilo.html">1</a></li>
-            <li class="page-item active"><a class="page-link" href="2-2-1-bibliotecas.html">2</a></li>
-            <li class="page-item"><a class="page-link" href="2-2-2-implementacion.html">3</a></li>
-            <li class="page-item"><a class="page-link" href="2-2-3-hilos-modo-usuario-kernel.html">4</a></li>
-            <li class="page-item">
-              <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Siguiente</a>
-            </li>
-          </ul>
+
+            <ul class="pagination justify-content-end">
+                <li class="page-item">
+                    <a class="page-link" href="2-1-modelo-de-procesos.html">Anterior</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="2-2-modelo-multi-hilo.html">1</a></li>
+                <li class="page-item active"><a class="page-link" href="2-2-1-bibliotecas.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="2-2-2-implementacion.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="2-2-3-hilos-modo-usuario-kernel.html">4</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Siguiente</a>
+                </li>
+            </ul>
 
         </div>
       </div>

@@ -2,34 +2,34 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>2.1 Modelo de procesos</title>
-  <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <!-- Bootstrap CSS-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>2.1 Modelo de procesos</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-  <!-- Bootstrap CSS-->
-  <!-- Local CSS-->
-  <link href="../css/header.css" rel="stylesheet" />
-  <link href="../css/navbar.css" rel="stylesheet" />
-  <link href="../css/card.css" rel="stylesheet" />
-  <link href="../css/offcanvas.css" rel="stylesheet" />
-  <link href="../css/pagination.css" rel="stylesheet" />
-  <link href="../css/footer.css" rel="stylesheet" />
+    <!-- Bootstrap CSS-->
+    <!-- Local CSS-->
+    <link href="../css/header.css" rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <link href="../css/card.css" rel="stylesheet" />
+    <link href="../css/offcanvas.css" rel="stylesheet" />
+    <link href="../css/pagination.css" rel="stylesheet" />
+    <link href="../css/footer.css" rel="stylesheet" />
 
 
-  <!-- Local CSS-->
-  <!-- Local JS-->
-  <script src="../js/headerPagesLoader.js"></script>
-  <script src="../js/navbarContentLoader.js"></script>
-  <script src="../js/offcanvasLoader.js"></script>
-  <script src="../js/footerPagesLoader.js"></script>
-  <!-- Local JS-->
+    <!-- Local CSS-->
+    <!-- Local JS-->
+    <script src="../js/headerPagesLoader.js"></script>
+    <script src="../js/navbarContentLoader.js"></script>
+    <script src="../js/offcanvasLoader.js"></script>
+    <script src="../js/footerPagesLoader.js"></script>
+    <!-- Local JS-->
 </head>
 
 <body>
@@ -39,55 +39,60 @@
     </div>
 
 
-  <!-- Header -->
-  <div id="header-container"></div>
-  <!-- Header -->
+    <!-- Header -->
+    <div id="header-container"></div>
+    <!-- Header -->
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    <!-- Navbar -->
+    <!-- Page content -->
 
-  <!-- Navbar -->
-  <div id="navbar-container"></div>
-  <!-- Navbar -->
+    <main>
+        <section>
+            <div class="card">
+                <h5 class="card-header">2.4.2 Semáforos y mutex</h5>
+                <div class="card-body m-5">
 
-  <!-- Page content -->
+                    <p class="card-text" ><span style="font-size:12pt;">Como en la vida real, un sem&aacute;foro es una herramienta que permite sincronizar, es este caso procesos, los cuales deben acceder a recursos sin llegar a un conflicto, que se traducir&iacute;a en inconsistencias de datos, interbloqueos y problemas de concurrencia y sincronizaci&oacute;n.</span></p>
+                    <p class="card-text" ><br></p>
+                    <p class="card-text" ><span style="font-size:12pt;">Implementado, un sem&aacute;foro es una estructura de dato.</span></p>
+                    <p class="card-text" ><br></p>
+                    <p class="card-text" ><span style="font-size:12pt;">De acuerdo con Allen B. Downey, un sem&aacute;foro es como un n&uacute;mero entero, con tres diferencias:&nbsp;</span></p>
+                    <p class="card-text" ><span style="font-size:12pt;">1. Cuando creas el sem&aacute;foro, puedes inicializar su valor a cualquier n&uacute;mero entero, pero despu&eacute;s de eso las &uacute;nicas operaciones que puedes realizar son incrementar (aumentar en uno) y disminuir (disminuir en uno). No puedes leer el Valor actual del sem&aacute;foro.&nbsp;</span></p>
+                    <p class="card-text" ><span style="font-size:12pt;">2. Cuando un hilo disminuye el sem&aacute;foro, si el resultado es negativo, el hilo se bloquea y no puede continuar hasta que otro hilo aumente. el sem&aacute;foro.&nbsp;</span></p>
+                    <p class="card-text" ><span style="font-size:12pt;">3. Cuando un hilo incrementa el sem&aacute;foro, si hay otros hilos esperando, uno de los hilos en espera se desbloquea.</span></p>
+                    <p class="card-text"  class="card-text">
+                        En construcción
+                    </p>
 
-  <main>
-    <section>
-      <div class="card">
-        <h5 class="card-header">2.4.2 Semáforos y mutex</h5>
-        <div class="card-body">
-          <p class="card-text">
-            En construcción
-          </p>
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Anterior</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="2-4-1-principios-de-la-sincronizacion.html">2</a></li>
+                        <li class="page-item active"><a class="page-link" href="2-4-2-semaforos-y-mutex.html">3</a></li>
+                        <li class="page-item"><a class="page-link" href="2-4-3-monitores.html">4</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="2-5-planificacion.html">Siguiente</a>
+                        </li>
+                    </ul>
 
-          <ul class="pagination justify-content-end">
-            <li class="page-item">
-              <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Anterior</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">1</a></li>
-            <li class="page-item"><a class="page-link" href="2-4-1-principios-de-la-sincronizacion.html">2</a></li>
-            <li class="page-item active"><a class="page-link" href="2-4-2-semaforos-y-mutex.html">3</a></li>
-            <li class="page-item"><a class="page-link" href="2-4-3-monitores.html">4</a></li>
-            <li class="page-item">
-              <a class="page-link" href="2-5-planificacion.html">Siguiente</a>
-            </li>
-          </ul>
+                </div>
+            </div>
 
-        </div>
-      </div>
+        </section>
+    </main>
 
-    </section>
-  </main>
-
-  <!-- Page content -->
-
-  <!-- Footer -->
-  <div id="footer-container"></div>
-  <!-- Footer -->
-
-  <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-  <!-- Core theme JS-->
+    <!-- Page content -->
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <!-- Footer -->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
 </body>
 
 </html>

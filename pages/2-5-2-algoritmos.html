@@ -2,34 +2,34 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>2.1 Modelo de procesos</title>
-  <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <!-- Bootstrap CSS-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>2.1 Modelo de procesos</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-  <!-- Bootstrap CSS-->
-  <!-- Local CSS-->
-  <link href="../css/header.css" rel="stylesheet" />
-  <link href="../css/navbar.css" rel="stylesheet" />
-  <link href="../css/card.css" rel="stylesheet" />
-  <link href="../css/offcanvas.css" rel="stylesheet" />
-  <link href="../css/pagination.css" rel="stylesheet" />
-  <link href="../css/footer.css" rel="stylesheet" />
+    <!-- Bootstrap CSS-->
+    <!-- Local CSS-->
+    <link href="../css/header.css" rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <link href="../css/card.css" rel="stylesheet" />
+    <link href="../css/offcanvas.css" rel="stylesheet" />
+    <link href="../css/pagination.css" rel="stylesheet" />
+    <link href="../css/footer.css" rel="stylesheet" />
 
 
-  <!-- Local CSS-->
-  <!-- Local JS-->
-  <script src="../js/headerPagesLoader.js"></script>
-  <script src="../js/navbarContentLoader.js"></script>
-  <script src="../js/offcanvasLoader.js"></script>
-  <script src="../js/footerPagesLoader.js"></script>
-  <!-- Local JS-->
+    <!-- Local CSS-->
+    <!-- Local JS-->
+    <script src="../js/headerPagesLoader.js"></script>
+    <script src="../js/navbarContentLoader.js"></script>
+    <script src="../js/offcanvasLoader.js"></script>
+    <script src="../js/footerPagesLoader.js"></script>
+    <!-- Local JS-->
 </head>
 
 <body>
@@ -39,55 +39,110 @@
     </div>
 
 
-  <!-- Header -->
-  <div id="header-container"></div>
-  <!-- Header -->
+    <!-- Header -->
+    <div id="header-container"></div>
+    <!-- Header -->
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    <!-- Navbar -->
+    <!-- Page content -->
 
-  <!-- Navbar -->
-  <div id="navbar-container"></div>
-  <!-- Navbar -->
+    <main>
+        <section>
+            <div class="card">
+                <h5 class="card-header">2.5.2 Algoritmos</h5>
+                <div class="card-body m-5">
 
-  <!-- Page content -->
+                    <p class="card-text" ><span style="color:#666666;font-size:16pt;">2.5.2 Algoritmos</span></p>
+                    <ul>
+                        <li style="list-style-type:disc;font-size:12pt;">
+                            <p class="card-text" ><strong><span style="font-size:12pt;">Primero en Entrar-Primero en Salir</span></strong></p>
+                        </li>
+                    </ul>
+                    <p class="card-text" ><span style="font-size:12pt;">Tambi&eacute;n denominado FCFS (First Come First Served), es un algoritmo que utiliza una fila de procesos determinando el funcionamiento de cada proceso por el orden de llegada. Al llegar el proceso es puesto detr&aacute;s del que lleg&oacute; antes que &eacute;l. Se resalta que al comenzar a ejecutarse un proceso, su ejecuci&oacute;n no es interrumpida hasta terminar.&nbsp;</span></p>
+                    <ul>
+                        <li style="list-style-type:disc;font-size:12pt;">
+                            <p class="card-text" ><strong><span style="font-size:12pt;">Prioridad al m&aacute;s corto</span></strong></p>
+                        </li>
+                    </ul>
+                    <p class="card-text" ><span style="font-size:12pt;">Conocido como SJF (Shortest Job First). Este proceso se distingue porque cuando un proceso se encuentra en ejecuci&oacute;n, voluntariamente cambia de estado, es decir que el tiempo de ejecuci&oacute;n del proceso no es determinado. Por lo cual cada proceso tiene una asignaci&oacute;n de tiempo cuando vuelve a ser ejecutado y va ejecutando el proceso con la menor cantidad de tiempo asignada. Al encontrarse que dos algoritmos poseen la misma cantidad de tiempo, se utilizar&aacute; el algoritmo FCFS.</span></p>
+                    <ul>
+                        <li style="list-style-type:disc;font-size:12pt;">
+                            <p class="card-text" ><strong><span style="font-size:12pt;">Planificaci&oacute;n por turno rotatorio</span></strong><span style="font-size:12pt;">&nbsp;</span></p>
+                        </li>
+                    </ul>
+                    <p class="card-text" ><span style="font-size:12pt;">Llamado Round Robin, es un algoritmo donde se determina el mismo tiempo para la ejecuci&oacute;n de todos los procesos. Si un proceso no puede ejecutarse por completo en el tiempo asignado su ejecuci&oacute;n ser&aacute; despu&eacute;s de la ejecuci&oacute;n de todos los procesos que se ejecuten con el tiempo asignado. Este algoritmo se fundamenta en FCFS y ordena la cola de procesos circularmente cuando se hallan en estado de listos. &nbsp; &nbsp;&nbsp;</span></p>
+                    <ul>
+                        <li style="list-style-type:disc;font-size:12pt;">
+                            <p class="card-text" ><strong><span style="font-size:12pt;">Planificaci&oacute;n por prioridad &nbsp;&nbsp;</span></strong></p>
+                        </li>
+                    </ul>
+                    <p class="card-text" ><span style="font-size:12pt;">Esta planificaci&oacute;n se caracteriza porque a cada proceso se le asigna una prioridad y se contin&uacute;an con un criterio determinado. Los procesos ser&aacute;n atendidos de acuerdo con la prioridad determinada.</span></p>
+                    <ul>
+                        <li style="list-style-type:disc;font-size:12pt;">
+                            <p class="card-text" ><strong><span style="font-size:12pt;">Planificaci&oacute;n garantizada</span></strong><span style="font-size:12pt;">&nbsp;&nbsp;</span></p>
+                        </li>
+                    </ul>
+                    <p class="card-text" ><span style="font-size:12pt;">En esta planificaci&oacute;n el sistema se enfoca en la cantidad de usuarios que debe atender. Donde en un n&uacute;mero n de usuarios se asignar&aacute; a cada usuario 1/n de tiempo de ejecuci&oacute;n.</span></p>
+                    <ul>
+                        <li style="list-style-type:disc;font-size:12pt;">
+                            <p class="card-text" ><strong><span style="font-size:12pt;">Planificaci&oacute;n de Colas M&uacute;ltiples&nbsp;</span></strong></p>
+                        </li>
+                    </ul>
+                    <p class="card-text" ><span style="font-size:12pt;">Derivado de MQS (Multilevel Queue Scheduling). Es un algoritmo donde la cola de procesos en estado de listos se divide en varias colas m&aacute;s peque&ntilde;as. Los procesos se clasifican a partir de un criterio que determina en qu&eacute; cola se ubicar&aacute; el proceso cuando se encuentre en estado de listo. &nbsp;&nbsp;</span></p>
+                    <p class="card-text" ><strong><span style="font-size:12pt;">Tipos de planificaci&oacute;n</span></strong></p>
+                    <p class="card-text" ><span style="font-size:12pt;">La planificaci&oacute;n de procesos busca la eficacia y la equidad de los tiempos, tanto de respuesta como de regreso, adem&aacute;s del rendimiento.</span></p>
+                    <p class="card-text" ><span style="font-size:12pt;">En la planificaci&oacute;n de procesos podemos encontrar tres tipos principales:&nbsp;</span></p>
+                    <ul>
+                        <li style="list-style-type:disc;font-size:12pt;">
+                            <p class="card-text" ><strong><span style="font-size:12pt;">Planificaci&oacute;n a largo plazo</span></strong></p>
+                        </li>
+                    </ul>
+                    <p class="card-text" ><span style="font-size:12pt;">En esta planificaci&oacute;n se determina cu&aacute;les procesos ser&aacute;n los siguientes en ser ejecutados. La toma de decisiones es realizada bajo los requisitos de los procesos previamente anunciados y los que se encuentran libres en el sistema luego de finalizar otro proceso.</span></p>
+                    <ul>
+                        <li style="list-style-type:disc;font-size:12pt;">
+                            <p class="card-text" ><strong><span style="font-size:12pt;">Planificaci&oacute;n a mediano plazo &nbsp;</span></strong><span style="font-size:12pt;">&nbsp;</span></p>
+                        </li>
+                    </ul>
+                    <p class="card-text" ><span style="font-size:12pt;">En la Planificaci&oacute;n a mediano plazo se decide cu&aacute;les tiempos deben ser bloqueados y en que momento determinado ya sea por la falta o la saturaci&oacute;n de alg&uacute;n recurso o porque la solicitud exigida no puede atenderse en el momento. La toma de decisiones es efectuada de acuerdo a la entrada y a la salida de los procesos que se encuentran en estado bloqueado.</span></p>
+                    <ul>
+                        <li style="list-style-type:disc;font-size:12pt;">
+                            <p class="card-text" ><strong><span style="font-size:12pt;">Planificaci&oacute;n a corto plazo</span></strong></p>
+                        </li>
+                    </ul>
+                    <p class="card-text" ><span style="font-size:12pt;">En este tipo de planificaci&oacute;n se determina en cada instante el procedimiento para compartir al equipo que recursos necesitan todos los procesos. Es de resaltar que este tipo de planificaci&oacute;n es ejecutado decenas de veces por segundo.&nbsp;</span></p>
+                    <p class="card-text" ><span style="font-size:12pt;">Se resalta que en la planificaci&oacute;n de procesos se debe tener en cuenta los tiempos que se pueden calcular, tales como: el tiempo de espera medio, el tiempo de retorno del proceso y el tiempo de retorno medio.</span></p>
+                    <p class="card-text" ><br></p>
+                    <p class="card-text" ><br></p>
 
-  <main>
-    <section>
-      <div class="card">
-        <h5 class="card-header">2.5.2 Algoritmos</h5>
-        <div class="card-body">
-          <p class="card-text">
-            En construcción
-          </p>
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Anterior</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="2-5-planificacion.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="2-5-1-criterios.html">2</a></li>
+                        <li class="page-item active"><a class="page-link" href="2-5-2-algoritmos.html">3</a></li>
+                        <li class="page-item"><a class="page-link" href="2-5-3-planificacion-de-hilos.html">4</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="bibliografia.html">Lista de referencias bibliográficas</a>
+                        </li>
+                    </ul>
 
-          <ul class="pagination justify-content-end">
-            <li class="page-item">
-              <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Anterior</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="2-5-planificacion.html">1</a></li>
-            <li class="page-item"><a class="page-link" href="2-5-1-criterios.html">2</a></li>
-            <li class="page-item active"><a class="page-link" href="2-5-2-algoritmos.html">3</a></li>
-            <li class="page-item"><a class="page-link" href="2-5-3-planificacion-de-hilos.html">4</a></li>
-            <li class="page-item">
-              <a class="page-link" href="bibliografia.html">Lista de referencias bibliográficas</a>
-            </li>
-          </ul>
+                </div>
+            </div>
 
-        </div>
-      </div>
+        </section>
+    </main>
 
-    </section>
-  </main>
-
-  <!-- Page content -->
-
-  <!-- Footer -->
-  <div id="footer-container"></div>
-  <!-- Footer -->
-
-  <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-  <!-- Core theme JS-->
+    <!-- Page content -->
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <!-- Footer -->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
 </body>
 
 </html>

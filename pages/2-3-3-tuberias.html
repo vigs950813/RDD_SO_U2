@@ -2,34 +2,34 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>2.1 Modelo de procesos</title>
-  <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <!-- Bootstrap CSS-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>2.1 Modelo de procesos</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-  <!-- Bootstrap CSS-->
-  <!-- Local CSS-->
-  <link href="../css/header.css" rel="stylesheet" />
-  <link href="../css/navbar.css" rel="stylesheet" />
-  <link href="../css/card.css" rel="stylesheet" />
-  <link href="../css/offcanvas.css" rel="stylesheet" />
-  <link href="../css/pagination.css" rel="stylesheet" />
-  <link href="../css/footer.css" rel="stylesheet" />
+    <!-- Bootstrap CSS-->
+    <!-- Local CSS-->
+    <link href="../css/header.css" rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <link href="../css/card.css" rel="stylesheet" />
+    <link href="../css/offcanvas.css" rel="stylesheet" />
+    <link href="../css/pagination.css" rel="stylesheet" />
+    <link href="../css/footer.css" rel="stylesheet" />
 
 
-  <!-- Local CSS-->
-  <!-- Local JS-->
-  <script src="../js/headerPagesLoader.js"></script>
-  <script src="../js/navbarContentLoader.js"></script>
-  <script src="../js/offcanvasLoader.js"></script>
-  <script src="../js/footerPagesLoader.js"></script>
-  <!-- Local JS-->
+    <!-- Local CSS-->
+    <!-- Local JS-->
+    <script src="../js/headerPagesLoader.js"></script>
+    <script src="../js/navbarContentLoader.js"></script>
+    <script src="../js/offcanvasLoader.js"></script>
+    <script src="../js/footerPagesLoader.js"></script>
+    <!-- Local JS-->
 </head>
 
 <body>
@@ -39,55 +39,57 @@
     </div>
 
 
-  <!-- Header -->
-  <div id="header-container"></div>
-  <!-- Header -->
+    <!-- Header -->
+    <div id="header-container"></div>
+    <!-- Header -->
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    <!-- Navbar -->
+    <!-- Page content -->
 
-  <!-- Navbar -->
-  <div id="navbar-container"></div>
-  <!-- Navbar -->
+    <main>
+        <section>
+            <div class="card">
+                <h5 class="card-header">2.3.3 Tuberías</h5>
+                <div class="card-body m-5">
 
-  <!-- Page content -->
+                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">La interconexi&oacute;n o tuber&iacute;a (prpe) es un m&eacute;todo de comunicaci&oacute;n entre procesos,</span></p>
+                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">que consiste en conectar la salida est&aacute;ndar de uno con la entrada est&aacute;ndar de otro,</span></p>
+                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">sin necesidad de crear por parte del usuario ficheros intermedios o temporales.&nbsp;</span></p>
+                    <p><br></p>
+                    <p><br></p>
+                    <p class="card-text" style="text-align: justify;"><span style="color:#272727;font-size:12pt;">La comunicaci&oacute;n entre procesos se realiza por medio de una zona de memoria compartida. Cuando creamos la interconexi&oacute;n, el n&uacute;cleo reserva esta zona, asign&aacute;ndole dos descriptores, uno para escribir, y otro para leer. De este modo, la informaci&oacute;n que escribe un proceso en una interconexi&oacute;n puede ser le&iacute;da inmediatamente por el otro, siendo el sistema el que realiza la sincronizaci&oacute;n de ambos.</span></p>
+                    <p class="card-text" style="text-align: justify;"><span style="color:#272727;font-size:12pt;">El &uacute;nico requisito para utilizar este mecanismo es que los procesos deben ser hijos del mismo padre y residir en la misma m&aacute;quina.</span></p>
+                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">La llamada al sistema pipe crea una interconexi&oacute;n entre dos procesos, de tal modo que nos devuelve dos descriptores, uno empleado para la lectura y otro para la escritura.</span></p>
 
-  <main>
-    <section>
-      <div class="card">
-        <h5 class="card-header">2.3.3 Tuberías</h5>
-        <div class="card-body">
-          <p class="card-text">
-            En construcción
-          </p>
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" href="2-2-modelo-multi-hilo.html">Anterior</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="2-3-comunicacion-entre-procesos.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="2-3-1-memoria-compartida.html">2</a></li>
+                        <li class="page-item"><a class="page-link" href="2-3-2-paso-de-mensajes.html">3</a></li>
+                        <li class="page-item active"><a class="page-link" href="2-3-3-tuberias.html">4</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Siguiente</a>
+                        </li>
+                    </ul>
 
-          <ul class="pagination justify-content-end">
-            <li class="page-item">
-              <a class="page-link" href="2-2-modelo-multi-hilo.html">Anterior</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="2-3-comunicacion-entre-procesos.html">1</a></li>
-            <li class="page-item"><a class="page-link" href="2-3-1-memoria-compartida.html">2</a></li>
-            <li class="page-item"><a class="page-link" href="2-3-2-paso-de-mensajes.html">3</a></li>
-            <li class="page-item active"><a class="page-link" href="2-3-3-tuberias.html">4</a></li>
-            <li class="page-item">
-              <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Siguiente</a>
-            </li>
-          </ul>
+                </div>
+            </div>
 
-        </div>
-      </div>
+        </section>
+    </main>
 
-    </section>
-  </main>
-
-  <!-- Page content -->
-
-  <!-- Footer -->
-  <div id="footer-container"></div>
-  <!-- Footer -->
-
-  <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-  <!-- Core theme JS-->
+    <!-- Page content -->
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <!-- Footer -->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
 </body>
 
 </html>
