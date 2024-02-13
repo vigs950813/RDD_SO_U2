@@ -2,34 +2,34 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>2.1 Modelo de procesos</title>
-  <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <!-- Bootstrap CSS-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>2.1 Modelo de procesos</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-  <!-- Bootstrap CSS-->
-  <!-- Local CSS-->
-  <link href="../css/header.css" rel="stylesheet" />
-  <link href="../css/navbar.css" rel="stylesheet" />
-  <link href="../css/card.css" rel="stylesheet" />
-  <link href="../css/offcanvas.css" rel="stylesheet" />
-  <link href="../css/pagination.css" rel="stylesheet" />
-  <link href="../css/footer.css" rel="stylesheet" />
+    <!-- Bootstrap CSS-->
+    <!-- Local CSS-->
+    <link href="../css/header.css" rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <link href="../css/card.css" rel="stylesheet" />
+    <link href="../css/offcanvas.css" rel="stylesheet" />
+    <link href="../css/pagination.css" rel="stylesheet" />
+    <link href="../css/footer.css" rel="stylesheet" />
 
 
-  <!-- Local CSS-->
-  <!-- Local JS-->
-  <script src="../js/headerPagesLoader.js"></script>
-  <script src="../js/navbarContentLoader.js"></script>
-  <script src="../js/offcanvasLoader.js"></script>
-  <script src="../js/footerPagesLoader.js"></script>
-  <!-- Local JS-->
+    <!-- Local CSS-->
+    <!-- Local JS-->
+    <script src="../js/headerPagesLoader.js"></script>
+    <script src="../js/navbarContentLoader.js"></script>
+    <script src="../js/offcanvasLoader.js"></script>
+    <script src="../js/footerPagesLoader.js"></script>
+    <!-- Local JS-->
 </head>
 
 <body>
@@ -39,55 +39,99 @@
     </div>
 
 
-  <!-- Header -->
-  <div id="header-container"></div>
-  <!-- Header -->
+    <!-- Header -->
+    <div id="header-container"></div>
+    <!-- Header -->
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    <!-- Navbar -->
+    <!-- Page content -->
 
-  <!-- Navbar -->
-  <div id="navbar-container"></div>
-  <!-- Navbar -->
+    <main>
+        <section>
+            <div class="card">
+                <h5 class="card-header">2.5 Planificación</h5>
+                <div class="card-body m-5">
 
-  <!-- Page content -->
+                    <div class="row m-5">
+                        <div class="col">
+                            <p class="card-text"><span style="font-size:12pt;">Existen varios criterios y estrategias que gu&iacute;an la planificaci&oacute;n de procesos:</span></p>
+                            <p class="card-text"><br></p>
+                            <ol>
+                                <li style="list-style-type:decimal;font-size:12pt;">
+                                    <p class="card-text"><span style="font-size:12pt;">Prioridades:</span></p>
+                                    <ul>
+                                        <li style="list-style-type:circle;font-size:12pt;">
+                                            <p class="card-text"><span style="font-size:12pt;">Los procesos pueden tener asignadas prioridades, indicando su importancia relativa para el sistema. La planificaci&oacute;n de procesos da preferencia a aquellos con prioridades m&aacute;s altas, asegurando que las tareas cr&iacute;ticas reciban un tratamiento adecuado.</span></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="list-style-type:decimal;font-size:12pt;">
+                                    <p class="card-text"><span style="font-size:12pt;">Tiempo Compartido:</span></p>
+                                    <ul>
+                                        <li style="list-style-type:circle;font-size:12pt;">
+                                            <p class="card-text"><span style="font-size:12pt;">En sistemas de tiempo compartido, la CPU se divide entre varios procesos en peque&ntilde;os intervalos de tiempo. Esto proporciona una apariencia de ejecuci&oacute;n simult&aacute;nea y permite que m&uacute;ltiples usuarios interact&uacute;en con el sistema de manera aparentemente simult&aacute;nea.</span></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="list-style-type:decimal;font-size:12pt;">
+                                    <p class="card-text"><span style="font-size:12pt;">Colas de Prioridad:</span></p>
+                                    <ul>
+                                        <li style="list-style-type:circle;font-size:12pt;">
+                                            <p class="card-text"><span style="font-size:12pt;">Los procesos se organizan en colas seg&uacute;n sus prioridades, y el planificador selecciona el proceso de mayor prioridad para su ejecuci&oacute;n. Esto asegura que los procesos cr&iacute;ticos reciban atenci&oacute;n inmediata.</span></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="list-style-type:decimal;font-size:12pt;">
+                                    <p class="card-text"><span style="font-size:12pt;">Round Robin:</span></p>
+                                    <ul>
+                                        <li style="list-style-type:circle;font-size:12pt;">
+                                            <p class="card-text"><span style="font-size:12pt;">Este algoritmo asigna a cada proceso un intervalo de tiempo fijo en el que puede ejecutarse. Si un proceso no se completa durante su intervalo, se coloca al final de la cola, permitiendo que otros procesos tengan la oportunidad de ejecutarse.</span></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="list-style-type:decimal;font-size:12pt;">
+                                    <p class="card-text"><span style="font-size:12pt;">Algoritmos de Preemptiva y No Preemptiva:</span></p>
+                                    <ul>
+                                        <li style="list-style-type:circle;font-size:12pt;">
+                                            <p class="card-text"><span style="font-size:12pt;">Los algoritmos preemptivos permiten que un proceso sea interrumpido y suspendido, mientras que los no preemptivos permiten que un proceso se ejecute hasta su finalizaci&oacute;n antes de seleccionar otro.</span></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <p class="card-text"><span style="font-size:12pt;">La importancia de la planificaci&oacute;n de procesos radica en su capacidad para optimizar los recursos del sistema. Al asignar el procesador de manera eficiente, se mejora la utilizaci&oacute;n de la CPU y se reduce el tiempo de espera de los procesos, lo que contribuye a un sistema operativo m&aacute;s &aacute;gil y receptivo. Adem&aacute;s, la planificaci&oacute;n equitativa y basada en prioridades asegura una distribuci&oacute;n justa de los recursos, evitando situaciones de inanici&oacute;n y garantizando que todos los procesos reciban una oportunidad adecuada de ejecuci&oacute;n.</span></p>
 
-  <main>
-    <section>
-      <div class="card">
-        <h5 class="card-header">2.5 Planificación</h5>
-        <div class="card-body">
-          <p class="card-text">
-            En construcción
-          </p>
+                        </div>
+                    </div>
 
-          <ul class="pagination justify-content-end">
-            <li class="page-item">
-              <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Anterior</a>
-            </li>
-            <li class="page-item active"><a class="page-link" href="2-5-planificacion.html">1</a></li>
-            <li class="page-item"><a class="page-link" href="2-5-1-criterios.html">2</a></li>
-            <li class="page-item"><a class="page-link" href="2-5-2-algoritmos.html">3</a></li>
-            <li class="page-item"><a class="page-link" href="2-5-3-planificacion-de-hilos.html">4</a></li>
-            <li class="page-item">
-              <a class="page-link" href="bibliografia.html">Lista de referencias bibliográficas</a>
-            </li>
-          </ul>
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Anterior</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="2-5-planificacion.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="2-5-1-criterios.html">2</a></li>
+                        <li class="page-item"><a class="page-link" href="2-5-2-algoritmos.html">3</a></li>
+                        <li class="page-item"><a class="page-link" href="2-5-3-planificacion-de-hilos.html">4</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="bibliografia.html">Lista de referencias bibliográficas</a>
+                        </li>
+                    </ul>
 
-        </div>
-      </div>
+                </div>
+            </div>
 
-    </section>
-  </main>
+        </section>
+    </main>
 
-  <!-- Page content -->
-
-  <!-- Footer -->
-  <div id="footer-container"></div>
-  <!-- Footer -->
-
-  <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-  <!-- Core theme JS-->
+    <!-- Page content -->
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <!-- Footer -->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
 </body>
 
 </html>
