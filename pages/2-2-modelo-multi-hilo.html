@@ -19,6 +19,7 @@
   <link href="../css/navbar.css" rel="stylesheet" />
   <link href="../css/card.css" rel="stylesheet" />
   <link href="../css/offcanvas.css" rel="stylesheet" />
+  <link href="../css/acordeon.css" rel="stylesheet" />
   <link href="../css/pagination.css" rel="stylesheet" />
   <link href="../css/footer.css" rel="stylesheet" />
 
@@ -50,44 +51,184 @@
   <!-- Page content -->
 
   <main>
+    <!-- Section 1 -->
     <section>
       <div class="card">
         <h5 class="card-header">2.2 Modelo multi-hilo</h5>
-        <div class="card-body m-5">
-            <p class="card-text" style="text-align: justify;"><strong><span style="font-size:12pt;">2.2 Modelo multi-hilo</span></strong></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Son unidades b&aacute;sicas de ejecuci&oacute;n dentro de un proceso que comparten el mismo espacio de direcciones y recursos del sistema, como memoria y archivos. Los hilos permiten que un proceso se ejecute de manera concurrente, facilitando la realizaci&oacute;n de m&uacute;ltiples tareas y operaciones simult&aacute;neamente.</span></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><strong><span style="font-size:12pt;">Tipos de Modelos Multihilos&nbsp;</span></strong></p>
-            <p class="card-text" style="text-align: justify;"><strong><span style="font-size:12pt;">● Modelo de Hilos a Nivel de Usuario (User-Level Threads): </span></strong> Los hilos se gestionan completamente en el espacio de usuario sin intervenci&oacute;n del sistema operativo.</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">○&nbsp;</span><strong><span style="font-size:12pt;">Ventajas</span></strong><span style="font-size:12pt;">: mayor flexibilidad y eficiencia en la gesti&oacute;n de hilos, ya que</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">las operaciones de creaci&oacute;n, planificaci&oacute;n y sincronizaci&oacute;n se realizan</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">a nivel de usuario.</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">○&nbsp;</span><strong><span style="font-size:12pt;">Desventajas</span></strong><span style="font-size:12pt;">: limitaciones en la escalabilidad y gesti&oacute;n de hilos en</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">entornos multin&uacute;cleo o multiprocesador, debido a la falta de soporte y</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">cooperaci&oacute;n del sistema operativo.</span></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><strong><span style="font-size:12pt;">● Modelo de Hilos a Nivel de Kernel (Kernel-Level Threads): </span></strong> Los hilos se gestionan y soportan directamente por el sistema operativo a nivel de kernel.</p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">○&nbsp;</span><strong><span style="font-size:12pt;">Ventajas</span></strong><span style="font-size:12pt;">: mayor eficiencia y escalabilidad en la gesti&oacute;n de hilos, ya que el sistema operativo puede planificar y coordinar hilos de manera m&aacute;s efectiva en entornos multin&uacute;cleo y multiprocesador.</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">○&nbsp;</span><strong><span style="font-size:12pt;">Desventajas</span></strong><span style="font-size:12pt;">: mayor complejidad y sobrecarga debido a la necesidad de sincronizaci&oacute;n y comunicaci&oacute;n entre hilos a trav&eacute;s de llamadas al sistema y operaciones de cambio de contexto.</span></p>
 
-            <ul class="pagination justify-content-end">
-                <li class="page-item">
-                    <a class="page-link" href="introduccion.html">Anterior</a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="2-2-modelo-multi-hilo.html">1</a></li>
-                <li class="page-item"><a class="page-link" href="2-2-1-bibliotecas.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="2-2-2-implementacion.html">3</a></li>
-                <li class="page-item"><a class="page-link" href="2-2-3-hilos-modo-usuario-kernel.html">4</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Siguiente</a>
-                </li>
-            </ul>
+        <div class="card-body">
+            
+            <p class="card-text">Son unidades b&aacute;sicas de
+                ejecuci&oacute;n dentro de un proceso que comparten el mismo espacio de direcciones y recursos del sistema, como
+                memoria y archivos. Los hilos permiten que un proceso se ejecute de manera concurrente, facilitando la
+                realizaci&oacute;n de m&uacute;ltiples tareas y operaciones simult&aacute;neamente.
+            </p>
+            
+            
+        </div>
+      </div>
+    </section>
+    <!-- Section 1 -->
 
+    <!-- Section 2 -->
+    <section>
+      <div class="card">
+        <h5 class="card-header">Tipos de modelos multihilos</h5>
 
+        <div class="card-body">
+            
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  Modelo a nivel de usuario
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                  <p class="card-text">
+                    Los hilos se gestionan completamente en el espacio de usuario sin intervención delsistema operativo.
+                  </p>
+                  <ul class="card-text">
+                    <li>
+                      <b>Ventajas</b>: Mayor flexibilidad y eficiencia en la gestión de hilos, ya que
+                      las operaciones de creación, planificación y sincronización se realizan
+                      a nivel de usuario.                      
+                    </li>
+                    <li>
+                      <b>Desventajas</b>: Limitaciones en la escalabilidad y gestión de hilos en
+                      entornos multinúcleo o multiprocesador, debido a la falta de soporte y
+                      cooperación del sistema operativo.                      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                  Modelo a nivel de kernel
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                  <p class="card-text">
+                    Los hilos se gestionan y soportan directamente por el sistema operativo a nivel de kernel.
+                  </p>
+                  <ul class="card-text">
+                    <li>
+                      <b>Ventajas</b>: Mayor eficiencia y escalabilidad en la gestión de hilos, ya
+                      que el sistema operativo puede planificar y coordinar hilos de manera
+                      más efectiva en entornos multinúcleo y multiprocesador.                      
+                    </li>
+                    <li>
+                      <b>Desventajas</b>: Mayor complejidad y sobrecarga debido a la necesidad
+                      de sincronización y comunicación entre hilos a través de llamadas al
+                      sistema y operaciones de cambio de contexto.                      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+            
         </div>
       </div>
 
     </section>
+    <!-- Section 2 -->
+
+    <!-- Section 3 -->
+    <section>
+      <div class="card">
+        <h5 class="card-header">Clasificación de modelos multihilos</h5>
+        <div class="card-body">
+            
+          <div class="accordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+                  Hilos independientes
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+                  <p class="card-text">
+                    Son una combinación de hilos a nivel de usuario y a nivel de kernel, donde múltiples hilos de usuario se asignan a
+                    un número menor de hilos del sistema operativo. Estos proporcionan
+                    un equilibrio entre la eficiencia y la flexibilidad, permitiendo una gestión
+                    óptima de recursos y una adaptabilidad a diferentes cargas de trabajo y
+                    requisitos del sistema.
+                  </p>   
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                  Hilos ligeros
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                <div class="accordion-body">
+                  <p class="card-text">
+                    Los hilos gestionados completamente a nivel de usuario, sin soporte directo del sistema operativo. Ofrecen una implementación más ligera 
+                    y eficiente de hilos, adecuada para aplicaciones 
+                    con requisitos de hilos flexibles y operaciones de E/S intensivas.
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                  Hilos pesados
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                <div class="accordion-body">
+                  <p class="card-text">
+                    Estos hilos gestionados y
+                    soportados directamente por el sistema operativo a nivel de kernel.
+                    Proporcionan un mayor nivel de control y gestión de hilos, adecuados para
+                    aplicaciones con requisitos de hilos intensivos y operaciones de cálculo
+                    intensivo.
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+          <b>CÓDIGOS EN CONSTRUCCIÓN</b>
+
+          <br>
+            
+          <ul class="pagination justify-content-end">
+            <li class="page-item">
+              <a class="page-link" href="introduccion.html">Anterior</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="2-2-modelo-multi-hilo.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="2-2-1-bibliotecas.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="2-2-2-implementacion.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="2-2-3-hilos-modo-usuario-kernel.html">4</a></li>
+            <li class="page-item">
+              <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Siguiente</a>
+            </li>
+          </ul>
+
+            
+        </div>
+      </div>
+
+    </section>
+    <!-- Section 3 -->
+
+
+
   </main>
 
   <!-- Page content -->
