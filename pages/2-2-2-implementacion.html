@@ -53,29 +53,38 @@
       <div class="card">
         <h5 class="card-header">2.2.2 Implementación</h5>
         <div class="card-body">
-            <p class="card-text" style="text-align: justify;"><strong><span style="font-size:12pt;">2.2.2 Implementaci&oacute;n</span></strong></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Cada Sistema operativo implementa los hilos del sistema utilizando tres est&aacute;ndares en donde las librer&iacute;as nativas son:</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">a) Win32</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">b) OS/2</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">c) POSIX.</span></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Las dos primeras son propietarias y s&oacute;lo corren bajo sus respectivas plataformas (NT, Win95, OS/2).</span></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">La especificaci&oacute;n POSIX (IEEE 1003.1c) conocida como pthreads [Butenhof, 1997] est&aacute; pensada para todas las plataformas y est&aacute; disponible para la mayor&iacute;a de las implementaciones UNIX y Linux, as&iacute; como VMS y AS/400.</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Algunas de las implementaciones del est&aacute;ndar POSIX son del primer tipo, mientras que tanto OS/2 como Win32 son del segundo tipo. Ambos m&eacute;todos pueden ser usados para implementar exactamente el mismo API</span></p>
-            <p><br></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Existen dos formas de implementaci&oacute;n de los hilos en el sistema operativo:</span></p>
-            <p><br></p>
-            <ol>
-                <li style="list-style-type:lower-alpha;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Es escribir una librer&iacute;a al nivel de usuario en donde todas las estructuras y el c&oacute;digo de la librer&iacute;a estar&aacute;n en espacio de usuario, por lo que la mayor&iacute;a de las llamadas que se hagan desde la librer&iacute;a se ejecutar&aacute;n en el espacio de usuario y no har&aacute; m&aacute;s uso de las rutinas del sistema que cualquier otra librer&iacute;a o programa de usuario.</span></p>
-                </li>
-                <li style="list-style-type:lower-alpha;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">La implementaci&oacute;n al nivel de n&uacute;cleo que es donde la mayor&iacute;a de las llamadas de la librer&iacute;a requerir&aacute;n llamadas al sistema.</span></p>
-                </li>
-            </ol>
+          
+          <p class="card-text">
+            Cada Sistema operativo implementa los hilos del sistema utilizando tres estándares en donde las librerías nativas son:
+          </p>
+          
+          <ol class="card-text" type="a">
+            <li>Win32.</li>
+            <li>OS/2.</li>
+            <li>POSIX.</li>
+          </ol>
+
+          <p class="card-text">
+            Las dos primeras son propietarias y sólo corren bajo sus respectivas plataformas (NT, Win95, OS/2).
+          </p>
+
+          <p class="card-text">
+            La especificación POSIX (IEEE 1003.1c) conocida como pthreads [Butenhof, 1997] está pensada para todas las plataformas y está disponible para la mayoría de las implementaciones UNIX y Linux, así como VMS y AS/400.
+          </p>
+
+          <p class="card-text">
+            Algunas de las implementaciones del estándar POSIX son del primer tipo, mientras que tanto OS/2 como Win32 son del segundo tipo. Ambos métodos pueden ser usados para implementar exactamente el mismo API.
+          </p>
+
+          <p class="card-text">
+            Existen dos formas de implementación de los hilos en el sistema operativo:
+          </p>
+          
+          <ol class="card-text" type="a">
+            <li>Es escribir una librería al nivel de usuario en donde todas las estructuras y el código de la librería estarán en espacio de usuario, por lo que la mayoría de las llamadas que se hagan desde la librería se ejecutarán en el espacio de usuario y no hará más uso de las rutinas del sistema que cualquier otra librería o programa de usuario.</li>
+            <li>La implementación al nivel de núcleo que es donde la mayoría de las llamadas de la librería requerirán llamadas al sistema.</li>
+          </ol>
+          
 
             <ul class="pagination justify-content-end">
                 <li class="page-item">
