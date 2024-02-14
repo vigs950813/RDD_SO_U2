@@ -34,9 +34,9 @@
 
 <body>
 
-    <div id="offcanvas-container">
+  <div id="offcanvas-container">
 
-    </div>
+  </div>
 
 
   <!-- Header -->
@@ -63,6 +63,8 @@
             Hay dos formas principales de implementarla:
           </p>
 
+          
+
           <ul class="card-text">
             <li>
               <b>Primer enfoque</b>: : Proporcionar una biblioteca ubicada en el espacio de usuario sin soporte de
@@ -77,6 +79,7 @@
                 </li>
               </ul>
             </li>
+            
             <li>
               <b>Segundo enfoque</b>: Implementar una biblioteca a nivel de kernel soportada directamente por el SO.
               <ul class="card-text">
@@ -99,7 +102,7 @@
             <li>
               <b>Hilos asincrónicos</b>: Una vez que el padre crea un hilo hijo, el padre reanuda su ejecución, de
               modo que el padre y el hijo se ejecutan de manera simultánea e independiente uno del otro.
-              
+
               <ul class="card-text">
                 <li>
                   Debido a que los hilos son independientes, generalmente hay poco intercambio de
@@ -109,14 +112,15 @@
             </li>
             <li>
               <b>Hilos sincrónicos</b>: Se produce cuando el hilo principal crea uno o más hilos hijos y luego debe
-              esperar a que todos sus hilos hijos finalicen antes de reanudarse.              
+              esperar a que todos sus hilos hijos finalicen antes de reanudarse.
               <ul class="card-text">
                 <li>
                   Los hilos hijos realizan el trabajo en simultáneo, pero el padre no puede continuar
                   hasta que este trabajo se haya completado.
                 </li>
                 <li>
-                  Una vez finalizado cada hilo hijo se une (joins) con su padre. Solo después de que todos los hijos se hayan unido (joined), el padre puede reanudar la ejecución.
+                  Una vez finalizado cada hilo hijo se une (joins) con su padre. Solo después de que todos los hijos se
+                  hayan unido (joined), el padre puede reanudar la ejecución.
                 </li>
                 <li>
                   Por lo general, los hilos sincrónicos implican un intercambio de datos significativo entre
@@ -130,18 +134,18 @@
             <b>CÓDIGOS EN CONSTRUCCIÓN</b>
           </p>
 
-            <ul class="pagination justify-content-end">
-                <li class="page-item">
-                    <a class="page-link" href="2-1-modelo-de-procesos.html">Anterior</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="2-2-modelo-multi-hilo.html">1</a></li>
-                <li class="page-item active"><a class="page-link" href="2-2-1-bibliotecas.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="2-2-2-implementacion.html">3</a></li>
-                <li class="page-item"><a class="page-link" href="2-2-3-hilos-modo-usuario-kernel.html">4</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Siguiente</a>
-                </li>
-            </ul>
+          <ul class="pagination justify-content-end">
+            <li class="page-item">
+              <a class="page-link" href="2-1-modelo-de-procesos.html">Anterior</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="2-2-modelo-multi-hilo.html">1</a></li>
+            <li class="page-item active"><a class="page-link" href="2-2-1-bibliotecas.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="2-2-2-implementacion.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="2-2-3-hilos-modo-usuario-kernel.html">4</a></li>
+            <li class="page-item">
+              <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Siguiente</a>
+            </li>
+          </ul>
 
         </div>
       </div>
