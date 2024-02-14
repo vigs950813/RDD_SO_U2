@@ -55,23 +55,31 @@
         <h5 class="card-header">2.4 Sincronización entre procesos/hilos</h5>
         <div class="card-body">
           <p class="card-text">
-            La sincronización entre procesos e hilos en C con el estándar POSIX se logra mediante mecanismos como semáforos, mutex (cerrojos), y variables de condición. Estos permiten controlar el acceso a recursos compartidos y coordinar la ejecución de múltiples hilos o procesos.
+            La sincronización entre procesos/hilos es crucial en entornos concurrentes donde múltiples tareas o subprocesos comparten recursos o realizan operaciones simultáneamente.
           </p>
 
           <p class="card-text">
-            Los semáforos se utilizan para gestionar el acceso concurrente a recursos compartidos, actuando como contadores que regulan la entrada y salida. Los mutex son cerrojos que garantizan la exclusión mutua, evitando que varios hilos o procesos accedan simultáneamente a una sección crítica.
+            Un proceso es una instancia independiente de un programa en ejecución. Cada proceso tiene su propio espacio de memoria y recursos asignados. Los procesos operan de manera aislada entre sí, y cada uno ejecuta su propia copia del programa, manteniendo su propio estado y contexto.  
           </p>
 
           <p class="card-text">
-            Las variables de condición permiten la sincronización basada en eventos, donde los hilos esperan señales para continuar su ejecución.
+            La comunicación entre procesos suele ser más compleja en comparación con la comunicación entre hilos, ya que implica mecanismos específicos conocidos como comunicación interprocesos (IPC). Estos mecanismos permiten que los procesos compartan información y se coordinen. Algunos métodos comunes de IPC incluyen colas, tuberías, archivos compartidos, memoria compartida, y mensajes.
           </p>
 
           <p class="card-text">
-            El estándar POSIX proporciona funciones como sem_init, pthread_mutex_init, y pthread_cond_init para inicializar estos mecanismos. Además, se utilizan funciones como sem_wait, pthread_mutex_lock, y pthread_cond_wait para realizar operaciones específicas de sincronización.
+            La creación y mantenimiento de procesos conlleva un mayor overhead en términos de recursos. Cada proceso tiene su propio espacio de memoria, tablas de sistema, registros y otros recursos asignados. Este enfoque de aislamiento entre procesos garantiza una mayor independencia, pero también requiere más recursos en comparación con el uso de hilos, que comparten el mismo espacio de memoria.
           </p>
 
           <p class="card-text">
-            El uso adecuado de estos mecanismos es esencial para evitar condiciones de carrera y garantizar una ejecución coherente y segura en entornos concurrentes.
+            Un hilo es una unidad más pequeña dentro de un proceso que comparte el mismo espacio de memoria y recursos. A diferencia de los procesos, los hilos no tienen su propio espacio de memoria independiente, pero comparten la información de programa y datos con otros hilos del mismo proceso. Cada hilo tiene su propio contador de programa y registros de CPU, lo que le permite ejecutarse de manera independiente dentro del contexto del proceso al que pertenece.
+          </p>
+
+          <p class="card-text">
+            Los hilos comparten datos más fácilmente en comparación con los procesos, ya que comparten el mismo espacio de memoria. La comunicación entre hilos puede ser más eficiente en términos de velocidad y complejidad, ya que no requiere mecanismos de IPC como en el caso de los procesos. Sin embargo, la comunicación entre hilos debe gestionarse cuidadosamente mediante técnicas de sincronización para evitar problemas como condiciones de carrera y garantizar la consistencia de los datos compartidos.
+          </p>
+
+          <p class="card-text">
+            Los hilos tienen un menor overhead en términos de recursos en comparación con los procesos. Dado que comparten la mayoría de los recursos con otros hilos dentro del mismo proceso, la creación y el mantenimiento de hilos son generalmente más eficientes. Sin embargo, es importante destacar que debido a la compartición de memoria, los hilos también requieren sincronización para evitar conflictos y problemas de consistencia en la manipulación de datos compartidos.
           </p>
 
           

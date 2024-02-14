@@ -52,134 +52,190 @@
     <section>
       <div class="card">
         <h5 class="card-header">2.4.1 Principios de la sincronización: condición de carrera, sección crítica, exclusión mutua, atomicidad, abrazo mortal</h5>
-        <div class="card-body m-5">
+        <div class="card-body">
 
-            <p class="card-text" ><span style="color:#666666;font-size:16pt;">2.4.1 Principios de la sincronizaci&oacute;n: condici&oacute;n de carrera, secci&oacute;n cr&iacute;tica, exclusi&oacute;n mutua, atomicidad, abrazo mortal</span></p>
-            <h3><span style="color:#434343;font-size:15pt;">Condici&oacute;n de carrera</span></h3>
-            <p class="card-text" ><span style="font-size:12pt;">Ocurre cuando dos o m&aacute;s procesos que est&aacute;n trabajando juntos comparten alg&uacute;n dato modificable (por ejemplo, una posici&oacute;n de memoria de lectura/escritura) que cada proceso puede leer o escribir y el resultado final depende del orden de ejecuci&oacute;n. (Nota: Este problema no sucede en la monoprogramaci&oacute;n).</span></p>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="font-size:12pt;">La condici&oacute;n de carrera se produce cuando:</span></p>
-            <p class="card-text" ><br></p>
-            <ol>
-                <li style="list-style-type:decimal;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Acceso concurrente</span></strong><span style="font-size:12pt;">: Dos o m&aacute;s procesos o hilos intentan acceder simult&aacute;neamente a un recurso compartido.</span></p>
+            <p class="card-text">
+                <b>Condición de carrera</b>
+            </p>
+
+            <p class="card-text">
+                Ocurre cuando dos o más procesos que están trabajando juntos comparten algún dato modificable (por ejemplo, una posición de memoria de lectura/escritura) que cada proceso puede leer o escribir y el resultado final depende del orden de ejecución. (Nota: Este problema no sucede en la monoprogramación).
+            </p>
+        
+            <p class="card-text">
+                La condición de carrera se produce cuando:
+            </p>
+
+            <ol class="card-text">
+                <li>
+                    <b>Acceso concurrente</b>: Dos o más procesos o hilos intentan acceder simultáneamente a un recurso compartido.
                 </li>
-                <li style="list-style-type:decimal;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Al menos una operaci&oacute;n de escritura</span></strong><span style="font-size:12pt;">: Al menos uno de los procesos realiza una operaci&oacute;n de escritura (modificaci&oacute;n) en el recurso compartido.</span></p>
+                <li>
+                    <b>Al menos una operación de escritura</b>: Al menos uno de los procesos realiza una operación de escritura (modificación) en el recurso compartido.
                 </li>
-                <li style="list-style-type:decimal;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">No hay sincronizaci&oacute;n</span></strong><span style="font-size:12pt;">: No se han implementado mecanismos de sincronizaci&oacute;n adecuados para controlar el acceso concurrente al recurso compartido.</span></p>
+                <li>
+                    <b>No hay sincronización</b>: No se han implementado mecanismos de sincronización adecuados para controlar el acceso concurrente al recurso compartido.
                 </li>
-            </ol>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="font-size:12pt;">Como resultado de la condici&oacute;n de carrera, el contenido del recurso compartido puede quedar en un estado inconsistente o incorrecto, ya que las operaciones de lectura y escritura pueden intercalarse de maneras no predecibles.</span></p>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="font-size:12pt;">Para evitar condiciones de carrera, es necesario utilizar mecanismos de sincronizaci&oacute;n, como mutexes, sem&aacute;foros o variables de condici&oacute;n, que permitan a los procesos o hilos coordinar su ejecuci&oacute;n de manera que se evite el acceso simult&aacute;neo a los recursos compartidos. Estos mecanismos ayudan a garantizar la consistencia de los datos y a prevenir resultados inesperados en entornos concurrentes.</span></p>
-            <h3><span style="color:#434343;font-size:15pt;">Exclusi&oacute;n mutua.&nbsp;</span></h3>
-            <p class="card-text" ><span style="font-size:12pt;">Los procesos compiten por el uso de unos recursos limitados. Esos recursos</span></p>
-            <p class="card-text" ><span style="font-size:12pt;">pueden ser:</span></p>
-            <p class="card-text" ><br></p>
-            <ul>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Compartibles</span></strong><span style="font-size:12pt;">: Pueden ser empleados por varios procesos de forma concurrente. Ejemplos: CPU, archivos de lectura, &aacute;reas de memoria no modificables, ...</span></p>
+              </ol>
+              
+        
+            <p class="card-text">
+                Como resultado de la condición de carrera, el contenido del recurso compartido puede quedar en un estado inconsistente o incorrecto, ya que las operaciones de lectura y escritura pueden intercalarse de maneras no predecibles.
+            </p>
+        
+            <p class="card-text">
+                Para evitar condiciones de carrera, es necesario utilizar mecanismos de sincronización, como mutexes, semáforos o variables de condición, que permitan a los procesos o hilos coordinar su ejecución de manera que se evite el acceso simultáneo a los recursos compartidos. Estos mecanismos ayudan a garantizar la consistencia de los datos y a prevenir resultados inesperados en entornos concurrentes.
+            </p>
+        
+            <p class="card-text">
+                <b>Exclusión mutua</b>
+            </p>
+        
+            <p class="card-text">
+                Los procesos compiten por el uso de unos recursos limitados. Esos recursos pueden ser:
+            </p>
+
+            <ol class="card-text">
+                <li>
+                    <b>Compartibles</b>: Pueden ser empleados por varios
+                    procesos de forma concurrente. Ejemplos: CPU, archivos de lectura, áreas de memoria no modificables.
                 </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">No compartibles</span></strong><span style="font-size:12pt;">: Su uso se restringe a un &uacute;nico proceso por:</span></p>
-                    <ul>
-                        <li style="list-style-type:circle;font-size:12pt;">
-                            <p class="card-text" ><span style="font-size:12pt;">La naturaleza f&iacute;sica del recurso. Ejemplos: Unidad de cinta magn&eacute;tica, lectora de tarjetas, impresora, &hellip;</span></p>
+                <li>
+                    <b>No compartibles</b>: Su uso se restringe a un único proceso por:
+                    <ul class="card-text">
+                        <li>
+                            <b>La naturaleza física del recurso</b>: Ejemplos: Unidad de cinta magnética, lectora de tarjetas,
+                            impresora.
                         </li>
-                        <li style="list-style-type:circle;font-size:12pt;">
-                            <p class="card-text" ><span style="font-size:12pt;">Si el recurso lo usan otros procesos de forma concurrente, la acci&oacute;n de uno de ellos puede interferir en la de otro. Ejemplos: Archivo de escritura, posici&oacute;n de memoria, &hellip;</span></p>
+                        <li>
+                            <b>Si el recurso lo usan otros procesos de forma concurrente, la acción de uno de ellos puede interferir
+                                en la de otro:</b> Ejemplos: Archivo de escritura, posición de memoria.
                         </li>
                     </ul>
                 </li>
-            </ul>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="font-size:12pt;">La&nbsp;</span><strong><span style="font-size:12pt;">exclusi&oacute;n mutua</span></strong><span style="font-size:12pt;">&nbsp;consiste en asegurar que los recursos no compartibles sean accedidos por un &uacute;nico proceso a la vez.</span></p>
-            <p class="card-text" ><span style="font-size:12pt;">Para evitar las condiciones de carrera necesitamos exclusi&oacute;n mutua, es decir, si un proceso est&aacute; usando una variable o archivo compartido, el otro proceso ser&aacute; excluido de hacer lo mismo.</span></p>
-            <h3><span style="color:#434343;font-size:15pt;">Secciones cr&iacute;ticas y secciones cr&iacute;ticas condicionales</span></h3>
-            <p class="card-text" ><span style="font-size:12pt;">Las&nbsp;</span><strong><span style="font-size:12pt;">secciones cr&iacute;ticas&nbsp;</span></strong><span style="font-size:12pt;">o regiones cr&iacute;ticas son fragmentos de programa que acceden a recursos no compartibles. Si dos procesos no est&aacute;n nunca en sus secciones cr&iacute;ticas al mismo tiempo, se evitan las condiciones de carrera (esto no impide tener procesos paralelos que cooperen correctamente y eficientemente usando datos compartidos).</span></p>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="font-size:12pt;">Las regiones cr&iacute;ticas condicionales permiten que los procesos ejecuten sus secciones cr&iacute;ticas s&oacute;lo cuando se cumpla una determinada condici&oacute;n.</span></p>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="font-size:12pt;">Cuando a un proceso no se le satisface la condici&oacute;n, se quedar&aacute; suspendido en una cola especial en espera del cumplimiento de la condici&oacute;n. As&iacute; se consigue que, aunque un proceso espere en una condici&oacute;n, no evite que otros utilicen el recurso. Con ello conseguimos la sincronizaci&oacute;n adem&aacute;s de la exclusi&oacute;n mutua a la secci&oacute;n cr&iacute;tica.</span></p>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="font-size:12pt;">Condiciones que se requieren para evitar las condiciones de carrera:</span></p>
-            <p class="card-text" ><br></p>
-            <ul>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" ><span style="font-size:12pt;">Dos procesos no pueden estar simult&aacute;neamente dentro de sus secciones cr&iacute;ticas.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" ><span style="font-size:12pt;">No se hacen suposiciones sobre las velocidades de los procesos o el n&uacute;mero de CPUs.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" ><span style="font-size:12pt;">Ning&uacute;n proceso que se pare fuera de su secci&oacute;n cr&iacute;tica bloquear&aacute; a otros procesos.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" ><span style="font-size:12pt;">Ning&uacute;n proceso esperar&aacute; mucho tiempo para entrar en su secci&oacute;n cr&iacute;tica. Por ello, las secciones cr&iacute;ticas deben ejecutarse tan r&aacute;pido como sea posible. Adem&aacute;s, un proceso no debe bloquearse dentro de su propia secci&oacute;n cr&iacute;tica (interbloqueo).</span></p>
-                </li>
-            </ul>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="color:#666666;font-size:16pt;">Atomicidad</span></p>
-            <p class="card-text" ><span style="font-size:12pt;">Es uno de los conceptos fundamentales en la programaci&oacute;n concurrente y en sistemas de bases de datos. Asegura que ciertas operaciones se realicen como una unidad at&oacute;mica e indivisible, evitando condiciones de carrera y garantizando la consistencia de los datos en entornos donde m&uacute;ltiples procesos o hilos pueden acceder y modificar datos compartidos simult&aacute;neamente.</span></p>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="font-size:12pt;">Algunos puntos clave sobre la atomicidad:</span></p>
-            <p class="card-text" ><br></p>
-            <ul>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Operaciones At&oacute;micas</span></strong><span style="font-size:12pt;">: Una operaci&oacute;n at&oacute;mica es aquella que se ejecuta de manera completa e indivisible. Ya sea que consista en una &uacute;nica instrucci&oacute;n o en un conjunto de instrucciones, una operaci&oacute;n at&oacute;mica se considera como si se ejecutara en un solo paso. Si se interrumpe una operaci&oacute;n at&oacute;mica, no dejar&aacute; el sistema en un estado inconsistente.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Evitar Condiciones de Carrera</span></strong><span style="font-size:12pt;">: La atomicidad es crucial para evitar condiciones de carrera, que ocurren cuando dos o m&aacute;s procesos intentan modificar un recurso compartido al mismo tiempo, resultando en comportamientos no deseados o inconsistentes.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Mecanismos de Sincronizaci&oacute;n</span></strong><span style="font-size:12pt;">: Los mecanismos de sincronizaci&oacute;n, como los mutexes, son utilizados para lograr la atomicidad. Al bloquear el acceso al recurso compartido mientras una operaci&oacute;n se est&aacute; realizando, se asegura que ning&uacute;n otro proceso pueda interferir hasta que la operaci&oacute;n se complete.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Transacciones en Bases de Datos</span></strong><span style="font-size:12pt;">: En el contexto de las bases de datos, la atomicidad se refiere a las transacciones at&oacute;micas. Una transacci&oacute;n es un conjunto de operaciones que deben ejecutarse en su totalidad o no ejecutarse en absoluto. Si alguna parte de la transacci&oacute;n falla, se revierten todas las operaciones a un estado consistente, manteniendo la integridad de la base de datos.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Rollback y Commit</span></strong><span style="font-size:12pt;">: Las transacciones en bases de datos suelen incluir dos conceptos relacionados: el &quot;commit&quot; (confirmaci&oacute;n) y el &quot;rollback&quot; (reversi&oacute;n). El &quot;commit&quot; confirma que todas las operaciones de la transacci&oacute;n se han realizado con &eacute;xito, mientras que el &quot;rollback&quot; deshace todas las operaciones en caso de un fallo.</span></p>
-                </li>
-            </ul>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="color:#666666;font-size:16pt;">Abrazo mortal</span><span style="color:#666666;font-size:12pt;">&nbsp;</span></p>
-            <p class="card-text" ><span style="font-size:12pt;">El &quot;abrazo mortal&quot; o deadlock es una situaci&oacute;n problem&aacute;tica en sistemas concurrentes donde dos o m&aacute;s procesos o hilos quedan atrapados indefinidamente porque cada uno est&aacute; esperando que el otro libere un recurso necesario para avanzar. En otras palabras, hay un bloqueo circular de dependencias entre los procesos, y ninguno puede continuar su ejecuci&oacute;n.</span></p>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="font-size:12pt;">Caracter&iacute;sticas clave del deadlock:</span></p>
-            <p class="card-text" ><br></p>
-            <ol>
-                <li style="list-style-type:decimal;font-size:12pt;">
-                    <p class="card-text" ><span style="font-size:12pt;">Bloqueo Mutuo: Cada proceso tiene un recurso que necesita para continuar y posee un recurso que el otro proceso necesita. Ambos procesos se bloquean mutuamente al retener los recursos necesarios para el otro.</span></p>
-                </li>
-                <li style="list-style-type:decimal;font-size:12pt;">
-                    <p class="card-text" ><span style="font-size:12pt;">Espera Circular: Existe un ciclo en el que cada proceso est&aacute; esperando que el siguiente libere un recurso. Esta cadena de espera circular es esencial para la existencia del deadlock.</span></p>
-                </li>
-                <li style="list-style-type:decimal;font-size:12pt;">
-                    <p class="card-text" ><span style="font-size:12pt;">Recursos No Liberados: Los recursos que los procesos han adquirido no se liberan adecuadamente. Esto puede deberse a errores en el c&oacute;digo, falta de sincronizaci&oacute;n o problemas de planificaci&oacute;n.</span></p>
-                </li>
             </ol>
-            <p class="card-text" ><br></p>
-            <p class="card-text" ><span style="font-size:12pt;">Para evitar deadlocks y mitigar sus efectos, se implementan diversas estrategias:</span></p>
-            <p class="card-text" ><br></p>
-            <ol>
-                <li style="list-style-type:decimal;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Asignaci&oacute;n Ordenada de Recursos</span></strong><span style="font-size:12pt;">: Asignar recursos a los procesos de una manera ordenada y garantizar que todos los procesos sigan el mismo orden al adquirir recursos ayuda a prevenir deadlocks.</span></p>
-                </li>
-                <li style="list-style-type:decimal;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Detecci&oacute;n y Recuperaci&oacute;n</span></strong><span style="font-size:12pt;">: Los sistemas operativos pueden implementar algoritmos de detecci&oacute;n de deadlock para identificar si un deadlock ha ocurrido. Luego, se pueden tomar medidas, como liberar recursos o terminar procesos, para recuperarse de la situaci&oacute;n.</span></p>
-                </li>
-                <li style="list-style-type:decimal;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Jerarqu&iacute;a de Recursos</span></strong><span style="font-size:12pt;">: Establecer una jerarqu&iacute;a de recursos y requerir que los procesos adquieran recursos en un orden espec&iacute;fico puede prevenir deadlocks.</span></p>
-                </li>
-                <li style="list-style-type:decimal;font-size:12pt;">
-                    <p class="card-text" ><strong><span style="font-size:12pt;">Timeouts y Liberaci&oacute;n Forzada</span></strong><span style="font-size:12pt;">: Si un proceso detecta que ha estado esperando demasiado tiempo por un recurso, puede liberar los recursos adquiridos y volver a intentar adquirirlos m&aacute;s tarde. Esto evita la permanencia indefinida en un deadlock.</span></p>
-                </li>
-            </ol>
-            <p class="card-text" ><strong><span style="font-size:12pt;">Exclusi&oacute;n M&uacute;tua</span></strong><span style="font-size:12pt;">: Limitar el acceso a recursos cr&iacute;ticos mediante el uso de mutexes o sem&aacute;foros puede prevenir situaciones de deadlock, pero tambi&eacute;n puede reducir la concurrencia.</span></p>
+              
+        
+            <p class="card-text">
+                La <b>exclusión mutua</b> consiste en asegurar que los recursos no compartibles sean accedidos por un único proceso a la vez.
+            </p>
+        
+            <p class="card-text">
+                Para evitar las condiciones de carrera necesitamos exclusión mutua, es decir, si un proceso está usando una variable o archivo compartido, el otro proceso será excluido de hacer lo mismo.
+            </p>
+        
+            <p class="card-text">
+                <b>Secciones críticas y secciones críticas condicionales</b>
+            </p>
 
+            <p class="card-text">
+                Las <b>secciones críticas</b> o regiones críticas son fragmentos de programa que acceden a recursos no compartibles. Si dos procesos no están nunca en sus secciones críticas al mismo tiempo, se evitan las condiciones de carrera (esto no impide tener procesos paralelos que cooperen correctamente y eficientemente usando datos compartidos).
+            </p>
+
+            <p class="card-text">
+                Las regiones críticas condicionales permiten que los procesos ejecuten sus secciones críticas sólo cuando se cumpla
+                una determinada condición.
+            </p>
+            
+            <p class="card-text">
+                Cuando a un proceso no se le satisface la condición, se quedará suspendido en una cola especial en espera del
+                cumplimiento de la condición. Así se consigue que, aunque un proceso espere en una condición, no evite que otros
+                utilicen el recurso. Con ello conseguimos la sincronización además de la exclusión mutua a la sección crítica.
+            </p>
+              
+            <p class="card-text">
+                Condiciones que se requieren para evitar las condiciones de carrera:
+            </p>
+            
+            <ul class="card-text">
+                <li>Dos procesos no pueden estar simultáneamente dentro de sus secciones críticas.</li>
+                <li>No se hacen suposiciones sobre las velocidades de los procesos o el número de CPUs.</li>
+                <li>Ningún proceso que se pare fuera de su sección crítica bloqueará a otros procesos.</li>
+                <li>Ningún proceso esperará mucho tiempo para entrar en su sección crítica. Por ello, las secciones críticas deben
+                    ejecutarse tan rápido como sea posible. Además, un proceso no debe bloquearse dentro de su propia sección
+                    crítica (interbloqueo).</li>
+            </ul>
+
+            <p class="card-text">
+                <b>Atomicidad</b>
+            </p>
+
+            <p class="card-text">
+                Es uno de los conceptos fundamentales en la programación concurrente y en sistemas de bases de datos. Asegura que
+                ciertas operaciones se realicen como una unidad atómica e indivisible, evitando condiciones de carrera y
+                garantizando la consistencia de los datos en entornos donde múltiples procesos o hilos pueden acceder y modificar
+                datos compartidos simultáneamente.
+            </p>
+            
+            
+            <p class="card-text">
+                Algunos puntos clave sobre la atomicidad:
+            </p>
+              
+
+            <ul class="card-text">
+                <li><b>Operaciones Atómicas:</b> Una operación atómica es aquella que se ejecuta de manera completa e indivisible.
+                    Ya sea que consista en una única instrucción o en un conjunto de instrucciones, una operación atómica se
+                    considera como si se ejecutara en un solo paso. Si se interrumpe una operación atómica, no dejará el sistema en
+                    un estado inconsistente.</li>
+                <li><b>Evitar Condiciones de Carrera:</b> La atomicidad es crucial para evitar condiciones de carrera, que ocurren
+                    cuando dos o más procesos intentan modificar un recurso compartido al mismo tiempo, resultando en
+                    comportamientos no deseados o inconsistentes.</li>
+                <li><b>Mecanismos de Sincronización:</b> Los mecanismos de sincronización, como los mutexes, son utilizados para
+                    lograr la atomicidad. Al bloquear el acceso al recurso compartido mientras una operación se está realizando, se
+                    asegura que ningún otro proceso pueda interferir hasta que la operación se complete.</li>
+                <li><b>Transacciones en Bases de Datos:</b> En el contexto de las bases de datos, la atomicidad se refiere a las
+                    transacciones atómicas. Una transacción es un conjunto de operaciones que deben ejecutarse en su totalidad o no
+                    ejecutarse en absoluto. Si alguna parte de la transacción falla, se revierten todas las operaciones a un estado
+                    consistente, manteniendo la integridad de la base de datos.</li>
+                <li><b>Rollback y Commit:</b> Las transacciones en bases de datos suelen incluir dos conceptos relacionados: el
+                    "commit" (confirmación) y el "rollback" (reversión). El "commit" confirma que todas las operaciones de la
+                    transacción se han realizado con éxito, mientras que el "rollback" deshace todas las operaciones en caso de un
+                    fallo.</li>
+            </ul>
+
+            <p class="card-text">
+                <b>Abrazo mortal</b>
+            </p>
+
+            <p class="card-text">
+                El "abrazo mortal" o deadlock es una situación problemática en sistemas concurrentes donde dos o más procesos o hilos quedan atrapados indefinidamente porque cada uno está esperando que el otro libere un recurso necesario para avanzar. En otras palabras, hay un bloqueo circular de dependencias entre los procesos, y ninguno puede continuar su ejecución.
+            </p>
+
+            <p class="card-text">
+                Características clave del deadlock:
+            </p>
+
+            <ol class="card-text">
+                <li><b>Bloqueo Mutuo:</b> Cada proceso tiene un recurso que necesita para continuar y posee un recurso que el otro
+                    proceso necesita. Ambos procesos se bloquean mutuamente al retener los recursos necesarios para el otro.</li>
+                <li><b>Espera Circular:</b> Existe un ciclo en el que cada proceso está esperando que el siguiente libere un
+                    recurso. Esta cadena de espera circular es esencial para la existencia del deadlock.</li>
+                <li><b>Recursos No Liberados:</b> Los recursos que los procesos han adquirido no se liberan adecuadamente. Esto
+                    puede deberse a errores en el código, falta de sincronización o problemas de planificación.</li>
+            </ol>
+              
+            <p class="card-text">
+                Para evitar deadlocks y mitigar sus efectos, se implementan diversas estrategias:
+            </p>
+
+            <ol class="card-text">
+                <li><b>Asignación Ordenada de Recursos:</b> Asignar recursos a los procesos de una manera ordenada y garantizar que
+                    todos los procesos sigan el mismo orden al adquirir recursos ayuda a prevenir deadlocks.</li>
+                <li><b>Detección y Recuperación:</b> Los sistemas operativos pueden implementar algoritmos de detección de deadlock
+                    para identificar si un deadlock ha ocurrido. Luego, se pueden tomar medidas, como liberar recursos o terminar
+                    procesos, para recuperarse de la situación.</li>
+                <li><b>Jerarquía de Recursos:</b> Establecer una jerarquía de recursos y requerir que los procesos adquieran
+                    recursos en un orden específico puede prevenir deadlocks.</li>
+                <li><b>Timeouts y Liberación Forzada:</b> Si un proceso detecta que ha estado esperando demasiado tiempo por un
+                    recurso, puede liberar los recursos adquiridos y volver a intentar adquirirlos más tarde. Esto evita la
+                    permanencia indefinida en un deadlock.</li>
+                <li><b>Exclusión Mútua:</b> Limitar el acceso a recursos críticos mediante el uso de mutexes o semáforos puede
+                    prevenir situaciones de deadlock, pero también puede reducir la concurrencia.</li>
+            </ol>
+              
+        
+        
             <ul class="pagination justify-content-end">
                 <li class="page-item">
                     <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Anterior</a>
