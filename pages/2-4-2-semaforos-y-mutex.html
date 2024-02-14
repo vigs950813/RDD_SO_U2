@@ -51,19 +51,43 @@
         <section>
             <div class="card">
                 <h5 class="card-header">2.4.2 Semáforos y mutex</h5>
-                <div class="card-body m-5">
+                <div class="card-body">
 
-                    <p class="card-text" ><span style="font-size:12pt;">Como en la vida real, un sem&aacute;foro es una herramienta que permite sincronizar, es este caso procesos, los cuales deben acceder a recursos sin llegar a un conflicto, que se traducir&iacute;a en inconsistencias de datos, interbloqueos y problemas de concurrencia y sincronizaci&oacute;n.</span></p>
-                    <p class="card-text" ><br></p>
-                    <p class="card-text" ><span style="font-size:12pt;">Implementado, un sem&aacute;foro es una estructura de dato.</span></p>
-                    <p class="card-text" ><br></p>
-                    <p class="card-text" ><span style="font-size:12pt;">De acuerdo con Allen B. Downey, un sem&aacute;foro es como un n&uacute;mero entero, con tres diferencias:&nbsp;</span></p>
-                    <p class="card-text" ><span style="font-size:12pt;">1. Cuando creas el sem&aacute;foro, puedes inicializar su valor a cualquier n&uacute;mero entero, pero despu&eacute;s de eso las &uacute;nicas operaciones que puedes realizar son incrementar (aumentar en uno) y disminuir (disminuir en uno). No puedes leer el Valor actual del sem&aacute;foro.&nbsp;</span></p>
-                    <p class="card-text" ><span style="font-size:12pt;">2. Cuando un hilo disminuye el sem&aacute;foro, si el resultado es negativo, el hilo se bloquea y no puede continuar hasta que otro hilo aumente. el sem&aacute;foro.&nbsp;</span></p>
-                    <p class="card-text" ><span style="font-size:12pt;">3. Cuando un hilo incrementa el sem&aacute;foro, si hay otros hilos esperando, uno de los hilos en espera se desbloquea.</span></p>
-                    <p class="card-text"  class="card-text">
-                        En construcción
+                    <p class="card-text">
+                        Como en la vida real, un semáforo es una herramienta que permite sincronizar, en este caso procesos, los cuales
+                        deben acceder a recursos sin llegar a un conflicto, que se traduciría en inconsistencias de datos, interbloqueos y
+                        problemas de concurrencia y sincronización.
                     </p>
+                    
+                    <p class="card-text">
+                        Implementado, un semáforo es una estructura de dato.
+                    </p>
+                    
+                    <p class="card-text">
+                        De acuerdo con Allen B. Downey, un semáforo es como un número entero, con tres diferencias:
+                    </p>
+                      
+
+                    <ol class="card-text">
+                        <li>Cuando creas el semáforo, puedes inicializar su valor a cualquier número entero, pero después de eso, las únicas
+                            operaciones que puedes realizar son incrementar (aumentar en uno) y disminuir (disminuir en uno). No puedes leer
+                            el valor actual del semáforo.</li>
+                        <li>Cuando un hilo disminuye el semáforo, si el resultado es negativo, el hilo se bloquea y no puede continuar hasta
+                            que otro hilo aumente el semáforo.</li>
+                        <li>Cuando un hilo incrementa el semáforo, si hay otros hilos esperando, uno de los hilos en espera se desbloquea.
+                        </li>
+                    </ol>
+
+                    <p class="card-text">
+                        Ejemplo de aplicación.
+                    </p>
+
+                    <p class="card-text">
+                        Un ejemplo típico de uso está en el problema de la cena de los filósofos, propuesto por Dijkstra en 1965, sin embargo, presentaremos un ejemplo diferente en esta ocasión.
+                    </p>
+
+                    
+                      
 
                     <ul class="pagination justify-content-end">
                         <li class="page-item">

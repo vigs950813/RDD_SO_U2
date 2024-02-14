@@ -51,58 +51,45 @@
         <section>
             <div class="card">
                 <h5 class="card-header">2.5 Planificación</h5>
-                <div class="card-body m-5">
+                <div class="card-body">
 
-                    <div class="row m-5">
-                        <div class="col">
-                            <p class="card-text"><span style="font-size:12pt;">Existen varios criterios y estrategias que gu&iacute;an la planificaci&oacute;n de procesos:</span></p>
-                            <p class="card-text"><br></p>
-                            <ol>
-                                <li style="list-style-type:decimal;font-size:12pt;">
-                                    <p class="card-text"><span style="font-size:12pt;">Prioridades:</span></p>
-                                    <ul>
-                                        <li style="list-style-type:circle;font-size:12pt;">
-                                            <p class="card-text"><span style="font-size:12pt;">Los procesos pueden tener asignadas prioridades, indicando su importancia relativa para el sistema. La planificaci&oacute;n de procesos da preferencia a aquellos con prioridades m&aacute;s altas, asegurando que las tareas cr&iacute;ticas reciban un tratamiento adecuado.</span></p>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li style="list-style-type:decimal;font-size:12pt;">
-                                    <p class="card-text"><span style="font-size:12pt;">Tiempo Compartido:</span></p>
-                                    <ul>
-                                        <li style="list-style-type:circle;font-size:12pt;">
-                                            <p class="card-text"><span style="font-size:12pt;">En sistemas de tiempo compartido, la CPU se divide entre varios procesos en peque&ntilde;os intervalos de tiempo. Esto proporciona una apariencia de ejecuci&oacute;n simult&aacute;nea y permite que m&uacute;ltiples usuarios interact&uacute;en con el sistema de manera aparentemente simult&aacute;nea.</span></p>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li style="list-style-type:decimal;font-size:12pt;">
-                                    <p class="card-text"><span style="font-size:12pt;">Colas de Prioridad:</span></p>
-                                    <ul>
-                                        <li style="list-style-type:circle;font-size:12pt;">
-                                            <p class="card-text"><span style="font-size:12pt;">Los procesos se organizan en colas seg&uacute;n sus prioridades, y el planificador selecciona el proceso de mayor prioridad para su ejecuci&oacute;n. Esto asegura que los procesos cr&iacute;ticos reciban atenci&oacute;n inmediata.</span></p>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li style="list-style-type:decimal;font-size:12pt;">
-                                    <p class="card-text"><span style="font-size:12pt;">Round Robin:</span></p>
-                                    <ul>
-                                        <li style="list-style-type:circle;font-size:12pt;">
-                                            <p class="card-text"><span style="font-size:12pt;">Este algoritmo asigna a cada proceso un intervalo de tiempo fijo en el que puede ejecutarse. Si un proceso no se completa durante su intervalo, se coloca al final de la cola, permitiendo que otros procesos tengan la oportunidad de ejecutarse.</span></p>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li style="list-style-type:decimal;font-size:12pt;">
-                                    <p class="card-text"><span style="font-size:12pt;">Algoritmos de Preemptiva y No Preemptiva:</span></p>
-                                    <ul>
-                                        <li style="list-style-type:circle;font-size:12pt;">
-                                            <p class="card-text"><span style="font-size:12pt;">Los algoritmos preemptivos permiten que un proceso sea interrumpido y suspendido, mientras que los no preemptivos permiten que un proceso se ejecute hasta su finalizaci&oacute;n antes de seleccionar otro.</span></p>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ol>
-                            <p class="card-text"><span style="font-size:12pt;">La importancia de la planificaci&oacute;n de procesos radica en su capacidad para optimizar los recursos del sistema. Al asignar el procesador de manera eficiente, se mejora la utilizaci&oacute;n de la CPU y se reduce el tiempo de espera de los procesos, lo que contribuye a un sistema operativo m&aacute;s &aacute;gil y receptivo. Adem&aacute;s, la planificaci&oacute;n equitativa y basada en prioridades asegura una distribuci&oacute;n justa de los recursos, evitando situaciones de inanici&oacute;n y garantizando que todos los procesos reciban una oportunidad adecuada de ejecuci&oacute;n.</span></p>
-
-                        </div>
-                    </div>
+                    <p class="card-text">
+                        En el ámbito de la computación, la planificación de procesos es un componente fundamental de los sistemas
+                        operativos, encargándose de determinar el orden en que los procesos accederán al procesador. Este proceso es crucial
+                        para optimizar la eficiencia del sistema al asignar recursos de manera equitativa y minimizar los tiempos de espera
+                        de los procesos.
+                    
+                        La esencia de la planificación de procesos reside en la gestión de la concurrencia, donde múltiples procesos
+                        compiten por el acceso al procesador. El objetivo principal es maximizar la utilización del CPU, minimizar el tiempo
+                        de respuesta y garantizar una distribución justa de los recursos del sistema. Para lograr esto, los sistemas
+                        operativos emplean algoritmos de planificación que determinan la secuencia en la que los procesos se ejecutarán.
+                    
+                        Existen varios criterios y estrategias que guían la planificación de procesos:
+                    </p>
+                    
+                    
+                    <ol class="card-text">
+                        <li><b>Prioridades:</b> Los procesos pueden tener asignadas prioridades, indicando su importancia relativa para el
+                            sistema. La planificación de procesos da preferencia a aquellos con prioridades más altas, asegurando que las
+                            tareas críticas reciban un tratamiento adecuado.</li>
+                    
+                        <li><b>Tiempo Compartido:</b> En sistemas de tiempo compartido, la CPU se divide entre varios procesos en pequeños
+                            intervalos de tiempo. Esto proporciona una apariencia de ejecución simultánea y permite que múltiples usuarios
+                            interactúen con el sistema de manera aparentemente simultánea.</li>
+                    
+                        <li><b>Colas de Prioridad:</b> Los procesos se organizan en colas según sus prioridades, y el planificador
+                            selecciona el proceso de mayor prioridad para su ejecución. Esto asegura que los procesos críticos reciban
+                            atención inmediata.</li>
+                    
+                        <li><b>Round Robin:</b> Este algoritmo asigna a cada proceso un intervalo de tiempo fijo en el que puede ejecutarse.
+                            Si un proceso no se completa durante su intervalo, se coloca al final de la cola, permitiendo que otros procesos
+                            tengan la oportunidad de ejecutarse.</li>
+                    
+                        <li><b>Algoritmos de Preemptiva y No Preemptiva:</b> Los algoritmos preemptivos permiten que un proceso sea
+                            interrumpido y suspendido, mientras que los no preemptivos permiten que un proceso se ejecute hasta su
+                            finalización antes de seleccionar otro.</li>
+                    </ol>
+                      
 
                     <ul class="pagination justify-content-end">
                         <li class="page-item">

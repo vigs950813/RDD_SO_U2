@@ -51,26 +51,54 @@
         <section>
             <div class="card">
                 <h5 class="card-header">2.4.3 Monitores</h5>
-                <div class="card-body m-5">
+                <div class="card-body">
 
-                    <div class="row m-5">
-                        <div class="col">
-                            <p class="card-text"><span style="font-size:12pt;">En el &aacute;mbito de la programaci&oacute;n concurrente, la sincronizaci&oacute;n y la gesti&oacute;n de recursos compartidos son dos desaf&iacute;os fundamentales. Los monitores, propuestos por E.W. Dijkstra en 1968, se erige como una abstracci&oacute;n poderosa y vers&aacute;til para abordar estos desaf&iacute;os de manera efectiva.&nbsp;</span></p>
-                            <p class="card-text"><br></p>
-                            <p class="card-text"><span style="font-size:12pt;">Los monitores se caracterizan por encapsular variables y procedimientos en una estructura &uacute;nica, proporcionando una interfaz cohesiva para la manipulaci&oacute;n de recursos compartidos. Su funcionalidad central radica en dos pilares: la exclusi&oacute;n mutua autom&aacute;tica y la gesti&oacute;n de variables condici&oacute;n.</span></p>
-                            <p class="card-text"><br></p>
-                            <p class="card-text"><span style="font-size:12pt;">La exclusi&oacute;n mutua es un aspecto cr&iacute;tico que abordan los monitores. Garantizan que solo un hilo o proceso pueda ejecutar un procedimiento monitor a la vez, eliminando as&iacute; las condiciones de carrera y promoviendo un acceso seguro a recursos compartidos. Esta caracter&iacute;stica simplifica el dise&ntilde;o y la implementaci&oacute;n de la exclusi&oacute;n mutua, reduciendo la propensi&oacute;n a errores asociados con la concurrencia.</span></p>
-                            <p class="card-text"><br></p>
-                            <p class="card-text"><span style="font-size:12pt;">Otra funci&oacute;n distintiva de los monitores es la gesti&oacute;n de variables condici&oacute;n. Estas variables son fundamentales para la comunicaci&oacute;n y sincronizaci&oacute;n entre hilos o procesos, facilitando la coordinaci&oacute;n eficiente en entornos concurrentes. Las variables condici&oacute;n permiten la espera y la se&ntilde;alizaci&oacute;n, contribuyendo a una ejecuci&oacute;n m&aacute;s coordinada y eficiente.</span></p>
-                            <p class="card-text"><br></p>
-                            <p class="card-text"><span style="font-size:12pt;">La importancia de los monitores se refleja en diversos aspectos clave. En primer lugar, facilitan la sincronizaci&oacute;n de manera efectiva, simplificando la implementaci&oacute;n y reduciendo la complejidad asociada a la concurrencia. Esta capacidad mejora la legibilidad del c&oacute;digo concurrente y facilita su mantenimiento, factores cruciales en el desarrollo de software robusto.</span></p>
-                            <p class="card-text"><br></p>
-                            <p class="card-text"><span style="font-size:12pt;">Adem&aacute;s, los monitores desempe&ntilde;an un papel crucial en la reducci&oacute;n de errores comunes asociados con la concurrencia. La encapsulaci&oacute;n de la sincronizaci&oacute;n y la exclusi&oacute;n mutua dentro de los monitores ayuda a prevenir problemas como condiciones de carrera y deadlocks, contribuyendo a la fiabilidad y seguridad del software.</span></p>
-                            <p class="card-text"><br></p>
-                            <p class="card-text"><span style="font-size:12pt;">La aparici&oacute;n de los monitores responde a la necesidad imperante de proporcionar una abstracci&oacute;n m&aacute;s estructurada y segura para la programaci&oacute;n concurrente. En un contexto donde la complejidad y propensi&oacute;n a errores de los enfoques tradicionales, como el uso de sem&aacute;foros y mutex, se volv&iacute;an evidentes, los monitores emergieron como una soluci&oacute;n m&aacute;s poderosa y f&aacute;cil de usar.</span></p>
-
-                        </div>
-                    </div>
+                    <p class="card-text">
+                        En el ámbito de la programación concurrente, la sincronización y la gestión de recursos compartidos son dos desafíos
+                        fundamentales. Los monitores, propuestos por E.W. Dijkstra en 1968, se erige como una abstracción poderosa y
+                        versátil para abordar estos desafíos de manera efectiva.
+                    </p>
+                    
+                    <p class="card-text">
+                        Los monitores se caracterizan por encapsular variables y procedimientos en una estructura única, proporcionando una
+                        interfaz cohesiva para la manipulación de recursos compartidos. Su funcionalidad central radica en dos pilares: la
+                        exclusión mutua automática y la gestión de variables condición.
+                    </p>
+                    
+                    <p class="card-text">
+                        La exclusión mutua es un aspecto crítico que abordan los monitores. Garantizan que solo un hilo o proceso pueda
+                        ejecutar un procedimiento monitor a la vez, eliminando así las condiciones de carrera y promoviendo un acceso seguro
+                        a recursos compartidos. Esta característica simplifica el diseño y la implementación de la exclusión mutua,
+                        reduciendo la propensión a errores asociados con la concurrencia.
+                    </p>
+                    
+                    <p class="card-text">
+                        Otra función distintiva de los monitores es la gestión de variables condición. Estas variables son fundamentales
+                        para la comunicación y sincronización entre hilos o procesos, facilitando la coordinación eficiente en entornos
+                        concurrentes. Las variables condición permiten la espera y la señalización, contribuyendo a una ejecución más
+                        coordinada y eficiente.
+                    </p>
+                    
+                    <p class="card-text">
+                        La importancia de los monitores se refleja en diversos aspectos clave. En primer lugar, facilitan la sincronización
+                        de manera efectiva, simplificando la implementación y reduciendo la complejidad asociada a la concurrencia. Esta
+                        capacidad mejora la legibilidad del código concurrente y facilita su mantenimiento, factores cruciales en el
+                        desarrollo de software robusto.
+                    </p>
+                    
+                    <p class="card-text">
+                        Además, los monitores desempeñan un papel crucial en la reducción de errores comunes asociados con la concurrencia.
+                        La encapsulación de la sincronización y la exclusión mutua dentro de los monitores ayuda a prevenir problemas como
+                        condiciones de carrera y deadlocks, contribuyendo a la fiabilidad y seguridad del software.
+                    </p>
+                    
+                    <p class="card-text">
+                        La aparición de los monitores responde a la necesidad imperante de proporcionar una abstracción más estructurada y
+                        segura para la programación concurrente. En un contexto donde la complejidad y propensión a errores de los enfoques
+                        tradicionales, como el uso de semáforos y mutex, se volvían evidentes, los monitores emergieron como una solución
+                        más poderosa y fácil de usar.
+                    </p>
+                      
                     
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
