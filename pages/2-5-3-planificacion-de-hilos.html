@@ -51,50 +51,65 @@
         <section>
             <div class="card">
                 <h5 class="card-header">2.5.3 Planificación de hilos</h5>
-                <div class="card-body m-5">
+                <div class="card-body">
 
-                    <div class="row m-5">
-                        <div class="col">
-                            <p><span style="font-size:12pt;">La planificaci&oacute;n de hilos constituye un elemento esencial en sistemas operativos modernos, permitiendo la coordinaci&oacute;n eficiente de ejecuciones concurrentes.&nbsp;</span></p>
-                            <h3><span style="color:#434343;font-size:13.999999999999998pt;">Coordinaci&oacute;n Concurrente:</span></h3>
-                            <p><span style="font-size:12pt;">A diferencia de los procesos, los hilos comparten el mismo espacio de memoria y recursos dentro de un proceso. La planificaci&oacute;n de hilos se centra en determinar el orden en el que los hilos acceder&aacute;n al procesador, optimizando la ejecuci&oacute;n paralela y minimizando conflictos en el acceso a recursos compartidos.</span></p>
-                            <p><br></p>
-                            <h3><span style="color:#434343;font-size:13.999999999999998pt;">Criterios de Planificaci&oacute;n de Hilos:</span></h3>
-                            <p><span style="font-size:12pt;">Los criterios utilizados en la planificaci&oacute;n de hilos comparten similitudes con los de procesos, pero se adaptan a las caracter&iacute;sticas particulares de la concurrencia de hilos. Algunos de estos criterios incluyen:</span></p>
-                            <p><br></p>
-                            <ol>
-                                <li style="list-style-type:decimal;font-size:12pt;">
-                                    <p><span style="font-size:12pt;">Prioridad de Hilos:</span></p>
-                                    <ul>
-                                        <li style="list-style-type:circle;font-size:12pt;">
-                                            <p><span style="font-size:12pt;">La asignaci&oacute;n de prioridades a los hilos es fundamental. Los hilos con mayor prioridad se ejecutan antes, permitiendo que los procesos cr&iacute;ticos sean atendidos con prontitud.</span></p>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li style="list-style-type:decimal;font-size:12pt;">
-                                    <p><span style="font-size:12pt;">Quantum de Tiempo:</span></p>
-                                    <ul>
-                                        <li style="list-style-type:circle;font-size:12pt;">
-                                            <p><span style="font-size:12pt;">La asignaci&oacute;n de un quantum de tiempo a cada hilo garantiza una ejecuci&oacute;n equitativa. Una gesti&oacute;n adecuada de los quanta contribuye a evitar la monopolizaci&oacute;n de recursos por parte de un hilo y fomenta la equidad en la ejecuci&oacute;n.</span></p>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li style="list-style-type:decimal;font-size:12pt;">
-                                    <p><span style="font-size:12pt;">Pol&iacute;tica de Prioridad Din&aacute;mica:</span></p>
-                                    <ul>
-                                        <li style="list-style-type:circle;font-size:12pt;">
-                                            <p><span style="font-size:12pt;">Similar a la planificaci&oacute;n de procesos, la prioridad din&aacute;mica permite ajustar las prioridades de los hilos en funci&oacute;n de su comportamiento y estado actual. Esta flexibilidad contribuye a una adaptaci&oacute;n din&aacute;mica a las demandas del sistema.</span></p>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ol>
-                            <h3><span style="color:#434343;font-size:13.999999999999998pt;">Ventajas de la Planificaci&oacute;n de Hilos:</span></h3>
-                            <p><span style="font-size:12pt;">La capacidad de ejecutar m&uacute;ltiples hilos simult&aacute;neamente ofrece ventajas significativas en t&eacute;rminos de rendimiento y capacidad de respuesta. Al compartir recursos y coordinar la ejecuci&oacute;n de hilos, los sistemas operativos pueden maximizar la utilizaci&oacute;n de la CPU y responder eficientemente a las demandas de tareas concurrentes.</span></p>
-                            <p><br></p>
-                            <h3><span style="color:#434343;font-size:13.999999999999998pt;">Desaf&iacute;os y Soluciones:</span></h3>
-                            <p><span style="font-size:12pt;">La planificaci&oacute;n de hilos tambi&eacute;n enfrenta desaf&iacute;os espec&iacute;ficos, como la gesti&oacute;n de la concurrencia y la sincronizaci&oacute;n de accesos a recursos compartidos. Mecanismos como sem&aacute;foros, mutex y monitores se utilizan para mitigar problemas como condiciones de carrera y asegurar una ejecuci&oacute;n coherente.</span></p>
-                        </div>
-                    </div>
+                    <p class="card-text">
+                        La planificación de hilos constituye un elemento esencial en sistemas operativos modernos, permitiendo la
+                        coordinación eficiente de ejecuciones concurrentes.
+                    </p>
+                    
+                    <p class="card-text">
+                        <b>Coordinación concurrente</b>
+                    </p>
+                    
+                    <p class="card-text">
+                        A diferencia de los procesos, los hilos comparten el mismo espacio de memoria y recursos dentro de un proceso. La
+                        planificación de hilos se centra en determinar el orden en el que los hilos accederán al procesador, optimizando la
+                        ejecución paralela y minimizando conflictos en el acceso a recursos compartidos.
+                    </p>
+                    
+                    <p class="card-text">
+                        <b>Criterios de planificación de hilos</b>
+                    </p>
+                    
+                    <p class="card-text">
+                        Los criterios utilizados en la planificación de hilos comparten similitudes con los de procesos, pero se adaptan a
+                        las características particulares de la concurrencia de hilos. Algunos de estos criterios incluyen:
+                    </p>
+
+                    <ol class="card-text">
+                        <li><b>Prioridad de hilos:</b> La asignación de prioridades a los hilos es fundamental. Los hilos con mayor
+                            prioridad se ejecutan antes, permitiendo que los procesos críticos sean atendidos con prontitud.</li>
+                    
+                        <li><b>Quantum de tiempo:</b> La asignación de un quantum de tiempo a cada hilo garantiza una ejecución equitativa.
+                            Una gestión adecuada de los quantum contribuye a evitar la monopolización de recursos por parte de un hilo y
+                            fomenta la equidad en la ejecución.</li>
+                    
+                        <li><b>Política de prioridad dinámica:</b> Similar a la planificación de procesos, la prioridad dinámica permite
+                            ajustar las prioridades de los hilos en función de su comportamiento y estado actual. Esta flexibilidad
+                            contribuye a una adaptación dinámica a las demandas del sistema.</li>
+                    </ol>
+
+                    <p class="card-text">
+                        <b>Ventajas de la planificación de hilos</b>
+                    </p>
+                    
+                    <p class="card-text">
+                        La capacidad de ejecutar múltiples hilos simultáneamente ofrece ventajas significativas en términos de rendimiento y
+                        capacidad de respuesta. Al compartir recursos y coordinar la ejecución de hilos, los sistemas operativos pueden
+                        maximizar la utilización de la CPU y responder eficientemente a las demandas de tareas concurrentes.
+                    </p>
+                    
+                    <p class="card-text">
+                        <b>Desafíos y soluciones</b>
+                    </p>
+                    
+                    <p class="card-text">
+                        La planificación de hilos también enfrenta desafíos específicos, como la gestión de la concurrencia y la
+                        sincronización de accesos a recursos compartidos. Mecanismos como semáforos, mutex y monitores se utilizan para
+                        mitigar problemas como condiciones de carrera y asegurar una ejecución coherente.
+                    </p>
+                      
 
                     <ul class="pagination justify-content-end">
                         <li class="page-item">

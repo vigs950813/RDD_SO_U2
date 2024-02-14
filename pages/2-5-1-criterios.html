@@ -51,33 +51,48 @@
         <section>
             <div class="card">
                 <h5 class="card-header">2.5.1 Criterios</h5>
-                <div class="card-body m-5">
+                <div class="card-body">
 
-                    <div class="row">
-                        <div class="col">
-                            <p class="card-text" ><span style="font-size:12pt;">En la infraestructura de sistemas operativos, la planificaci&oacute;n de procesos se erige como un componente cr&iacute;tico, determinando c&oacute;mo se asignar&aacute; el recurso m&aacute;s preciado, el tiempo de CPU, entre los distintos procesos concurrentes. En este ensayo, exploraremos los criterios fundamentales que orientan la toma de decisiones en la planificaci&oacute;n de procesos, buscando optimizar la eficiencia y garantizar una equidad en la distribuci&oacute;n de recursos en los sistemas operativos modernos.</span></p>
-                            <p class="card-text" ><br></p>
-                            <h3><span style="color:#434343;font-size:13.999999999999998pt;">Prioridad:</span></h3>
-                            <p class="card-text" ><span style="font-size:12pt;">Uno de los criterios m&aacute;s destacados es la asignaci&oacute;n de prioridades a los procesos. Esta estrategia permite dar preferencia a procesos cr&iacute;ticos o urgentes, asegurando que aquellos con mayor importancia para el sistema o la aplicaci&oacute;n reciban atenci&oacute;n inmediata. La prioridad se convierte as&iacute; en un indicador clave para la toma de decisiones del planificador de procesos.</span></p>
-                            <p class="card-text" ><br></p>
-                            <h3><span style="color:#434343;font-size:13.999999999999998pt;">Tiempo de Ejecuci&oacute;n Restante (SRTN):</span></h3>
-                            <p class="card-text" ><span style="font-size:12pt;">El tiempo de ejecuci&oacute;n restante es un criterio que se enfoca en minimizar el tiempo de espera total. Los procesos son seleccionados con base en la estimaci&oacute;n de cu&aacute;nto tiempo les resta para su finalizaci&oacute;n. Esta estrategia busca optimizar la utilizaci&oacute;n del CPU al priorizar aquellos procesos que requieren menos tiempo para su ejecuci&oacute;n.</span></p>
-                            <p class="card-text" ><br></p>
-                            <h3><span style="color:#434343;font-size:13.999999999999998pt;">Tiempo de Ejecuci&oacute;n Estimado (SJF o SJN):</span></h3>
-                            <p class="card-text" ><span style="font-size:12pt;">Similar al enfoque SRTN, el criterio de tiempo de ejecuci&oacute;n estimado busca seleccionar procesos con el tiempo de ejecuci&oacute;n m&aacute;s corto. Esta estrategia tiene como objetivo minimizar el tiempo de espera total y mejorar la eficiencia del sistema al asignar la CPU de manera eficaz.</span></p>
-                            <p class="card-text" ><br></p>
-                            <h3><span style="color:#434343;font-size:13.999999999999998pt;">Round Robin:</span></h3>
-                            <p class="card-text" ><span style="font-size:12pt;">La t&eacute;cnica Round Robin introduce equidad en la planificaci&oacute;n de procesos al asignar a cada proceso un quantum de tiempo fijo. Esto garantiza que todos los procesos tengan la oportunidad de ejecutarse, evitando que un proceso acapara el CPU de manera prolongada. La equidad se convierte en el n&uacute;cleo de esta estrategia, asegurando una distribuci&oacute;n justa de los recursos.</span></p>
-                            <p class="card-text" ><br></p>
-                            <h3><span style="color:#434343;font-size:13.999999999999998pt;">First Come, First Served (FCFS):</span></h3>
-                            <p class="card-text" ><span style="font-size:12pt;">El criterio FCFS adopta un enfoque sencillo pero eficaz al ejecutar los procesos en el orden en que llegan. Este m&eacute;todo, aunque simple, puede dar lugar a tiempos de espera largos y, por ende, se utiliza con precauci&oacute;n en entornos donde la eficiencia es una prioridad.</span></p>
-                            <p class="card-text" ><br></p>
-                            <h3><span style="color:#434343;font-size:13.999999999999998pt;">Prioridad Din&aacute;mica, Multi-Nivel de Colas y Planificaci&oacute;n en Tiempo Real:</span></h3>
-                            <p class="card-text" ><span style="font-size:12pt;">Estos criterios avanzados permiten una adaptabilidad m&aacute;s din&aacute;mica en la planificaci&oacute;n de procesos. La prioridad din&aacute;mica ajusta las prioridades en funci&oacute;n del comportamiento pasado o del estado actual del proceso. El multinivel de colas implica la organizaci&oacute;n jer&aacute;rquica de procesos, movi&eacute;ndose entre colas seg&uacute;n su comportamiento. La planificaci&oacute;n en tiempo real asegura que ciertos procesos cumplan con plazos estrictos, fundamental en aplicaciones donde la respuesta r&aacute;pida es cr&iacute;tica.</span></p>
-                            <p class="card-text" ><br></p>
-                            <p class="card-text" ><br></p>
-                        </div>
-                    </div>
+                    <p class="card-text">
+                        En la infraestructura de sistemas operativos, la planificación de procesos se erige como un componente crítico,
+                        determinando cómo se asignará el recurso más preciado, el tiempo de CPU, entre los distintos procesos concurrentes.
+                        En este ensayo, exploraremos los criterios fundamentales que orientan la toma de decisiones en la planificación de
+                        procesos, buscando optimizar la eficiencia y garantizar una equidad en la distribución de recursos en los sistemas
+                        operativos modernos.
+                    </p>
+                    
+                    <ul class="card-text">
+                        <li><b>Prioridad:</b> Uno de los criterios más destacados es la asignación de prioridades a los procesos. Esta
+                            estrategia permite dar preferencia a procesos críticos o urgentes, asegurando que aquellos con mayor importancia
+                            para el sistema o la aplicación reciban atención inmediata. La prioridad se convierte así en un indicador clave
+                            para la toma de decisiones del planificador de procesos.</li>
+                    
+                        <li><b>Tiempo de Ejecución Restante (SRTN):</b> El tiempo de ejecución restante es un criterio que se enfoca en
+                            minimizar el tiempo de espera total. Los procesos son seleccionados con base en la estimación de cuánto tiempo
+                            les resta para su finalización. Esta estrategia busca optimizar la utilización del CPU al priorizar aquellos
+                            procesos que requieren menos tiempo para su ejecución.</li>
+                    
+                        <li><b>Tiempo de Ejecución Estimado (SJF o SJN):</b> Similar al enfoque SRTN, el criterio de tiempo de ejecución
+                            estimado busca seleccionar procesos con el tiempo de ejecución más corto. Esta estrategia tiene como objetivo
+                            minimizar el tiempo de espera total y mejorar la eficiencia del sistema al asignar la CPU de manera eficaz.</li>
+                    
+                        <li><b>Round Robin:</b> La técnica Round Robin introduce equidad en la planificación de procesos al asignar a cada
+                            proceso un quantum de tiempo fijo. Esto garantiza que todos los procesos tengan la oportunidad de ejecutarse,
+                            evitando que un proceso acapare el CPU de manera prolongada. La equidad se convierte en el núcleo de esta
+                            estrategia, asegurando una distribución justa de los recursos.</li>
+                    
+                        <li><b>First Come, First Served (FCFS):</b> El criterio FCFS adopta un enfoque sencillo pero eficaz al ejecutar los
+                            procesos en el orden en que llegan. Este método, aunque simple, puede dar lugar a tiempos de espera largos y,
+                            por ende, se utiliza con precaución en entornos donde la eficiencia es una prioridad.</li>
+                    
+                        <li><b>Prioridad Dinámica, Multi-Nivel de Colas y Planificación en Tiempo Real:</b> Estos criterios avanzados
+                            permiten una adaptabilidad más dinámica en la planificación de procesos. La prioridad dinámica ajusta las
+                            prioridades en función del comportamiento pasado o del estado actual del proceso. El multinivel de colas implica
+                            la organización jerárquica de procesos, moviéndose entre colas según su comportamiento. La planificación en
+                            tiempo real asegura que ciertos procesos cumplan con plazos estrictos, fundamental en aplicaciones donde la
+                            respuesta rápida es crítica.</li>
+                    </ul>
+                      
 
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
