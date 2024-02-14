@@ -53,30 +53,39 @@
     <section>
       <div class="card">
         <h5 class="card-header">2.3.2 Paso de mensajes</h5>
-        <div class="card-body m-5">
+        <div class="card-body">
 
-            <p class="card-text" style="text-align: justify;"><strong><span style="font-size:12pt;">2.3.2 Paso de mensajes</span></strong></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">El paso de mensajes es la herramienta b&aacute;sica de comunicaci&oacute;n entre procesos. Un proceso puede mandar cualquier informaci&oacute;n a otro mediante este procedimiento.</span></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">El paso de mensajes se puede usar para la sincronizaci&oacute;n de procesos.</span></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Ventajas del paso de mensajes:</span></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">F&aacute;cilmente transportable de sistemas monoprocesadores a sistemas de memoria compartida o a sistemas distribuidos.</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Fomenta la modularidad y la arquitectura cliente-servidor.</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Funciones (primitivas) relacionadas con el paso de mensajes:</span></p>
-            <p><br></p>
-            <ol>
-                <li style="list-style-type:upper-alpha;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">send(destino, mensaje).</span></p>
-                </li>
-                <li style="list-style-type:upper-alpha;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">receive(origen, mensaje).</span></p>
-                </li>
-            </ol>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">C&oacute;mo concretar estas primitivas en un sistema dado son las cuestiones de dise&ntilde;o.</span></p>
+          <p class="card-text">
+            El paso de mensajes es la herramienta básica de comunicación entre procesos. Un proceso puede mandar cualquier información a otro mediante este procedimiento.
+          </p>
+
+          <p class="card-text">
+            El paso de mensajes se puede usar para la sincronización de procesos.
+          </p>
+
+          <p class="card-text">
+            Ventajas del paso de mensajes:
+          </p>
+
+          <ul class="card-text">
+            <li>
+              Fácilmente transportable de sistemas monoprocesadores a sistemas de memoria compartida o a sistemas distribuidos.
+            </li>
+            <li>
+              Fomenta la modularidad y la arquitectura cliente-servidor.
+            </li>
+            <li>
+              Funciones (primitivas) relacionadas con el paso de mensajes:
+              <ol class="card-text" type="a">
+                <li>send (destino, mensaje).</li>
+                <li>receive (origen, mensaje).</li>
+              </ol>
+            </li>
+          </ul>
+
+          <p class="card-text">
+            Cómo concretar estas primitivas en un sistema dado son las cuestiones de diseño.
+          </p>
 
             <ul class="pagination justify-content-end">
                 <li class="page-item">

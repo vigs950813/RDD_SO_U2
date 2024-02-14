@@ -55,7 +55,23 @@
         <h5 class="card-header">2.4 Sincronización entre procesos/hilos</h5>
         <div class="card-body">
           <p class="card-text">
-            En construcción
+            La sincronización entre procesos e hilos en C con el estándar POSIX se logra mediante mecanismos como semáforos, mutex (cerrojos), y variables de condición. Estos permiten controlar el acceso a recursos compartidos y coordinar la ejecución de múltiples hilos o procesos.
+          </p>
+
+          <p class="card-text">
+            Los semáforos se utilizan para gestionar el acceso concurrente a recursos compartidos, actuando como contadores que regulan la entrada y salida. Los mutex son cerrojos que garantizan la exclusión mutua, evitando que varios hilos o procesos accedan simultáneamente a una sección crítica.
+          </p>
+
+          <p class="card-text">
+            Las variables de condición permiten la sincronización basada en eventos, donde los hilos esperan señales para continuar su ejecución.
+          </p>
+
+          <p class="card-text">
+            El estándar POSIX proporciona funciones como sem_init, pthread_mutex_init, y pthread_cond_init para inicializar estos mecanismos. Además, se utilizan funciones como sem_wait, pthread_mutex_lock, y pthread_cond_wait para realizar operaciones específicas de sincronización.
+          </p>
+
+          <p class="card-text">
+            El uso adecuado de estos mecanismos es esencial para evitar condiciones de carrera y garantizar una ejecución coherente y segura en entornos concurrentes.
           </p>
 
           

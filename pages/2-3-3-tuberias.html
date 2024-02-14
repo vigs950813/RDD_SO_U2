@@ -51,16 +51,35 @@
         <section>
             <div class="card">
                 <h5 class="card-header">2.3.3 Tuberías</h5>
-                <div class="card-body m-5">
+                <div class="card-body">
 
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">La interconexi&oacute;n o tuber&iacute;a (prpe) es un m&eacute;todo de comunicaci&oacute;n entre procesos,</span></p>
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">que consiste en conectar la salida est&aacute;ndar de uno con la entrada est&aacute;ndar de otro,</span></p>
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">sin necesidad de crear por parte del usuario ficheros intermedios o temporales.&nbsp;</span></p>
-                    <p><br></p>
-                    <p><br></p>
-                    <p class="card-text" style="text-align: justify;"><span style="color:#272727;font-size:12pt;">La comunicaci&oacute;n entre procesos se realiza por medio de una zona de memoria compartida. Cuando creamos la interconexi&oacute;n, el n&uacute;cleo reserva esta zona, asign&aacute;ndole dos descriptores, uno para escribir, y otro para leer. De este modo, la informaci&oacute;n que escribe un proceso en una interconexi&oacute;n puede ser le&iacute;da inmediatamente por el otro, siendo el sistema el que realiza la sincronizaci&oacute;n de ambos.</span></p>
-                    <p class="card-text" style="text-align: justify;"><span style="color:#272727;font-size:12pt;">El &uacute;nico requisito para utilizar este mecanismo es que los procesos deben ser hijos del mismo padre y residir en la misma m&aacute;quina.</span></p>
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">La llamada al sistema pipe crea una interconexi&oacute;n entre dos procesos, de tal modo que nos devuelve dos descriptores, uno empleado para la lectura y otro para la escritura.</span></p>
+
+                    <p class="card-text">
+                        La interconexión o tubería (prpe) es un método de comunicación entre procesos,
+                        que consiste en conectar la salida estándar de uno con la entrada estándar de otro,
+                        sin necesidad de crear por parte del usuario ficheros intermedios o temporales. 
+                    </p>
+
+                    <p class="card-text">
+                        La comunicación entre procesos se realiza por medio de una zona de memoria compartida. Cuando creamos la interconexión, el núcleo reserva esta zona, asignándole dos descriptores, uno para escribir, y otro para leer. De este modo, la información que escribe un proceso en una interconexión puede ser leída inmediatamente por el otro, siendo el sistema el que realiza la sincronización de ambos.
+                    </p>
+
+                    <p class="card-text">
+                        El único requisito para utilizar este mecanismo es que los procesos deben ser hijos del mismo padre y residir en la misma computadora.
+                    </p>
+
+                    <p class="card-text">
+                        La llamada al sistema pipe crea una interconexión entre dos procesos, de tal modo que nos devuelve dos descriptores, uno empleado para la lectura y otro para la escritura.
+                    </p>
+
+                    <p class="card-text">
+
+                    </p>
+
+                    <p class="card-text">
+
+                    </p>
+
 
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
