@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>2.1 Modelo de procesos</title>
+  <title>2.2.3 Hilos en modo usuario y kernel</title>
   <!-- Favicon-->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <!-- Bootstrap CSS-->
@@ -54,115 +54,158 @@
       <div class="card">
         <h5 class="card-header">2.2.3 Hilos en modo usuario y kernel</h5>
         <div class="card-body">
-            <p class="card-text" style="text-align: justify;"><strong><span style="font-size:12pt;">2.2.3 Hilos en modo usuario y kernel</span></strong></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Existen dos niveles de implementaci&oacute;n de hilos:</span></p>
-            <ol>
-                <li style="list-style-type:lower-alpha;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Hilos a nivel de usuario&nbsp;</span></p>
-                </li>
-                <li style="list-style-type:lower-alpha;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Hilos a nivel de Kernel</span></p>
-                </li>
-            </ol>
-            <p><br></p>
-            <ol>
-                <li>
-                    <strong>
-                        <ul>
-                            <li style="list-style-type:lower-alpha;font-size:12pt;">
-                                <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Hilos a nivel de usuario (ULT).</span></p>
-                            </li>
-                        </ul>
-                    </strong>
-                </li>
-            </ol>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">En una aplicaci&oacute;n ULT pura, todo el trabajo de gesti&oacute;n de hilos lo realiza la aplicaci&oacute;n y el n&uacute;cleo o kernel no es consciente de la existencia de hilos. Es posible programar una aplicaci&oacute;n como multihilo mediante una biblioteca de hilos. La misma contiene el c&oacute;digo para crear y destruir hilos, intercambiar mensajes y datos entre hilos, para planificar la ejecuci&oacute;n de hilos, para salvar y restaurar el contexto de los hilos.</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Todas las operaciones descritas se llevan a cabo en el espacio de usuario de un mismo proceso. El kernel contin&uacute;a planificando el proceso como una unidad y asign&aacute;ndole un &uacute;nico estado (Listo, bloqueado, etc.)</span></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Las ventajas que ofrecen los ULT son:</span></p>
-            <p><br></p>
-            <ul>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">El intercambio de los hilos no necesita los privilegios del modo kernel, porque todas las estructuras de datos est&aacute;n en el espacio de direcciones de usuario de un mismo proceso. Por lo tanto, el proceso no debe cambiar a modo kernel para gestionar hilos. Se evita la sobrecarga de cambio de modo y con esto el sobrecoste u overhead.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Se puede realizar una planificaci&oacute;n espec&iacute;fica. Dependiendo de qu&eacute; aplicaci&oacute;n sea, se puede decidir por una u otra planificaci&oacute;n seg&uacute;n sus ventajas.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Los ULT se pueden ejecutar en cualquier sistema operativo.La biblioteca de hilos es un conjunto compartido.</span></p>
-                </li>
-            </ul>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Igualmente, las desventajas m&aacute;s relevantes son:</span></p>
-            <p><br></p>
-            <p><br></p>
-            <ul>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">En la mayor&iacute;a de los sistemas operativos las llamadas al sistema (System calls) son bloqueantes. Cuando un hilo realiza una llamada al sistema, se bloquea el mismo y tambi&eacute;n el resto de los hilos del proceso.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">En una estrategia ULT pura, una aplicaci&oacute;n multihilo no puede aprovechar las ventajas de los multiprocesadores. El n&uacute;cleo asigna un solo proceso a un solo procesador, ya que como el n&uacute;cleo no interviene y ve al conjunto de hilos como un solo proceso.</span></p>
-                </li>
-            </ul>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Una soluci&oacute;n al bloqueo mediante llamadas al sistema es usando la t&eacute;cnica de jacketing, que es convertir una llamada bloqueante en no bloqueante.</span></p>
-            <p><br></p>
-            <p><br></p>
-            <ol start="2">
-                <li>
-                    <strong>
-                        <ul>
-                            <li style="list-style-type:lower-alpha;font-size:12pt;">
-                                <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Hilos a nivel de Kernel de sistema operativo (KLT).</span></p>
-                            </li>
-                        </ul>
-                    </strong>
-                </li>
-            </ol>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">En una aplicaci&oacute;n KLT pura, todo el trabajo de gesti&oacute;n de hilos lo realiza el kernel. En el &aacute;rea de la aplicaci&oacute;n no hay c&oacute;digo de gesti&oacute;n de hilos, &uacute;nicamente un API (interfaz de programas de aplicaci&oacute;n) para la gesti&oacute;n de hilos en el n&uacute;cleo. Windows 2000, Linux y OS/2 utilizan este m&eacute;todo.</span></p>
-            <p><br></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Las principales ventajas de los KLT:</span></p>
-            <p><br></p>
-            <ul>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">El kernel puede planificar simult&aacute;neamente m&uacute;ltiples hilos del mismo proceso en m&uacute;ltiples procesadores.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Si se bloquea un hilo, puede planificar otro del mismo proceso.</span></p>
-                </li>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">Las propias funciones del kernel pueden ser multihilo.</span></p>
-                </li>
-            </ul>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">&nbsp;</span></p>
-            <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">En cambio, la desventajas que presenta es:</span></p>
-            <p><br></p>
-            <ul>
-                <li style="list-style-type:disc;font-size:12pt;">
-                    <p class="card-text" style="text-align: justify;"><span style="font-size:12pt;">El paso de control de un hilo a otro precisa de un cambio de modo.</span></p>
-                </li>
-            </ul>
+      
+            <p class="card-text">
+                Existen dos niveles de implementación de hilos:
+            </p>
 
-            <ul class="pagination justify-content-end">
-                <li class="page-item">
-                    <a class="page-link" href="2-1-modelo-de-procesos.html">Anterior</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="2-2-modelo-multi-hilo.html">1</a></li>
-                <li class="page-item"><a class="page-link" href="2-2-1-bibliotecas.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="2-2-2-implementacion.html">3</a></li>
-                <li class="page-item active"><a class="page-link" href="2-2-3-hilos-modo-usuario-kernel.html">4</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Siguiente</a>
-                </li>
-            </ul>
-
+            <ol class="card-text" type="a">
+                <li>Hilos a nivel de usuario.</li>
+                <li>Hilos a nivel de kernel.</li>
+            </ol>
+              
         </div>
       </div>
-
     </section>
+
+
+    <section>
+        <div class="card">
+            <h5 class="card-header">Hilos a nivel de usuario</h5>
+            <div class="card-body">
+    
+                <p class="card-text">
+                    Todo el trabajo de gestión de hilos lo realiza la aplicación y el núcleo o kernel no es consciente
+                    de la existencia de hilos. Es posible programar una aplicación como multihilo mediante una biblioteca
+                    de hilos. La misma contiene el código para crear y destruir hilos, intercambiar mensajes y datos entre
+                    hilos, para planificar la ejecución de hilos, para salvar y restaurar el contexto de los hilos.
+                </p>
+    
+                <p class="card-text">
+                    Todas las operaciones descritas se llevan a cabo en el espacio de usuario de un mismo proceso.
+                    El kernel continúa planificando el proceso como una unidad y asignándole un único estado (listo,
+                    bloqueado, etc.)
+                </p>
+    
+                <p class="card-text">
+                    Las ventajas que ofrecen son:
+                </p>
+    
+                <ul class="card-text">
+                    <li>
+                        El intercambio de los hilos no necesita los privilegios del modo kernel, porque todas las
+                        estructuras de datos están en el espacio de direcciones de usuario de un mismo proceso. Por lo
+                        tanto, el proceso no debe cambiar a modo kernel para gestionar hilos. Se evita la sobrecarga de
+                        cambio de modo y con esto el sobrecoste u overhead.
+                    </li>
+                    <li>
+                        Se puede realizar una planificación específica. Dependiendo de qué aplicación sea, se puede decidir
+                        por una u otra planificación según sus ventajas.
+                    </li>
+                    <li>
+                        Los ULT se pueden ejecutar en cualquier sistema operativo. La biblioteca de hilos es un conjunto
+                        compartido.
+                    </li>
+                </ul>
+    
+                <p class="card-text">
+                    Las desventajas más relevantes son:
+                </p>
+    
+                <ul class="card-text">
+                    <li>
+                        En la mayoría de los sistemas operativos las llamadas al sistema (System calls) son bloqueantes.
+                        Cuando un hilo realiza una llamada al sistema, se bloquea el mismo y también el resto de los hilos
+                        del proceso.
+                    </li>
+                    <li>
+                        En una estrategia ULT pura, una aplicación multihilo no puede aprovechar las ventajas de los
+                        multiprocesadores. El núcleo asigna un solo proceso a un solo procesador, ya que como el núcleo no
+                        interviene y ve al conjunto de hilos como un solo proceso.
+                    </li>
+                </ul>
+    
+                <p class="card-text">
+                    Una solución al bloqueo mediante llamadas al sistema es usando la técnica de jacketing, que es convertir
+                    una llamada bloqueante en no bloqueante.
+                </p>
+    
+    
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="card">
+            <h5 class="card-header">Hilos a nivel de kernel</h5>
+            <div class="card-body">
+    
+                <p class="card-text">
+                    Todo el trabajo de gestión de hilos lo realiza el kernel. En el área 
+                    de la aplicación no hay código de gestión de hilos, únicamente un API (interfaz de programas de aplicación) 
+                    para la gestión de hilos en el núcleo. Windows 2000, Linux y OS/2 utilizan este método.
+                </p>
+    
+                <p class="card-text">
+                    Todas las operaciones descritas se llevan a cabo en el espacio de usuario de un mismo proceso.
+                    El kernel continúa planificando el proceso como una unidad y asignándole un único estado (listo,
+                    bloqueado, etc.)
+                </p>
+    
+                <p class="card-text">
+                    Las ventajas que ofrecen son:
+                </p>
+    
+                <ul class="card-text">
+                    <li>
+                        El kernel puede planificar simultáneamente múltiples hilos del mismo proceso en múltiples procesadores.
+                    </li>
+                    <li>
+                        Si se bloquea un hilo, puede planificar otro del mismo proceso.
+                    </li>
+                    <li>
+                        Las propias funciones del kernel pueden ser multihilo.
+                    </li>
+                </ul>
+    
+                <p class="card-text">
+                    La desventaja más relevantes es:
+                </p>
+    
+                <ul class="card-text">
+                    <li>
+                        El paso de control de un hilo a otro precisa de un cambio de modo.
+                    </li>
+                </ul>
+    
+                <p class="card-text">
+                    Una solución al bloqueo mediante llamadas al sistema es usando la técnica de jacketing, que es convertir
+                    una llamada bloqueante en no bloqueante.
+                </p>
+    
+    
+    
+    
+    
+    
+                <ul class="pagination justify-content-end">
+                    <li class="page-item">
+                        <a class="page-link" href="2-1-modelo-de-procesos.html">Anterior</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="2-2-modelo-multi-hilo.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="2-2-1-bibliotecas.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="2-2-2-implementacion.html">3</a></li>
+                    <li class="page-item active"><a class="page-link" href="2-2-3-hilos-modo-usuario-kernel.html">4</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Siguiente</a>
+                    </li>
+                </ul>
+    
+            </div>
+        </div>
+    </section>
+
+
   </main>
 
   <!-- Page content -->
