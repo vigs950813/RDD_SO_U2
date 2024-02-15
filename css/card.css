@@ -24,3 +24,12 @@
     line-height: 2.5rem;
 }
 
+.card-text.card-code{
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.5rem;
+    background-color: #4A8CD5;
+    color: white;
+    font-weight: bold;
+}
+

@@ -35,9 +35,9 @@
 
 <body>
 
-    <div id="offcanvas-container">
+  <div id="offcanvas-container">
 
-    </div>
+  </div>
 
 
   <!-- Header -->
@@ -57,14 +57,15 @@
         <h5 class="card-header">2.2 Modelo multi-hilo</h5>
 
         <div class="card-body">
-            
-            <p class="card-text">Son unidades b&aacute;sicas de
-                ejecuci&oacute;n dentro de un proceso que comparten el mismo espacio de direcciones y recursos del sistema, como
-                memoria y archivos. Los hilos permiten que un proceso se ejecute de manera concurrente, facilitando la
-                realizaci&oacute;n de m&uacute;ltiples tareas y operaciones simult&aacute;neamente.
-            </p>
-            
-            
+
+          <p class="card-text">Son unidades b&aacute;sicas de
+            ejecuci&oacute;n dentro de un proceso que comparten el mismo espacio de direcciones y recursos del sistema,
+            como
+            memoria y archivos. Los hilos permiten que un proceso se ejecute de manera concurrente, facilitando la
+            realizaci&oacute;n de m&uacute;ltiples tareas y operaciones simult&aacute;neamente.
+          </p>
+
+
         </div>
       </div>
     </section>
@@ -76,15 +77,18 @@
         <h5 class="card-header">Tipos de modelos multihilos</h5>
 
         <div class="card-body">
-            
+
           <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
                   Modelo a nivel de usuario
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
                   <p class="card-text">
                     Los hilos se gestionan completamente en el espacio de usuario sin intervención delsistema operativo.
@@ -93,12 +97,12 @@
                     <li>
                       <b>Ventajas</b>: Mayor flexibilidad y eficiencia en la gestión de hilos, ya que
                       las operaciones de creación, planificación y sincronización se realizan
-                      a nivel de usuario.                      
+                      a nivel de usuario.
                     </li>
                     <li>
                       <b>Desventajas</b>: Limitaciones en la escalabilidad y gestión de hilos en
                       entornos multinúcleo o multiprocesador, debido a la falta de soporte y
-                      cooperación del sistema operativo.                      
+                      cooperación del sistema operativo.
                     </li>
                   </ul>
                 </div>
@@ -106,11 +110,14 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo">
                   Modelo a nivel de kernel
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingTwo">
                 <div class="accordion-body">
                   <p class="card-text">
                     Los hilos se gestionan y soportan directamente por el sistema operativo a nivel de kernel.
@@ -119,20 +126,20 @@
                     <li>
                       <b>Ventajas</b>: Mayor eficiencia y escalabilidad en la gestión de hilos, ya
                       que el sistema operativo puede planificar y coordinar hilos de manera
-                      más efectiva en entornos multinúcleo y multiprocesador.                      
+                      más efectiva en entornos multinúcleo y multiprocesador.
                     </li>
                     <li>
                       <b>Desventajas</b>: Mayor complejidad y sobrecarga debido a la necesidad
                       de sincronización y comunicación entre hilos a través de llamadas al
-                      sistema y operaciones de cambio de contexto.                      
+                      sistema y operaciones de cambio de contexto.
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-            
-            
+
+
         </div>
       </div>
 
@@ -144,50 +151,61 @@
       <div class="card">
         <h5 class="card-header">Clasificación de modelos multihilos</h5>
         <div class="card-body">
-            
+
           <div class="accordion">
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseThree">
                   Hilos independientes
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingThree">
                 <div class="accordion-body">
                   <p class="card-text">
-                    Son una combinación de hilos a nivel de usuario y a nivel de kernel, donde múltiples hilos de usuario se asignan a
+                    Son una combinación de hilos a nivel de usuario y a nivel de kernel, donde múltiples hilos de
+                    usuario se asignan a
                     un número menor de hilos del sistema operativo. Estos proporcionan
                     un equilibrio entre la eficiencia y la flexibilidad, permitiendo una gestión
                     óptima de recursos y una adaptabilidad a diferentes cargas de trabajo y
                     requisitos del sistema.
-                  </p>   
+                  </p>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFour">
                   Hilos ligeros
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+              <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingFour">
                 <div class="accordion-body">
                   <p class="card-text">
-                    Los hilos gestionados completamente a nivel de usuario, sin soporte directo del sistema operativo. Ofrecen una implementación más ligera 
-                    y eficiente de hilos, adecuada para aplicaciones 
+                    Los hilos gestionados completamente a nivel de usuario, sin soporte directo del sistema operativo.
+                    Ofrecen una implementación más ligera
+                    y eficiente de hilos, adecuada para aplicaciones
                     con requisitos de hilos flexibles y operaciones de E/S intensivas.
                   </p>
-                  
+
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelsStayOpen-headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFive">
                   Hilos pesados
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+              <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingFive">
                 <div class="accordion-body">
                   <p class="card-text">
                     Estos hilos gestionados y
@@ -196,7 +214,7 @@
                     aplicaciones con requisitos de hilos intensivos y operaciones de cálculo
                     intensivo.
                   </p>
-                  
+
                 </div>
               </div>
             </div>
@@ -205,12 +223,77 @@
           <br>
 
           <p class="card-text">
-            <b>CÓDIGOS EN CONSTRUCCIÓN</b>
+            A continuación se presenta un ejemplo de código implementado en lenguaje de programación C utilizando hilos
+            ligeros.
           </p>
-          
+
+          <div class="card-body">
+
+            <pre class="card-text card-code">
+                // Importación de librerías
+                #include &lt;stdio.h&gt;
+                #include &lt;pthread.h&gt;// Librería POSIX estándar en lenguaje C para Linux
+            
+                // Función que se ejecutará en el primer hilo
+                void* funcionHilo1(void* arg) {
+                    for (int i = 1; i &lt;= 5; ++i) {
+                        printf("Hilo 1: Mensaje %d\n", i);
+                    }
+                    return NULL;
+                }
+            
+                // Función que se ejecutará en el segundo hilo
+                void* funcionHilo2(void* arg) {
+                    for (int i = 1; i &lt;= 5; ++i) {
+                        printf("Hilo 2: Mensaje %d\n", i);
+                    }
+                    return NULL;
+                }
+            
+                int main() {
+                    // Declaración de identificadores de hilos
+                    pthread_t hilo1, hilo2;
+            
+                    // Creación de hilos
+                    pthread_create(&hilo1, NULL, funcionHilo1, NULL);
+                    pthread_create(&hilo2, NULL, funcionHilo2, NULL);
+            
+                    // Espera a que los hilos terminen su ejecución
+                    pthread_join(hilo1, NULL);
+                    pthread_join(hilo2, NULL);
+            
+                    printf("Programa principal: Hilos finalizados\n");
+            
+                    return 0;
+                }
+              
+            </pre>
+          </div>
+
+          <div class="text-center">
+            <b>Código 1. Hilos ligeros.</b>
+          </div>
 
           <br>
-            
+
+          <p class="card-text">
+            Este programa crea dos hilos (hilo1 y hilo2) utilizando la función pthread_create. Cada hilo ejecuta su propia función
+            (funcionHilo1 y funcionHilo2) que imprime mensajes en la consola. La función pthread_join se utiliza para esperar a
+            que los hilos terminen su ejecución antes de que el programa principal imprima el mensaje "Programa principal: Hilos
+            finalizados".
+            Recuerda que la salida exacta puede variar debido a la concurrencia de los hilos.
+          </p>
+          
+          <br>
+          
+          <p class="card-text">
+            La ejecución del programa puede variar, ya que depende del sistema operativo y de cómo el planificador de hilos decida
+            asignar tiempo de CPU a cada hilo.
+          </p>
+
+
+          <br>
+
           <ul class="pagination justify-content-end">
             <li class="page-item">
               <a class="page-link" href="introduccion.html">Anterior</a>
@@ -224,7 +307,7 @@
             </li>
           </ul>
 
-            
+
         </div>
       </div>
 
