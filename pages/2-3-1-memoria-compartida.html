@@ -34,9 +34,9 @@
 
 <body>
 
-    <div id="offcanvas-container">
+  <div id="offcanvas-container">
 
-    </div>
+  </div>
 
 
   <!-- Header -->
@@ -56,61 +56,91 @@
         <div class="card-body">
 
           <p class="card-text">
-            La memoria compartida es un medio que permite establecer una zona común de memoria entre varias aplicaciones.
+            La memoria compartida es un medio que permite establecer una zona común de memoria entre varias
+            aplicaciones.
           </p>
 
-          
-          <p class="card-text">
-            La memoria convencional que puede direccionar un proceso a través de su espacio de direcciones virtuales es local a ese proceso, cualquier intento de direccionar esa memoria desde otro proceso va a provocar una violación de segmento.
-          </p>
-
-          
-          <p class="card-text">
-            El mecanismo de memoria compartida permite a dos o más procesos compartir un segmento de memoria, y por consiguiente, los datos que hay en él. Es por ello el método más rápido de comunicación entre procesos.
-          </p>
-
-          
-          <p class="card-text">
-            Al ser el objetivo de este tipo de comunicación la transferencia de datos entre varios procesos, los programas que utilizan memoria compartida deben normalmente establecer algún tipo de protocolo para el bloqueo. Este protocolo puede ser la utilización de semáforos, que es a su vez otro tipo de comunicación (sincronización) entre procesos.
-          </p>
-
-          
-          <p class="card-text">
-            La memoria que maneja un proceso, y también la compartida, va a ser virtual, por lo que su dirección física puede variar con el tiempo. Esto no va a plantear ningún problema, ya que los procesos no generan direcciones físicas, sino virtuales, y es el núcleo (con su gestor de memoria) el encargado de traducir unas a otras.
-          </p>
+          <br>
 
           <p class="card-text">
-            Por lo que la memoria compartida administra los procesos a realizar es muy importante en la gestión de memoria principal y de archivos, la cual se centra en optimizar la ejecución de trabajos sin intervención del usuario. La gestión de memoria implica cargar y descargar programas eficientemente para maximizar la utilización de recursos. 
+            La memoria convencional que puede direccionar un proceso a través de su espacio de direcciones virtuales es
+            local a ese proceso, cualquier intento de direccionar esa memoria desde otro proceso va a provocar una
+            violación de segmento.
           </p>
 
-          <p class="card-text">
-            En cuanto a la gestión de archivos, asegura que los datos necesarios estén disponibles para los programas en lotes. La planificación cuidadosa de recursos garantiza que múltiples trabajos se ejecuten de manera eficiente, optimizando el rendimiento del sistema.
-          </p>
+          <br>
 
           <p class="card-text">
-            A continuación se presentan algunas de las funciones más utilizadas en el estándar POSIX para la implementación de memoria compartida en lenguaje C.
+            El mecanismo de memoria compartida permite a dos o más procesos compartir un segmento de memoria, y por
+            consiguiente, los datos que hay en él. Es por ello el método más rápido de comunicación entre procesos.
+          </p>
+
+          <br>
+
+          <p class="card-text">
+            Al ser el objetivo de este tipo de comunicación la transferencia de datos entre varios procesos, los
+            programas que utilizan memoria compartida deben normalmente establecer algún tipo de protocolo para el
+            bloqueo. Este protocolo puede ser la utilización de semáforos, que es a su vez otro tipo de comunicación
+            (sincronización) entre procesos.
+          </p>
+
+          <br>
+
+          <p class="card-text">
+            La memoria que maneja un proceso, y también la compartida, va a ser virtual, por lo que su dirección física
+            puede variar con el tiempo. Esto no va a plantear ningún problema, ya que los procesos no generan
+            direcciones físicas, sino virtuales, y es el núcleo (con su gestor de memoria) el encargado de traducir unas
+            a otras.
+          </p>
+
+          <br>
+
+          <p class="card-text">
+            Por lo que la memoria compartida administra los procesos a realizar es muy importante en la gestión de
+            memoria principal y de archivos, la cual se centra en optimizar la ejecución de trabajos sin intervención
+            del usuario. La gestión de memoria implica cargar y descargar programas eficientemente para maximizar la
+            utilización de recursos.
+          </p>
+
+          <br>
+
+          <p class="card-text">
+            En cuanto a la gestión de archivos, asegura que los datos necesarios estén disponibles para los programas en
+            lotes. La planificación cuidadosa de recursos garantiza que múltiples trabajos se ejecuten de manera
+            eficiente, optimizando el rendimiento del sistema.
+          </p>
+
+          <br>
+
+          <p class="card-text">
+            A continuación se presentan algunas de las funciones más utilizadas en el estándar POSIX para la
+            implementación de memoria compartida en lenguaje C.
           </p>
 
           <ol class="card-text">
-            <li><b>shmget():</b> Obtiene o crea un segmento de memoria compartida. Permite a los procesos compartir información almacenada en un área de memoria compartida.</li>
-            <li><b>shmctl():</b> Controla las propiedades de un segmento de memoria compartida, como la eliminación o modificación de permisos. Proporciona funciones de control sobre los segmentos de memoria compartida.</li>
-            <li><b>shmat():</b> Asocia un segmento de memoria compartida al espacio de direcciones de un proceso. Permite que un proceso acceda y trabaje con el contenido de un segmento de memoria compartida.</li>
-            <li><b>shmdt():</b> Desasocia un segmento de memoria compartida del espacio de direcciones de un proceso. Indica que un proceso ya no utilizará el segmento de memoria compartida.</li>
+            <li><b>shmget():</b> Obtiene o crea un segmento de memoria compartida. Permite a los procesos compartir
+              información almacenada en un área de memoria compartida.</li>
+            <li><b>shmctl():</b> Controla las propiedades de un segmento de memoria compartida, como la eliminación o
+              modificación de permisos. Proporciona funciones de control sobre los segmentos de memoria compartida.</li>
+            <li><b>shmat():</b> Asocia un segmento de memoria compartida al espacio de direcciones de un proceso.
+              Permite que un proceso acceda y trabaje con el contenido de un segmento de memoria compartida.</li>
+            <li><b>shmdt():</b> Desasocia un segmento de memoria compartida del espacio de direcciones de un proceso.
+              Indica que un proceso ya no utilizará el segmento de memoria compartida.</li>
           </ol>
 
 
-            <ul class="pagination justify-content-end">
-                <li class="page-item">
-                    <a class="page-link" href="2-2-modelo-multi-hilo.html">Anterior</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="2-3-comunicacion-entre-procesos.html">1</a></li>
-                <li class="page-item active"><a class="page-link" href="2-3-1-memoria-compartida.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="2-3-2-paso-de-mensajes.html">3</a></li>
-                <li class="page-item"><a class="page-link" href="2-3-3-tuberias.html">4</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Siguiente</a>
-                </li>
-            </ul>
+          <ul class="pagination justify-content-end">
+            <li class="page-item">
+              <a class="page-link" href="2-2-modelo-multi-hilo.html">Anterior</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="2-3-comunicacion-entre-procesos.html">1</a></li>
+            <li class="page-item active"><a class="page-link" href="2-3-1-memoria-compartida.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="2-3-2-paso-de-mensajes.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="2-3-3-tuberias.html">4</a></li>
+            <li class="page-item">
+              <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Siguiente</a>
+            </li>
+          </ul>
 
         </div>
       </div>

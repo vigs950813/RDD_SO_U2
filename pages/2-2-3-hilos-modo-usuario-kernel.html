@@ -80,12 +80,16 @@
                     de hilos. La misma contiene el código para crear y destruir hilos, intercambiar mensajes y datos entre
                     hilos, para planificar la ejecución de hilos, para salvar y restaurar el contexto de los hilos.
                 </p>
+
+                <br>
     
                 <p class="card-text">
                     Todas las operaciones descritas se llevan a cabo en el espacio de usuario de un mismo proceso.
                     El kernel continúa planificando el proceso como una unidad y asignándole un único estado (listo,
                     bloqueado, etc.)
                 </p>
+
+                <br>
     
                 <p class="card-text">
                     Las ventajas que ofrecen son:
@@ -107,6 +111,8 @@
                         compartido.
                     </li>
                 </ul>
+
+                <br>
     
                 <p class="card-text">
                     Las desventajas más relevantes son:
@@ -124,6 +130,8 @@
                         interviene y ve al conjunto de hilos como un solo proceso.
                     </li>
                 </ul>
+
+                <br>
     
                 <p class="card-text">
                     Una solución al bloqueo mediante llamadas al sistema es usando la técnica de jacketing, que es convertir
@@ -145,12 +153,16 @@
                     de la aplicación no hay código de gestión de hilos, únicamente un API (interfaz de programas de aplicación) 
                     para la gestión de hilos en el núcleo. Windows 2000, Linux y OS/2 utilizan este método.
                 </p>
+
+                <br>
     
                 <p class="card-text">
                     Todas las operaciones descritas se llevan a cabo en el espacio de usuario de un mismo proceso.
                     El kernel continúa planificando el proceso como una unidad y asignándole un único estado (listo,
                     bloqueado, etc.)
                 </p>
+
+                <br>
     
                 <p class="card-text">
                     Las ventajas que ofrecen son:
@@ -167,9 +179,11 @@
                         Las propias funciones del kernel pueden ser multihilo.
                     </li>
                 </ul>
+
+                <br>
     
                 <p class="card-text">
-                    La desventaja más relevantes es:
+                    La desventaja más relevante es:
                 </p>
     
                 <ul class="card-text">
@@ -177,6 +191,8 @@
                         El paso de control de un hilo a otro precisa de un cambio de modo.
                     </li>
                 </ul>
+
+                <br>
     
                 <p class="card-text">
                     Una solución al bloqueo mediante llamadas al sistema es usando la técnica de jacketing, que es convertir

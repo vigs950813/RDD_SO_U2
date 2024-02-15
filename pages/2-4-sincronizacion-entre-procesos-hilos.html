@@ -34,9 +34,9 @@
 
 <body>
 
-    <div id="offcanvas-container">
+  <div id="offcanvas-container">
 
-    </div>
+  </div>
 
 
   <!-- Header -->
@@ -55,39 +55,73 @@
         <h5 class="card-header">2.4 Sincronización entre procesos/hilos</h5>
         <div class="card-body">
           <p class="card-text">
-            La sincronización entre procesos/hilos es crucial en entornos concurrentes donde múltiples tareas o subprocesos comparten recursos o realizan operaciones simultáneamente.
+            La sincronización entre procesos/hilos es crucial en entornos concurrentes donde múltiples tareas o
+            subprocesos comparten recursos o realizan operaciones simultáneamente.
           </p>
+
+          <br>
 
           <p class="card-text">
-            Un proceso es una instancia independiente de un programa en ejecución. Cada proceso tiene su propio espacio de memoria y recursos asignados. Los procesos operan de manera aislada entre sí, y cada uno ejecuta su propia copia del programa, manteniendo su propio estado y contexto.  
+            Un proceso es una instancia independiente de un programa en ejecución. Cada proceso tiene su propio espacio
+            de memoria y recursos asignados. Los procesos operan de manera aislada entre sí, y cada uno ejecuta su
+            propia copia del programa, manteniendo su propio estado y contexto.
           </p>
+
+          <br>
 
           <p class="card-text">
-            La comunicación entre procesos suele ser más compleja en comparación con la comunicación entre hilos, ya que implica mecanismos específicos conocidos como comunicación interprocesos (IPC). Estos mecanismos permiten que los procesos compartan información y se coordinen. Algunos métodos comunes de IPC incluyen colas, tuberías, archivos compartidos, memoria compartida, y mensajes.
+            La comunicación entre procesos suele ser más compleja en comparación con la comunicación entre hilos, ya que
+            implica mecanismos específicos conocidos como comunicación interprocesos (IPC). Estos mecanismos permiten
+            que los procesos compartan información y se coordinen. Algunos métodos comunes de IPC incluyen colas,
+            tuberías, archivos compartidos, memoria compartida, y mensajes.
           </p>
+
+          <br>
 
           <p class="card-text">
-            La creación y mantenimiento de procesos conlleva un mayor overhead en términos de recursos. Cada proceso tiene su propio espacio de memoria, tablas de sistema, registros y otros recursos asignados. Este enfoque de aislamiento entre procesos garantiza una mayor independencia, pero también requiere más recursos en comparación con el uso de hilos, que comparten el mismo espacio de memoria.
+            La creación y mantenimiento de procesos conlleva un mayor overhead en términos de recursos. Cada proceso
+            tiene su propio espacio de memoria, tablas de sistema, registros y otros recursos asignados. Este enfoque de
+            aislamiento entre procesos garantiza una mayor independencia, pero también requiere más recursos en
+            comparación con el uso de hilos, que comparten el mismo espacio de memoria.
           </p>
+
+          <br>
 
           <p class="card-text">
-            Un hilo es una unidad más pequeña dentro de un proceso que comparte el mismo espacio de memoria y recursos. A diferencia de los procesos, los hilos no tienen su propio espacio de memoria independiente, pero comparten la información de programa y datos con otros hilos del mismo proceso. Cada hilo tiene su propio contador de programa y registros de CPU, lo que le permite ejecutarse de manera independiente dentro del contexto del proceso al que pertenece.
+            Un hilo es una unidad más pequeña dentro de un proceso que comparte el mismo espacio de memoria y recursos.
+            A diferencia de los procesos, los hilos no tienen su propio espacio de memoria independiente, pero comparten
+            la información de programa y datos con otros hilos del mismo proceso. Cada hilo tiene su propio contador de
+            programa y registros de CPU, lo que le permite ejecutarse de manera independiente dentro del contexto del
+            proceso al que pertenece.
           </p>
+
+          <br>
 
           <p class="card-text">
-            Los hilos comparten datos más fácilmente en comparación con los procesos, ya que comparten el mismo espacio de memoria. La comunicación entre hilos puede ser más eficiente en términos de velocidad y complejidad, ya que no requiere mecanismos de IPC como en el caso de los procesos. Sin embargo, la comunicación entre hilos debe gestionarse cuidadosamente mediante técnicas de sincronización para evitar problemas como condiciones de carrera y garantizar la consistencia de los datos compartidos.
+            Los hilos comparten datos más fácilmente en comparación con los procesos, ya que comparten el mismo espacio
+            de memoria. La comunicación entre hilos puede ser más eficiente en términos de velocidad y complejidad, ya
+            que no requiere mecanismos de IPC como en el caso de los procesos. Sin embargo, la comunicación entre hilos
+            debe gestionarse cuidadosamente mediante técnicas de sincronización para evitar problemas como condiciones
+            de carrera y garantizar la consistencia de los datos compartidos.
           </p>
+
+          <br>
 
           <p class="card-text">
-            Los hilos tienen un menor overhead en términos de recursos en comparación con los procesos. Dado que comparten la mayoría de los recursos con otros hilos dentro del mismo proceso, la creación y el mantenimiento de hilos son generalmente más eficientes. Sin embargo, es importante destacar que debido a la compartición de memoria, los hilos también requieren sincronización para evitar conflictos y problemas de consistencia en la manipulación de datos compartidos.
+            Los hilos tienen un menor overhead en términos de recursos en comparación con los procesos. Dado que
+            comparten la mayoría de los recursos con otros hilos dentro del mismo proceso, la creación y el
+            mantenimiento de hilos son generalmente más eficientes. Sin embargo, es importante destacar que debido a la
+            compartición de memoria, los hilos también requieren sincronización para evitar conflictos y problemas de
+            consistencia en la manipulación de datos compartidos.
           </p>
 
-          
+
           <ul class="pagination justify-content-end">
             <li class="page-item">
               <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Anterior</a>
             </li>
-            <li class="page-item active"><a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">1</a></li>
+            <li class="page-item active"><a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">1</a>
+            </li>
             <li class="page-item"><a class="page-link" href="2-4-1-principios-de-la-sincronizacion.html">2</a></li>
             <li class="page-item"><a class="page-link" href="2-4-2-semaforos-y-mutex.html">3</a></li>
             <li class="page-item"><a class="page-link" href="2-4-3-monitores.html">4</a></li>

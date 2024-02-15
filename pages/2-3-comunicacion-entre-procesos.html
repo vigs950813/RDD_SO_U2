@@ -34,9 +34,9 @@
 
 <body>
 
-    <div id="offcanvas-container">
+  <div id="offcanvas-container">
 
-    </div>
+  </div>
 
 
   <!-- Header -->
@@ -56,8 +56,13 @@
         <div class="card-body">
 
           <p class="card-text">
-            Todos los procesos requieren comunicarse con otros procesos, dado que se necesita de una canalización del shell en el cual la salida del primer proceso se debe pasar al segundo proceso y así sucesivamente. Por lo que existe una necesidad de comunicación entre ellos, de tal forma que esto sucede estructuradamente sin utilizar interrupciones, es por ello que la comunicación entre proceso requiere de un origen a un destino.
+            Todos los procesos requieren comunicarse con otros procesos, dado que se necesita de una canalización del
+            shell en el cual la salida del primer proceso se debe pasar al segundo proceso y así sucesivamente. Por lo
+            que existe una necesidad de comunicación entre ellos, de tal forma que esto sucede estructuradamente sin
+            utilizar interrupciones, es por ello que la comunicación entre proceso requiere de un origen a un destino.
           </p>
+
+          <br>
 
           <p class="card-text">
             Ahora bien, hay que considerar las siguientes situaciones:
@@ -66,58 +71,89 @@
           <ol class="card-text">
             <li>Un proceso puede pasar información a otro.</li>
             <li>Uno o más procesos no se interpongan entre sí.</li>
-            <li>Debe existir una secuencia apropiada cuando hay dependencias presentes, es decir, si el proceso A produce datos y el proceso B los imprime, B tiene que esperar hasta que A haya producido algunos datos antes de empezar a imprimir o realizar algún proceso.</li>
+            <li>Debe existir una secuencia apropiada cuando hay dependencias presentes, es decir, si el proceso A
+              produce datos y el proceso B los imprime, B tiene que esperar hasta que A haya producido algunos datos
+              antes de empezar a imprimir o realizar algún proceso.</li>
           </ol>
-          
+
+          <br>
 
           <p class="card-text">
-            Ahora bien, algo que se debe de considerar en la comunicación de procesos es su estado por lo que la cola de procesos representa las diferentes etapas por las que pasa un proceso desde su creación hasta su finalización. Los estados típicos son:
+            Algo que se debe de considerar en la comunicación de procesos es su estado por lo que la cola de procesos
+            representa las diferentes etapas por las que pasa un proceso desde su creación hasta su finalización. Los
+            estados típicos son:
           </p>
 
           <ol class="card-text">
             <li>Listo (ready): El proceso está listo para ejecutarse, pero está esperando su turno en la cola.</li>
             <li>Ejecución (running): El proceso está actualmente siendo ejecutado por la CPU.</li>
-            <li>Bloqueado (blocked): El proceso está temporalmente detenido, es cuando está esperando la finalización de una operación de entrada/salida.</li>
-            <li>La función de los estados de cola es coordinar la ejecución de procesos, optimizar la utilización de la CPU y garantizar una transición eficiente entre las diversas etapas del ciclo de vida de un proceso.</li>
+            <li>Bloqueado (blocked): El proceso está temporalmente detenido, es cuando está esperando la finalización de
+              una operación de entrada/salida.</li>
+            <li>La función de los estados de cola es coordinar la ejecución de procesos, optimizar la utilización de la
+              CPU y garantizar una transición eficiente entre las diversas etapas del ciclo de vida de un proceso.</li>
           </ol>
-          
-          <p class="card-text">
-            Por lo que el entorno de multiprograma en procesos permite la ejecución concurrente de varios programas. Mientras un programa está en espera (por ejemplo, realizando operaciones de entrada/salida), otros pueden ejecutarse, mejorando la eficiencia del sistema.
-          </p>
+
+          <br>
 
           <p class="card-text">
-            El entorno asegura que la CPU esté ocupada la mayor parte del tiempo, reduciendo los tiempos de inactividad y mejorando la capacidad de respuesta del sistema. La planificación cuidadosa de procesos, combinada con la gestión eficiente de la memoria y los archivos, contribuye a un entorno más efectivo en sistemas operativos por lotes y en la comunicación de procesos.
+            Por lo que el entorno de multiprograma en procesos permite la ejecución concurrente de varios programas.
+            Mientras un programa está en espera (por ejemplo, realizando operaciones de entrada/salida), otros pueden
+            ejecutarse, mejorando la eficiencia del sistema.
           </p>
+
+          <br>
 
           <p class="card-text">
-            Cabe resaltar que la IPC (Interproceso de Comunicación) permite la comunicación y el intercambio de datos entre procesos en un sistema operativo. Existen varios mecanismos de IPC, como colas de mensajes, semáforos y memoria compartida. La comunicación entre procesos es esencial cuando los programas necesitan colaborar o compartir información.
+            El entorno asegura que la CPU esté ocupada la mayor parte del tiempo, reduciendo los tiempos de inactividad
+            y mejorando la capacidad de respuesta del sistema. La planificación cuidadosa de procesos, combinada con la
+            gestión eficiente de la memoria y los archivos, contribuye a un entorno más efectivo en sistemas operativos
+            por lotes y en la comunicación de procesos.
           </p>
+
+          <br>
 
           <p class="card-text">
-            Por ejemplo, un proceso podría producir datos que otro proceso necesita consumir. El IPC proporciona métodos seguros y eficientes para que los procesos se comuniquen y compartan recursos.
+            Cabe resaltar que la IPC (Interproceso de Comunicación) permite la comunicación y el intercambio de datos
+            entre procesos en un sistema operativo. Existen varios mecanismos de IPC, como colas de mensajes, semáforos
+            y memoria compartida. La comunicación entre procesos es esencial cuando los programas necesitan colaborar o
+            compartir información.
           </p>
+
+          <br>
 
           <p class="card-text">
-            Las colas de mensajes son un mecanismo muy similar a las FIFO. Una cola se puede ver como una lista enlazada de mensajes dentro del espacio de direccionamiento del núcleo.
+            Por ejemplo, un proceso podría producir datos que otro proceso necesita consumir. El IPC proporciona métodos
+            seguros y eficientes para que los procesos se comuniquen y compartan recursos.
           </p>
+
+          <br>
 
           <p class="card-text">
-            Una aplicación, siempre que tenga los derechos necesarios, puede depositar un mensaje (de cualquier tipo) en ella, y otras aplicaciones podrán leerlo. Es posible asignar atributos a los mensajes, de forma que se puedan mantener ordenados por prioridad en lugar de por orden de llegada.
+            Las colas de mensajes son un mecanismo muy similar a las FIFO. Una cola se puede ver como una lista enlazada
+            de mensajes dentro del espacio de direccionamiento del núcleo.
           </p>
 
-         
-            <ul class="pagination justify-content-end">
-                <li class="page-item">
-                    <a class="page-link" href="2-2-modelo-multi-hilo.html">Anterior</a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="2-3-comunicacion-entre-procesos.html">1</a></li>
-                <li class="page-item"><a class="page-link" href="2-3-1-memoria-compartida.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="2-3-2-paso-de-mensajes.html">3</a></li>
-                <li class="page-item"><a class="page-link" href="2-3-3-tuberias.html">4</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Siguiente</a>
-                </li>
-            </ul>
+          <br>
+
+          <p class="card-text">
+            Una aplicación, siempre que tenga los derechos necesarios, puede depositar un mensaje (de cualquier tipo) en
+            ella, y otras aplicaciones podrán leerlo. Es posible asignar atributos a los mensajes, de forma que se
+            puedan mantener ordenados por prioridad en lugar de por orden de llegada.
+          </p>
+
+
+          <ul class="pagination justify-content-end">
+            <li class="page-item">
+              <a class="page-link" href="2-2-modelo-multi-hilo.html">Anterior</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="2-3-comunicacion-entre-procesos.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="2-3-1-memoria-compartida.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="2-3-2-paso-de-mensajes.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="2-3-3-tuberias.html">4</a></li>
+            <li class="page-item">
+              <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Siguiente</a>
+            </li>
+          </ul>
 
         </div>
       </div>
