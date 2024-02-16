@@ -55,8 +55,70 @@
         <h5 class="card-header">2.1.3 Estados</h5>
         <div class="card-body">
           <p class="card-text">
-            <b>Este tema no está en el documento proporcionado</b>
+            Los sistemas operativos gestionan procesos, y cada proceso puede encontrarse en diferentes estados durante su ciclo de
+            vida. Entender estos estados es crucial para los estudiantes universitarios de programación. A continuación, se
+            describen de manera sencilla los estados principales de un proceso en un sistema operativo.
           </p>
+
+          
+          <ol class="card-text">
+            <li><b>Listo (Ready):</b>
+              <ul>
+                <li><b>Descripción:</b> El proceso está listo para ejecutarse y espera a que el planificador de procesos le asigne
+                  tiempo de CPU.</li>
+                <li><b>Características:</b>
+                  <ul>
+                    <li><b>En Espera:</b> No se ejecuta de inmediato, pero está preparado para hacerlo.</li>
+                    <li><b>Recursos Asignados:</b> Ha recibido los recursos necesarios y está a la espera de la CPU.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <br>
+          
+            <li><b>Ejecución (Running):</b>
+              <ul>
+                <li><b>Descripción:</b> El proceso está actualmente siendo ejecutado por la CPU.</li>
+                <li><b>Características:</b>
+                  <ul>
+                    <li><b>Utilizando la CPU:</b> Activo y realizando sus operaciones.</li>
+                    <li><b>Tiempo de CPU Asignado:</b> En ejecución durante el período asignado.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <br>
+          
+            <li><b>Bloqueado (Blocked):</b>
+              <ul>
+                <li><b>Descripción:</b> El proceso está detenido temporalmente debido a la espera de algún evento o recurso.</li>
+                <li><b>Características:</b>
+                  <ul>
+                    <li><b>En Espera de un Evento:</b> Puede ser la llegada de datos, señales de entrada/salida, etc.</li>
+                    <li><b>Recursos Temporalmente No Disponibles:</b> La ejecución se detiene hasta que se cumpla cierta
+                      condición.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <br>
+          
+            <li><b>Terminado (Terminated):</b>
+              <ul>
+                <li><b>Descripción:</b> El proceso ha finalizado su ejecución y ha liberado todos los recursos asignados.</li>
+                <li><b>Características:</b>
+                  <ul>
+                    <li><b>Completado:</b> Ha realizado todas sus operaciones y ha liberado recursos.</li>
+                    <li><b>Liberación de Recursos:</b> Todos los recursos asignados han sido devueltos al sistema operativo.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ol>
+        
 
           <p class="text-center">
             <a href="" target="blank"><img src="../images/-----" alt="Error al cargar imagen figura_5.png" style="width: 15%;"></a>
