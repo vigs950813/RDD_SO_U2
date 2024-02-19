@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- Bootstrap CSS-->
     <!-- Local CSS-->
@@ -54,48 +54,60 @@
                 <div class="card-body">
 
                     <ul class="card-text">
-                        <li><b>Primero en entrar-primero en salir:</b> También denominado FCFS (First Come First
+                        <li>
+                            <b>Primero en entrar-primero en salir:</b> También denominado FCFS (First Come First
                             Served), es un algoritmo que utiliza una fila de procesos determinando el funcionamiento de
                             cada proceso por el orden de llegada. Al llegar el proceso es puesto detrás del que llegó
                             antes que él. Se resalta que al comenzar a ejecutarse un proceso, su ejecución no es
-                            interrumpida hasta terminar.</li>
+                            interrumpida hasta terminar.
+                        </li>
 
-                            <br>
+                        <br>
 
-                        <li><b>Prioridad al más corto:</b> Conocido como SJF (Shortest Job First). Este proceso se
+                        <li>
+                            <b>Prioridad al más corto:</b> Conocido como SJF (Shortest Job First). Este proceso se
                             distingue porque cuando un proceso se encuentra en ejecución, voluntariamente cambia de
                             estado, es decir que el tiempo de ejecución del proceso no es determinado. Por lo cual cada
                             proceso tiene una asignación de tiempo cuando vuelve a ser ejecutado y va ejecutando el
                             proceso con la menor cantidad de tiempo asignada. Al encontrarse que dos algoritmos poseen
-                            la misma cantidad de tiempo, se utilizará el algoritmo FCFS.</li>
+                            la misma cantidad de tiempo, se utilizará el algoritmo FCFS.
+                        </li>
 
-                            <br>
+                        <br>
 
-                        <li><b>Planificación por turno rotatorio:</b> Llamado Round Robin, es un algoritmo donde se
+                        <li>
+                            <b>Planificación por turno rotatorio:</b> Llamado Round Robin, es un algoritmo donde se
                             determina el mismo tiempo para la ejecución de todos los procesos. Si un proceso no puede
                             ejecutarse por completo en el tiempo asignado su ejecución será después de la ejecución de
                             todos los procesos que se ejecuten con el tiempo asignado. Este algoritmo se fundamenta en
-                            FCFS y ordena la cola de procesos circularmente cuando se hallan en estado de listos.</li>
+                            FCFS y ordena la cola de procesos circularmente cuando se hallan en estado de listos.
+                        </li>
 
-                            <br>
+                        <br>
 
-                        <li><b>Planificación por prioridad:</b> Esta planificación se caracteriza porque a cada proceso
+                        <li>
+                            <b>Planificación por prioridad:</b> Esta planificación se caracteriza porque a cada proceso
                             se le asigna una prioridad y se continúan con un criterio determinado. Los procesos serán
-                            atendidos de acuerdo con la prioridad determinada.</li>
+                            atendidos de acuerdo con la prioridad determinada.
+                        </li>
 
-                            <br>
+                        <br>
 
-                        <li><b>Planificación garantizada:</b> En esta planificación el sistema se enfoca en la cantidad
+                        <li>
+                            <b>Planificación garantizada:</b> En esta planificación el sistema se enfoca en la cantidad
                             de usuarios que debe atender. Donde en un número n de usuarios se asignará a cada usuario
-                            1/n de tiempo de ejecución.</li>
+                            1/n de tiempo de ejecución.
+                        </li>
 
-                            <br>
+                        <br>
 
-                        <li><b>Planificación de colas múltiples:</b> Derivado de MQS (Multilevel Queue Scheduling). Es
+                        <li>
+                            <b>Planificación de colas múltiples:</b> Derivado de MQS (Multilevel Queue Scheduling). Es
                             un algoritmo donde la cola de procesos en estado de listos se divide en varias colas más
                             pequeñas. Los procesos se clasifican a partir de un criterio que determina en qué cola se
-                            ubicará el proceso cuando se encuentre en estado de listo.</li>
-                            <br>
+                            ubicará el proceso cuando se encuentre en estado de listo.
+                        </li>
+                        <br>
                     </ul>
 
                     <p class="card-text">
@@ -116,35 +128,47 @@
                     <br>
 
                     <ul class="card-text">
-                        <li><b>Planificación a largo plazo:</b> En esta planificación se determina cuáles procesos serán
+                        <li>
+                            <b>Planificación a largo plazo:</b> En esta planificación se determina cuáles procesos serán
                             los siguientes en ser ejecutados. La toma de decisiones es realizada bajo los requisitos de
                             los procesos previamente anunciados y los que se encuentran libres en el sistema luego de
-                            finalizar otro proceso.</li>
-                            <br>
+                            finalizar otro proceso.
+                        </li>
+                        <br>
 
-                        <li><b>Planificación a mediano plazo:</b> En la Planificación a mediano plazo se decide cuáles
+                        <li>
+                            <b>Planificación a mediano plazo:</b> En la Planificación a mediano plazo se decide cuáles
                             tiempos deben ser bloqueados y en qué momento determinado ya sea por la falta o la
                             saturación de algún recurso o porque la solicitud exigida no puede atenderse en el momento.
                             La toma de decisiones es efectuada de acuerdo a la entrada y a la salida de los procesos que
-                            se encuentran en estado bloqueado.</li>
-                            <br>
+                            se encuentran en estado bloqueado.
+                        </li>
+                        <br>
 
-                        <li><b>Planificación a corto plazo:</b> En este tipo de planificación se determina en cada
+                        <li>
+                            <b>Planificación a corto plazo:</b> En este tipo de planificación se determina en cada
                             instante el procedimiento para compartir al equipo que recursos necesitan todos los
                             procesos. Es de resaltar que este tipo de planificación es ejecutado decenas de veces por
-                            segundo.</li>
-                            <br>
+                            segundo.
+                        </li>
+                        <br>
 
-                        <li><b>Se resalta que en la planificación de procesos se debe tener en cuenta los tiempos que se
-                                pueden calcular, tales como:</b> El tiempo de espera medio, el tiempo de retorno del
-                            proceso y el tiempo de retorno medio.</li>
+                        <li>
+                            <b>
+                                Se resalta que en la planificación de procesos se debe tener en cuenta los tiempos que se
+                                pueden calcular, tales como:
+                            </b> El tiempo de espera medio, el tiempo de retorno del
+                            proceso y el tiempo de retorno medio.
+                        </li>
                     </ul>
 
                     <p class="text-center">
-                        <a href="" target="blank"><img src="../images/-----" alt="Error al cargar imagen figura_23.png"
-                                style="width: 15%;"></a>
+                        <a href="" target="blank">
+                            <img src="../images/-----" alt="Error al cargar imagen figura_23.png"
+                                 style="width: 15%;">
+                        </a>
                     </p>
-                    
+
                     <p class="text-center">
                         <b>Figura 23. nombreFigura.</b>
                     </p>
@@ -175,8 +199,8 @@
     <!-- Footer -->
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
     <!-- Core theme JS-->
 </body>
 
