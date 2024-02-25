@@ -60,33 +60,40 @@
                     </p>
 
                     <br>
-                    
+
                     <p class="card-text">
                         Implementado, un semáforo es una estructura de dato.
                     </p>
 
                     <br>
-                    
+
                     <p class="card-text">
                         De acuerdo con Allen B. Downey, un semáforo es como un número entero, con tres diferencias:
                     </p>
-                      
+
 
                     <ol class="card-text">
-                        <li>Cuando creas el semáforo, puedes inicializar su valor a cualquier número entero, pero después de eso, las únicas
+                        <li>
+                            Cuando creas el semáforo, puedes inicializar su valor a cualquier número entero, pero después de eso, las únicas
                             operaciones que puedes realizar son incrementar (aumentar en uno) y disminuir (disminuir en uno). No puedes leer
-                            el valor actual del semáforo.</li>
-                        <li>Cuando un hilo disminuye el semáforo, si el resultado es negativo, el hilo se bloquea y no puede continuar hasta
-                            que otro hilo aumente el semáforo.</li>
-                        <li>Cuando un hilo incrementa el semáforo, si hay otros hilos esperando, uno de los hilos en espera se desbloquea.
+                            el valor actual del semáforo.
+                        </li>
+                        <li>
+                            Cuando un hilo disminuye el semáforo, si el resultado es negativo, el hilo se bloquea y no puede continuar hasta
+                            que otro hilo aumente el semáforo.
+                        </li>
+                        <li>
+                            Cuando un hilo incrementa el semáforo, si hay otros hilos esperando, uno de los hilos en espera se desbloquea.
                         </li>
                     </ol>
 
                     <br>
 
-                    
+                    <div class="card-body">
 
-                    <pre>
+
+
+                        <pre class="card-text card-code">
                             Ejemplo:
                             Este código demuestra cómo se puede utilizar un semáforo como un mutex para proteger una sección crítica de código. 
                             Crea un hilo y un semáforo (que actúa como un mutex). Cuando cada hilo intenta imprimir su mensaje (la sección crítica), 
@@ -119,6 +126,8 @@
 	                            return 0;
                             }
 </pre>
+
+                    </div>
 
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
