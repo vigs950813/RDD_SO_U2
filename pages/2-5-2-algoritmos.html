@@ -174,6 +174,113 @@
                     </p>
 
 
+                    <pre>
+                                        // Ejemplo de código de algoritmo FIFO
+                                        function saludar() {
+                                        console.log("¡Hola, mundo!");
+                                        }
+
+                                        int main() {
+                                        // Crear la FIFO
+                                        mkfifo(FIFO_FILE, 0666);
+
+                                        // Abrir la FIFO para escribir
+                                        int fd = open(FIFO_FILE, O_WRONLY);
+                                        if (fd == -1) {
+                                        perror("Error al abrir la FIFO para escribir");
+                                        exit(EXIT_FAILURE);
+                                        }
+
+                                        // Escribir datos en la FIFO
+                                        char message[] = "Hola, FIFO!";
+                                        write(fd, message, strlen(message) + 1);
+
+                                        // Cerrar el extremo de escritura de la FIFO
+                                        close(fd);
+
+                                        // Abrir la FIFO para leer
+                                        fd = open(FIFO_FILE, O_RDONLY);
+                                        if (fd == -1) {
+                                        perror("Error al abrir la FIFO para leer");
+                                        exit(EXIT_FAILURE);
+                                        }
+
+                                        // Leer datos de la FIFO
+                                        char buffer[100];
+                                        read(fd, buffer, sizeof(buffer));
+                                        printf("Mensaje leído: %s\n", buffer);
+
+                                        // Cerrar el extremo de lectura de la FIFO
+                                        close(fd);
+
+                                        // Eliminar la FIFO
+                                        unlink(FIFO_FILE);
+
+                                        return 0;
+                                        }
+
+                    </pre>
+
+
+                    <pre>
+                                // Estructura para representar un proceso
+                                struct Process {
+                                    int id;        // Identificador del proceso
+                                    int arrivalTime; // Tiempo de llegada del proceso
+                                    int burstTime; // Tiempo de ráfaga del proceso
+                                };
+
+                                // Función para la planificación SJF
+                                void sjf(struct Process processes[], int n) {
+                                    int remainingTime[n];
+                                    for (int i = 0; i < n; i++) {
+                                        remainingTime[i] = processes[i].burstTime;
+                                    }
+
+                                    int completed = 0, t = 0, minIndex;
+
+                                    while (completed != n) {
+                                        minIndex = -1;
+
+                                        // Encontrar el proceso con el tiempo de ráfaga más corto que ha llegado
+                                        for (int i = 0; i < n; i++) {
+                                            if (processes[i].arrivalTime <= t && (minIndex == -1 || remainingTime[i] < remainingTime[minIndex])) {
+                                                minIndex = i;
+                                            }
+                                        }
+
+                                        // Si no se encuentra ningún proceso listo, avanzar en el tiempo
+                                        if (minIndex == -1) {
+                                            t++;
+                                            continue;
+                                        }
+
+                                        // Ejecutar el proceso seleccionado
+                                        remainingTime[minIndex]--;
+                                        t++;
+
+                                        // Si la ráfaga ha terminado, imprimir el mensaje y marcar el proceso como completado
+                                        if (remainingTime[minIndex] == 0) {
+                                            printf("Proceso %d ejecutado en el tiempo %d\n", processes[minIndex].id, t);
+                                            completed++;
+                                        }
+                                    }
+                                }
+
+                                int main() {
+                                    // Ejemplo con tres procesos
+                                    struct Process processes[] = {{1, 0, 6}, {2, 2, 8}, {3, 3, 7}};
+                                    int n = sizeof(processes) / sizeof(processes[0]);
+
+                                    printf("Planificación SJF:\n");
+                                    sjf(processes, n);
+
+                                    return 0;
+                                }
+
+                    </pre>
+
+
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
                             <a class="page-link" href="2-4-sincronizacion-entre-procesos-hilos.html">Anterior</a>

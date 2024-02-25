@@ -84,17 +84,41 @@
 
                     <br>
 
-                    <p class="card-text">
-                        <!-- Ejemplo de aplicación. -->
-                        <b>EN CONSTRUCCIÓN</b> 
-                    </p>
+                    
 
-                    <!-- <p class="card-text">
-                        Un ejemplo típico de uso está en el problema de la cena de los filósofos, propuesto por Dijkstra en 1965, sin embargo, presentaremos un ejemplo diferente en esta ocasión.
-                    </p> -->
-
-
-                      
+                    <pre>
+                            Ejemplo:
+                            Este código demuestra cómo se puede utilizar un semáforo como un mutex para proteger una sección crítica de código. 
+                            Crea un hilo y un semáforo (que actúa como un mutex). Cuando cada hilo intenta imprimir su mensaje (la sección crítica), 
+                            primero debe adquirir el semáforo (mutex). Solo después de adquirir el semáforo, el hilo puede imprimir su mensaje.
+                            
+                            #include <stdio.h>
+                            #include <pthread.h>
+                            #include <semaphore.h>
+ 
+                            sem_t mutex;
+ 
+                            void* thread_func(void* arg) {
+	                            sem_wait(&mutex); // Espero al semáforo (mutex)
+	                            printf("Sección crítica del hilo\n");
+	                            sem_post(&mutex); // Libero el semáforo (mutex)
+	                            return NULL;
+                            }
+ 
+                            int main() {
+	                            pthread_t thread;
+	                            sem_init(&mutex, 0, 1); // Inicializo el semáforo (mutex)
+ 
+	                            pthread_create(&thread, NULL, thread_func, NULL); // Creo un hilo
+	                            sem_wait(&mutex); // Espero al semáforo (mutex)
+	                            printf("Sección crítica del hilo principal\n");
+	                            sem_post(&mutex); // Libero el semáforo (mutex)
+ 
+	                            pthread_join(thread, NULL); // Espero a que termine el hilo
+	                            sem_destroy(&mutex); // Destruyo el semáforo (mutex)
+	                            return 0;
+                            }
+</pre>
 
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
