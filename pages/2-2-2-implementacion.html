@@ -103,11 +103,10 @@
                     <div class="card-body">
 
 
-
-                        <pre class="card-text card-code">
-                Ejemplo 2:
-                Modelo de Hilos Independientes (M:N Mapping).
-                En este modelo, varios hilos de usuario se mapean a un número menor de hilos del sistema operativo, permitiendo una implementación más eficiente y adaptativa de hilos.
+                        <pre class="card-text card-code">       
+                //Ejemplo 1:
+                //En este modelo, varios hilos de usuario se mapean a un número menor de hilos del sistema operativo,
+                // permitiendo una implementación más eficiente y adaptativa de hilos.   
 
                 #include <stdio.h>
                 #include <pthread.h>
@@ -134,9 +133,18 @@
 	                return 0;
                 }
 
-                Ejemplo 2:
-                Modelo de Hilos Pesados (Heavyweight Threads).
-                En este modelo, los hilos son gestionados y soportados directamente por el sistema operativo a nivel de kernel, proporcionando un mayor nivel de control y cooperación entre hilos y procesos.
+                        </pre>
+
+                        <p class="text-center">
+                            <b>Código 3. Modelo de Hilos Independientes (M:N Mapping).</b><br />
+                        </p>
+
+                        <pre>
+
+                //Ejemplo 2:
+                
+                //En este modelo, los hilos son gestionados y soportados directamente por el sistema operativo a nivel de kernel, 
+                //proporcionando un mayor nivel de control y cooperación entre hilos y procesos.
                 #include <stdio.h>
                 #include <pthread.h>
  
@@ -161,10 +169,18 @@
  
 	                return 0;
                 }
+                        </pre>
 
-                Ejemplo 3:
-                Modelo de Hilos Ligeros (Lightweight Threads).
-                En este modelo, los hilos son gestionados completamente a nivel de usuario sin soporte directo del sistema operativo, proporcionando una implementación más ligera y eficiente de hilos.
+                        <p class="text-center">
+                            <b>Código 4. Modelo de Hilos Pesados (Heavyweight Threads).</b><br />
+                        </p>
+
+                        <pre>
+
+                //Ejemplo 3:
+                
+                //En este modelo, los hilos son gestionados completamente a nivel de usuario sin soporte directo del sistema operativo, 
+                //proporcionando una implementación más ligera y eficiente de hilos.
 
                 #include <stdio.h>
                 #include <pthread.h>
@@ -194,6 +210,10 @@
             </pre>
 
                     </div>
+
+                    <p class="text-center">
+                        <b>Código 5. Modelo de Hilos Ligeros (Lightweight Threads).</b><br />
+                    </p>
 
                     <ul class="pagination justify-content-end">
                         <li class="page-item">

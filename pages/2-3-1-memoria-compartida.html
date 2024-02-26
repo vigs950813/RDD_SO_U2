@@ -142,11 +142,13 @@
               <pre class="card-text card-code">
                 Ejemplo 1:
 
-                El ejemplo siguiente es igual un programa en c que tiene dos procesos: un padre y un hijo con tuberías donde ejemplificamos correctamente las tuberías con memoria compratida.
+                El ejemplo siguiente es un programa en c que tiene dos procesos: un padre y un hijo con tuberías 
+                donde se ejemplifica correctamente las tuberías con memoria compartida.
+
                 #include <stdio.h>
                 #include <stdlib.h>
                 #include <unistd.h>
-                #include <sys/shm.h>
+                #include <sys /shm.h>
  
                 int main() {
 	                int fd[2];
@@ -204,6 +206,10 @@
                 }
 
 </pre>
+
+              <p class="text-center">
+                  <b>Código 6. Tuberías con memoria compartida.</b>
+              </p>
 
           </div>
 
