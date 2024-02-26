@@ -103,105 +103,108 @@
 
                     <div class="card-body">
                         <pre class="card-text card-code">
-                        Ejemplo 1:
-                        El ejemplo es un código en c con tuberías que para ejemplificar el perfecto de la comunicación entre procesos
-                        
-                        #include <unistd.h>
-                        #include <stdlib.h>
-                        #include <string.h>
-                        #include <stdio.h>
-                        #include <time.h>
- 
-                        int main (void) {
-                            // Definimos dos descriptores de archivo para las tuberías
-                            int fd [2];
-                            int fd2 [2];
- 
-                            // Definimos una variable para el ID del proceso
-                            pid_t pid;
- 
-                            // Definimos los mensajes que voy a enviar
-                            char saludoPadre [] = "Buenos días hijo.";
-                            int tamSaludoPadre = strlen (saludoPadre);
-                            char buffer [tamSaludoPadre];
-                            char despedidaHijo [] = "Adiós papá.";
-                            int tamDespedidaHijo = strlen (despedidaHijo);
-                            char buffer2 [tamDespedidaHijo];
- 
-                            // Aquí generamos un número aleatorio
-                            srand (time (NULL));
-                            int num = rand () % 101;
-                            char numRandom [3];
-                            sprintf (numRandom, "%d", num);
-                            int tamNumeroRandom = strlen (numRandom);
-                            char buffer3 [tamNumeroRandom];
- 
-                            // Creación de las tuberías
-                            pipe (fd);
-                            pipe (fd2);
- 
-                            // Creación del proceso hijo
-                            pid = fork ();
- 
-                            switch (pid) {
-                                case -1:
-        	                        printf ("No se ha podido crear hijo...\\n");
-        	                        exit (-1);
-        	                        break;
-                                case 0:
-        	                        // Cierre del descriptor de escritura en la tubería del hijo
-        	                        close (fd [1]);
- 
-        	                        // Lectura del mensaje padre
-        	                        read (fd [0], buffer, tamSaludoPadre);
-        	                        printf ("\\t\\t%s\\n", buffer);
- 
-        	                        // Cierre del descriptor de lectura en la tubería del hijo
-        	                        close (fd [0]);
- 
-        	                        // Despedida del padre
-        	                        write (fd [1], despedidaHijo, tamDespedidaHijo);
- 
-        	                        // Cierro del descriptor de lectura en la segunda tubería del hijo
-        	                        close (fd2 [0]);
- 
-        	                        // Escritura del número aleatorio a la segunda tubería
-        	                        write (fd2 [1], numRandom, tamNumeroRandom);
-        	                        break;
-                                default:
-        	                        // Cierre del descriptor de lectura en la tubería del padre
-        	                        close (fd [0]);
- 
-        	                        // Escritura del mensaje de saludo al hijo
-        	                        write (fd [1], saludoPadre, tamSaludoPadre);
- 
-        	
-        	                        wait (NULL);
- 
-        	                        // Aquí cierro el descriptor de escritura en la tubería del padre
-        	                        close (fd [1]);
- 
-        	                        // Aquí leo el mensaje de despedida del hijo
-        	                        read (fd [0], buffer2, tamDespedidaHijo);
-        	                        printf ("\\t\\t%s\\n", buffer2);
- 
-        	                        // Aquí cierro el descriptor de escritura en la segunda tubería del padre
-        	                        close (fd2 [1]);
- 
-        	                        // Aquí leo el número aleatorio del hijo
-        	                        read (fd2 [0], buffer3, tamNumeroRandom);
-        	                        printf ("\\t\\t%s\\n", buffer3);
-        	                        break;
+                            Ejemplo 1:
+                            El ejemplo es un código en c con tuberías que para ejemplificar el perfecto de la comunicación entre procesos
+                            
+                            #include &lt;unistd.h&gt;
+                            #include &lt;stdlib.h&gt;
+                            #include &lt;string.h&gt;
+                            #include &lt;stdio.h&gt;
+                            #include &lt;time.h&gt;
+        
+                            int main (void) {
+                                // Definimos dos descriptores de archivo para las tuberías
+                                int fd [2];
+                                int fd2 [2];
+        
+                                // Definimos una variable para el ID del proceso
+                                pid_t pid;
+        
+                                // Definimos los mensajes que voy a enviar
+                                char saludoPadre [] = "Buenos días hijo.";
+                                int tamSaludoPadre = strlen (saludoPadre);
+                                char buffer [tamSaludoPadre];
+                                char despedidaHijo [] = "Adiós papá.";
+                                int tamDespedidaHijo = strlen (despedidaHijo);
+                                char buffer2 [tamDespedidaHijo];
+        
+                                // Aquí generamos un número aleatorio
+                                srand (time (NULL));
+                                int num = rand () % 101;
+                                char numRandom [3];
+                                sprintf (numRandom, "%d", num);
+                                int tamNumeroRandom = strlen (numRandom);
+                                char buffer3 [tamNumeroRandom];
+        
+                                // Creación de las tuberías
+                                pipe (fd);
+                                pipe (fd2);
+        
+                                // Creación del proceso hijo
+                                pid = fork ();
+        
+                                switch (pid) {
+                                    case -1:
+                                        printf ("No se ha podido crear hijo...\\n");
+                                        exit (-1);
+                                        break;
+                                    case 0:
+                                        // Cierre del descriptor de escritura en la tubería del hijo
+                                        close (fd [1]);
+        
+                                        // Lectura del mensaje padre
+                                        read (fd [0], buffer, tamSaludoPadre);
+                                        printf ("\\t\\t%s\\n", buffer);
+        
+                                        // Cierre del descriptor de lectura en la tubería del hijo
+                                        close (fd [0]);
+        
+                                        // Despedida del padre
+                                        write (fd [1], despedidaHijo, tamDespedidaHijo);
+        
+                                        // Cierro del descriptor de lectura en la segunda tubería del hijo
+                                        close (fd2 [0]);
+        
+                                        // Escritura del número aleatorio a la segunda tubería
+                                        write (fd2 [1], numRandom, tamNumeroRandom);
+                                        break;
+                                    default:
+                                        // Cierre del descriptor de lectura en la tubería del padre
+                                        close (fd [0]);
+        
+                                        // Escritura del mensaje de saludo al hijo
+                                        write (fd [1], saludoPadre, tamSaludoPadre);
+        
+                
+                                        wait (NULL);
+        
+                                        // Aquí cierro el descriptor de escritura en la tubería del padre
+                                        close (fd [1]);
+        
+                                        // Aquí leo el mensaje de despedida del hijo
+                                        read (fd [0], buffer2, tamDespedidaHijo);
+                                        printf ("\\t\\t%s\\n", buffer2);
+        
+                                        // Aquí cierro el descriptor de escritura en la segunda tubería del padre
+                                        close (fd2 [1]);
+        
+                                        // Aquí leo el número aleatorio del hijo
+                                        read (fd2 [0], buffer3, tamNumeroRandom);
+                                        printf ("\\t\\t%s\\n", buffer3);
+                                        break;
+                                }
+                                return 0;
                             }
-                            return 0;
-                        }
-
-</pre>
-                        <p class="text-center">
-                            <b>Código 7. Comunicación entre procesos con tuberías.</b>
-                        </p>
-
+                    
+                    </pre>
+                       
+                    
                     </div>
+
+
+                    <p class="text-center">
+                        <b>Código 7. Comunicación entre procesos con tuberías.</b>
+                    </p>
 
 
                     <ul class="pagination justify-content-end">
