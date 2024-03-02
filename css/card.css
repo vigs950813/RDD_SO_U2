@@ -25,11 +25,18 @@
 }
 
 .card-text.card-code{
-    font-size: 16px;
+    font-size: 18px;
     text-align: justify;
     line-height: 1.5rem;
     background-color: #1B2A3B;
     color: white;
     font-weight: bold;
+    border-radius: 14px 14px 14px 14px;
+    box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
+}
+
+.card-text.quoted-text{
+    font-size: 18px;
+    text-align: left;
 }
 

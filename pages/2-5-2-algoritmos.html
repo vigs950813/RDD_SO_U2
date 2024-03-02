@@ -175,88 +175,77 @@
 
 
                     <div class="card-body">
-
-
-
-
                         <pre class="card-text card-code">
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <sys /stat.h>
-#include <sys /types.h>
-
-#define FIFO_FILE "fifo_example"
-
-int main() {
-    // Crear la FIFO
-    mkfifo(FIFO_FILE, 0666); // Se crea con permisos de lectura y escritura para todos los usuarios
-
-    // Abrir la FIFO para escribir
-    int fd = open(FIFO_FILE, O_WRONLY); // Abre la FIFO en modo escritura
-    if (fd == -1) {
-        perror("Error al abrir la FIFO para escribir");
-        exit(EXIT_FAILURE);
-    }
-
-    // Escribir datos en la FIFO
-    char message[] = "Hola, FIFO!";
-    write(fd, message, strlen(message) + 1); // Escribe el mensaje en la FIFO, incluyendo el carácter nulo
-
-    // Cerrar el extremo de escritura de la FIFO
-    close(fd);
-
-    // Abrir la FIFO para leer
-    fd = open(FIFO_FILE, O_RDONLY); // Abre la FIFO en modo lectura
-    if (fd == -1) {
-        perror("Error al abrir la FIFO para leer");
-        exit(EXIT_FAILURE);
-    }
-
-    // Leer datos de la FIFO
-    char buffer[100]; // Buffer para almacenar los datos leídos
-    read(fd, buffer, sizeof(buffer)); // Lee datos de la FIFO y los almacena en el buffer
-    printf("Mensaje leído: %s\n", buffer); // Imprime el mensaje leído desde la FIFO
-
-    // Cerrar el extremo de lectura de la FIFO
-    close(fd);
-
-    // Eliminar la FIFO
-    unlink(FIFO_FILE); // Borra el archivo de la FIFO
-
-    return 0;
-}
-
-
-                    </pre>
-
-                        <p class="text-center">
-                            <b>Código 9. Algoritmo FIFO.</b>
-                        </p>
-
-
+                            // Ejemplo de código de algoritmo FIFO
+                            function saludar() {
+                                console.log("¡Hola, mundo!");
+                            }
+                        
+                            int main() {
+                                // Crear la FIFO
+                                mkfifo(FIFO_FILE, 0666);
+                            
+                                // Abrir la FIFO para escribir
+                                int fd = open(FIFO_FILE, O_WRONLY);
+                                
+                                if (fd == -1) {
+                                    perror("Error al abrir la FIFO para escribir");
+                                    exit(EXIT_FAILURE);
+                                }
+                        
+                                // Escribir datos en la FIFO
+                                char message[] = "Hola, FIFO!";
+                                write(fd, message, strlen(message) + 1);
+                            
+                                // Cerrar el extremo de escritura de la FIFO
+                                close(fd);
+                            
+                                // Abrir la FIFO para leer
+                                fd = open(FIFO_FILE, O_RDONLY);
+                                if (fd == -1) {
+                                    perror("Error al abrir la FIFO para leer");
+                                    exit(EXIT_FAILURE);
+                                }
+                            
+                                // Leer datos de la FIFO
+                                char buffer[100];
+                                read(fd, buffer, sizeof(buffer));
+                                printf("Mensaje leído: %s\n", buffer);
+                            
+                                // Cerrar el extremo de lectura de la FIFO
+                                close(fd);
+                            
+                                // Eliminar la FIFO
+                                unlink(FIFO_FILE);
+                            
+                                return 0;
+                            }
+                    
+                        </pre>
+                    </div>
+                    
+                    <p class="text-center">
+                        <b>Código 9. Algoritmo FIFO.</b>
+                    </p>
+                
+                    <div class="card-body">
                         <pre class="card-text card-code">
-#include <stdio.h>
-
 // Estructura para representar un proceso
 struct Process {
-    int id;             // Identificador del proceso
-    int arrivalTime;    // Tiempo de llegada del proceso
-    int burstTime;      // Tiempo de ráfaga del proceso
+    int id;        // Identificador del proceso
+    int arrivalTime; // Tiempo de llegada del proceso
+    int burstTime; // Tiempo de ráfaga del proceso
 };
 
-// Función para la planificación SJF (Shortest Job First)
+// Función para la planificación SJF
 void sjf(struct Process processes[], int n) {
-    int remainingTime[n]; // Tiempo restante para cada proceso
+    int remainingTime[n];
     for (int i = 0; i < n; i++) {
-        remainingTime[i] = processes[i].burstTime; // Inicializar el tiempo restante con el tiempo de ráfaga
+        remainingTime[i] = processes[i].burstTime;
     }
 
     int completed = 0, t = 0, minIndex;
 
-    // Mientras no se hayan completado todos los procesos
     while (completed != n) {
         minIndex = -1;
 
@@ -288,22 +277,19 @@ void sjf(struct Process processes[], int n) {
 int main() {
     // Ejemplo con tres procesos
     struct Process processes[] = {{1, 0, 6}, {2, 2, 8}, {3, 3, 7}};
-    int n = sizeof(processes) / sizeof(processes[0]); // Obtener el número de procesos
+    int n = sizeof(processes) / sizeof(processes[0]);
 
-    printf("Planificación SJF (Shortest Job First):\n");
-    sjf(processes, n); // Llamar a la función de planificación SJF
+    printf("Planificación SJF:\n");
+    sjf(processes, n);
 
     return 0;
 }
-
 
                     </pre>
 
                         <p class="text-center">
                             <b>Código 10. Planificación SFJ.</b>
                         </p>
-
-                    </div>
 
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
