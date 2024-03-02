@@ -180,49 +180,55 @@
 
 
                         <pre class="card-text card-code">
-    // Ejemplo de código de algoritmo FIFO
-    function saludar() {
-    console.log("¡Hola, mundo!");
-    }
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys /stat.h>
+#include <sys /types.h>
 
-    int main() {
+#define FIFO_FILE "fifo_example"
+
+int main() {
     // Crear la FIFO
-    mkfifo(FIFO_FILE, 0666);
+    mkfifo(FIFO_FILE, 0666); // Se crea con permisos de lectura y escritura para todos los usuarios
 
     // Abrir la FIFO para escribir
-    int fd = open(FIFO_FILE, O_WRONLY);
+    int fd = open(FIFO_FILE, O_WRONLY); // Abre la FIFO en modo escritura
     if (fd == -1) {
-    perror("Error al abrir la FIFO para escribir");
-    exit(EXIT_FAILURE);
+        perror("Error al abrir la FIFO para escribir");
+        exit(EXIT_FAILURE);
     }
 
     // Escribir datos en la FIFO
     char message[] = "Hola, FIFO!";
-    write(fd, message, strlen(message) + 1);
+    write(fd, message, strlen(message) + 1); // Escribe el mensaje en la FIFO, incluyendo el carácter nulo
 
     // Cerrar el extremo de escritura de la FIFO
     close(fd);
 
     // Abrir la FIFO para leer
-    fd = open(FIFO_FILE, O_RDONLY);
+    fd = open(FIFO_FILE, O_RDONLY); // Abre la FIFO en modo lectura
     if (fd == -1) {
-    perror("Error al abrir la FIFO para leer");
-    exit(EXIT_FAILURE);
+        perror("Error al abrir la FIFO para leer");
+        exit(EXIT_FAILURE);
     }
 
     // Leer datos de la FIFO
-    char buffer[100];
-    read(fd, buffer, sizeof(buffer));
-    printf("Mensaje leído: %s\n", buffer);
+    char buffer[100]; // Buffer para almacenar los datos leídos
+    read(fd, buffer, sizeof(buffer)); // Lee datos de la FIFO y los almacena en el buffer
+    printf("Mensaje leído: %s\n", buffer); // Imprime el mensaje leído desde la FIFO
 
     // Cerrar el extremo de lectura de la FIFO
     close(fd);
 
     // Eliminar la FIFO
-    unlink(FIFO_FILE);
+    unlink(FIFO_FILE); // Borra el archivo de la FIFO
 
     return 0;
-    }
+}
+
 
                     </pre>
 
@@ -232,22 +238,25 @@
 
 
                         <pre class="card-text card-code">
+#include <stdio.h>
+
 // Estructura para representar un proceso
 struct Process {
-    int id;        // Identificador del proceso
-    int arrivalTime; // Tiempo de llegada del proceso
-    int burstTime; // Tiempo de ráfaga del proceso
+    int id;             // Identificador del proceso
+    int arrivalTime;    // Tiempo de llegada del proceso
+    int burstTime;      // Tiempo de ráfaga del proceso
 };
 
-// Función para la planificación SJF
+// Función para la planificación SJF (Shortest Job First)
 void sjf(struct Process processes[], int n) {
-    int remainingTime[n];
+    int remainingTime[n]; // Tiempo restante para cada proceso
     for (int i = 0; i < n; i++) {
-        remainingTime[i] = processes[i].burstTime;
+        remainingTime[i] = processes[i].burstTime; // Inicializar el tiempo restante con el tiempo de ráfaga
     }
 
     int completed = 0, t = 0, minIndex;
 
+    // Mientras no se hayan completado todos los procesos
     while (completed != n) {
         minIndex = -1;
 
@@ -279,13 +288,14 @@ void sjf(struct Process processes[], int n) {
 int main() {
     // Ejemplo con tres procesos
     struct Process processes[] = {{1, 0, 6}, {2, 2, 8}, {3, 3, 7}};
-    int n = sizeof(processes) / sizeof(processes[0]);
+    int n = sizeof(processes) / sizeof(processes[0]); // Obtener el número de procesos
 
-    printf("Planificación SJF:\n");
-    sjf(processes, n);
+    printf("Planificación SJF (Shortest Job First):\n");
+    sjf(processes, n); // Llamar a la función de planificación SJF
 
     return 0;
 }
+
 
                     </pre>
 

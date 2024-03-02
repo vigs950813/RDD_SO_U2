@@ -110,30 +110,31 @@
 
                 #include <stdio.h>
                 #include <pthread.h>
- 
+
+                // Función que será ejecutada por cada hilo
                 void *funcion_hilo(void *arg) {
-	                printf("Hilo ejecutado: %d\n", *((int *) arg));
-	                pthread_exit(NULL);
-                }
- 
-                int main() {
-	                pthread_t hilos[4];
-	                int ids[] = {1, 2, 3, 4};
- 
-	                // Crear hilos
-	                for (int i = 0; i < 4; i++) {
-                        pthread_create(&hilos[i], NULL, funcion_hilo, (void *) &ids[i]);
-	                }
- 
-	                // Esperar la finalización de los hilos
-	                for (int i = 0; i < 4; i++) {
-    	                pthread_join(hilos[i], NULL);
-	                }
- 
-	                return 0;
+                    printf("Hilo ejecutado: %d\n", *((int *) arg)); // Imprimir el ID del hilo
+                    pthread_exit(NULL); // Terminar el hilo
+                    }
+
+                    int main() {
+                    pthread_t hilos[4]; // Array para almacenar los identificadores de los hilos
+                    int ids[] = {1, 2, 3, 4}; // Array de IDs de los hilos
+
+                    // Crear hilos
+                    for (int i = 0; i < 4; i++) {
+                    pthread_create(&hilos[i], NULL, funcion_hilo, (void *) &ids[i]); // Crear un nuevo hilo
+                    }
+
+                    // Esperar la finalización de los hilos
+                    for (int i = 0; i < 4; i++) {
+                    pthread_join(hilos[i], NULL); // Esperar a que el hilo con el ID correspondiente termine
+                    }
+
+                    return 0;
                 }
 
-                        </pre>
+</pre>
 
                         <p class="text-center">
                             <b>Código 3. Modelo de Hilos Independientes (M:N Mapping).</b><br />
@@ -147,29 +148,30 @@
                 //proporcionando un mayor nivel de control y cooperación entre hilos y procesos.
                 #include <stdio.h>
                 #include <pthread.h>
- 
+
+                // Función que será ejecutada por cada hilo ligero
                 void *funcion_hilo_ligero(void *arg) {
-                    printf("Hilo ligero ejecutado: %d\n", *((int *) arg));
-	                pthread_exit(NULL);
+                    printf("Hilo ligero ejecutado: %d\n", *((int *) arg)); // Imprimir el ID del hilo ligero
+                    pthread_exit(NULL); // Terminar el hilo ligero
+                    }
+
+                    int main() {
+                    pthread_t hilos[2]; // Array para almacenar los identificadores de los hilos ligeros
+                    int ids[] = {1, 2}; // Array de IDs de los hilos ligeros
+
+                    // Crear hilos ligeros
+                    for (int i = 0; i < 2; i++) {
+                    pthread_create(&hilos[i], NULL, funcion_hilo_ligero, (void *) &ids[i]); // Crear un nuevo hilo ligero
+                    }
+
+                    // Esperar la finalización de los hilos ligeros
+                    for (int i = 0; i < 2; i++) {
+                    pthread_join(hilos[i], NULL); // Esperar a que el hilo ligero con el ID correspondiente termine
+                    }
+
+                    return 0;
                 }
- 
-                int main() {
-	                pthread_t hilos[2];
-	                int ids[] = {1, 2};
- 
-	                // Crear hilos ligeros
-	                for (int i = 0; i < 2; i++) {
-                        pthread_create(&hilos[i], NULL, funcion_hilo_ligero, (void *) &ids[i]);
-	                }
- 
-	                // Esperar la finalización de los hilos
-	                for (int i = 0; i < 2; i++) {
-    	                pthread_join(hilos[i], NULL);
-	                }
- 
-	                return 0;
-                }
-                        </pre>
+</pre>
 
                         <p class="text-center">
                             <b>Código 4. Modelo de Hilos Pesados (Heavyweight Threads).</b><br />
