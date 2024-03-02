@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Actividad 2</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<!-- Bootstrap CSS-->
+<!-- Local CSS-->
+<link href="../css/header.css" rel="stylesheet" />
+<link href="../css/navbar.css" rel="stylesheet" />
+<link href="../css/offcanvas.css" rel="stylesheet" />
+<link href="../css/card.css" rel="stylesheet" />
+<link href="../css/table.css" rel="stylesheet" />
+<link href="../css/pagination.css" rel="stylesheet" />
+<link href="../css/footer.css" rel="stylesheet" />
+
+
+<!-- Local CSS-->
+<!-- Local JS-->
+<script src="../js/headerPagesLoader.js"></script>
+<script src="../js/navbarContentLoader.js"></script>
+<script src="../js/offcanvasLoader.js"></script>
+<script src="../js/footerPagesLoader.js"></script>
+<!-- Local JS-->
+<style>
+    .draggable-item {
+        cursor: grab;
+        font-weight: bold;
+    }
+
+    .draggable-item:hover{
+        font-size: 15px;
+        color: #616161;
+    }
+
+    .droppable-area {
+        min-height: 50px;
+        margin-bottom: 10px;
+        background-color: #D5D5D5;
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- Offcanvas -->
+    <div id="offcanvas-container"></div>
+    <!-- Offcanvas -->
+
+    <!-- Header -->
+    <div id="header-container"></div>
+    <!-- Header -->
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    <!-- Navbar -->
+
+    <!-- Page content -->
+
+    <main>
+        <section>
+            <div class="card">
+                <h3 class="card-header">Actividad 2</h3>
+                <div class="card-body">
+
+                    <p class="card-text">
+                        <b>Instrucciones</b>
+                    </p>
+
+
+                    <p class="card-text">
+                        Correlaciona los conceptos con las definiciones, coloca en el recuadro sombreado, el número de
+                        concepto correspondiente.
+                    </p>
+
+                    <p class="card-text">
+                        Una vez que hayas terminado de seleccionar tus respuestas, puedes verificarlas dando clic en el
+                        botón Validar respuestas.
+                    </p>
+
+                    <p class="card-text">
+                        Puede reiniciar las posiciones de los items arrastrables dando clic en el botón Resetear
+                        posiciones.
+                    </p>
+
+                    <p class="card-text">
+                        Es importante que sepas que esta actividad no tiene calificación, su propósito es reforzar tus
+                        conocimientos relacionados con este tema y que puedas evaluar aprendizajes adquiridos.
+                    </p>
+
+
+                    <div class="container">
+                        <!-- Fila -->
+                        <div class="row">
+
+                            <div class="col">
+                                <b>Concepto</b>
+                            </div>
+                            <div class="col">
+                                <b></b>
+                            </div>
+                            <div class="col">
+                                <b>Definición</b>
+                            </div>
+                        </div>
+                        <!-- Fila -->
+                        <!-- Fila -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="item1">1.
+                                    Modelo de hilos a nivel usuario.</div>
+                            </div>
+
+                            <div class="col droppable-area" id="respuesta1" ondrop="drop(event)"
+                                ondragover="allowDrop(event)"></div>
+                            <div class="col" id="pregunta1">
+                                Proporcionan cálculos y operaciones de forma intensiva.
+                            </div>
+
+                        </div>
+                        <!-- Fila -->
+                        <!-- Fila -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="item2">2.
+                                    Modelo de hilos a nivel de kernel.</div>
+                            </div>
+
+                            <div class="col droppable-area" id="respuesta2" ondrop="drop(event)"
+                                ondragover="allowDrop(event)"></div>
+                            <div class="col" id="pregunta2">
+                                Se caracterizan por realizar operaciones de E/S intensivas.
+                            </div>
+
+                        </div>
+                        <!-- Fila -->
+                        <!-- Fila -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="item3">3.
+                                    Hilos independientes.
+                                </div>
+                            </div>
+
+                            <div class="col droppable-area" id="respuesta3" ondrop="drop(event)"
+                                ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col" id="pregunta3">
+                                Ofrecen un equilibrio entre eficiencia y flexibilidad.
+                            </div>
+
+                        </div>
+                        <!-- Fila -->
+                        <!-- Fila -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="item4">4.
+                                    Hilos ligeros.</div>
+                            </div>
+
+                            <div class="col droppable-area" id="respuesta4" ondrop="drop(event)"
+                                ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col" id="pregunta4">
+                                En este modo son más complejos de implementar, añadiendo la sobrecarga y forzosa
+                                sincronización para su funcionamiento.
+                            </div>
+
+                        </div>
+                        <!-- Fila -->
+                        <!-- Fila -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="item5">5.
+                                    Hilos pesados.</div>
+                            </div>
+
+                            <div class="col droppable-area" id="respuesta5" ondrop="drop(event)"
+                                ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col" id="pregunta5">
+                                Las operaciones de creación, planificación y sincronización se realizan en este modo.
+                            </div>
+
+                        </div>
+                        <!-- Fila -->
+                        <!-- Fila -->
+                        <!-- <div class="row">
+                            <div class="col">
+                                <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="item6">6.
+                                    Plataforma de gestión del aprendizaje de código abierto que facilita la creación de
+                                    cursos en línea, evaluaciones y la interacción entre estudiantes y profesores</div>
+                            </div>
+
+                            <div class="col droppable-area" id="respuesta6" ondrop="drop(event)"
+                                ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col" id="pregunta6">
+                                Schoology
+                            </div>
+
+                        </div> -->
+                        <!-- Fila -->
+                        <!-- Fila -->
+                        <!-- <div class="row">
+                            <div class="col">
+                                <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="item7">7.
+                                    Plataforma de aprendizaje en línea que integra funciones de gestión del aprendizaje
+                                    y red social educativa, permitiendo la creación de cursos y la colaboración en línea
+                                </div>
+                            </div>
+
+                            <div class="col droppable-area" id="respuesta7" ondrop="drop(event)"
+                                ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col" id="pregunta7">
+                                Moodle
+                            </div>
+
+                        </div> -->
+                        <!-- Fila -->
+                        <br>
+                        <!-- Fila -->
+                        <div class="row" style="border-color: transparent;">
+                            <div class="col">
+                                <button type="button" onclick="validarRespuestas()" class="btn btn-primary">Validar
+                                    respuestas</button>
+                            </div>
+                            <div class="col">
+                                <a href="actividad-2.html"><button type="button" class="btn btn-primary">Resetear
+                                        posiciones</button></a>
+                            </div>
+                        </div>
+                        <!-- Fila -->
+
+                    </div>
+
+                    <br>
+
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" href="2-1-modelo-de-procesos.html">Anterior</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="2-2-modelo-multi-hilo.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="2-2-1-bibliotecas.html">2</a></li>
+                        <li class="page-item"><a class="page-link" href="2-2-2-implementacion.html">3</a></li>
+                        <li class="page-item"><a class="page-link" href="2-2-3-hilos-modo-usuario-kernel.html">4</a></li>
+                        <li class="page-item active"><a class="page-link" href="actividad-2.html">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="2-3-comunicacion-entre-procesos.html">Siguiente Tema</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Page content -->
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <!-- Footer -->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            const draggedItemId = event.dataTransfer.getData("text");
+            const draggedItem = document.getElementById(draggedItemId);
+            const dropTarget = event.target;
+
+            if (dropTarget.classList.contains("droppable-area")) {
+                dropTarget.appendChild(draggedItem);
+            }
+        }
+
+        function validarRespuestas() {
+            const respuestasCorrectas = {
+                "respuesta1": "item5",
+                "respuesta2": "item4",
+                "respuesta3": "item3",
+                "respuesta4": "item2",
+                "respuesta5": "item1",
+
+            };
+
+            let respuestasCorrectasContador = 0;
+            let respuestasIncorrectasContador = 0;
+
+            for (const respuestaId in respuestasCorrectas) {
+                const respuestaDiv = document.getElementById(respuestaId);
+                const itemDiv = respuestaDiv.querySelector(".draggable-item");
+
+                if (!itemDiv || itemDiv.id !== respuestasCorrectas[respuestaId]) {
+                    respuestasIncorrectasContador++;
+                    // Cambia el color de fondo a rojo
+                    //respuestaDiv.style.backgroundColor = "#FFC0C0"; 
+                } else {
+                    respuestasCorrectasContador++;
+                    // Cambia el color de fondo a verde
+                    //respuestaDiv.style.backgroundColor = "#C0FFC0"; 
+                }
+            }
+
+            alert("Respuestas Correctas: " + respuestasCorrectasContador + "\nRespuestas Incorrectas: " + respuestasIncorrectasContador);
+        }
+    </script>
+
+
+
+</body>
+
+</html>
