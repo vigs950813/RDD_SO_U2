@@ -94,48 +94,46 @@
                     
                     
                         <pre class="card-text card-code">
-Ejemplo:
-Este código demuestra cómo se puede utilizar un semáforo como un mutex
-para proteger una sección crítica de código. 
-Crea un hilo y un semáforo (que actúa como un mutex). 
-Cuando cada hilo intenta imprimir su mensaje (la sección crítica), 
-primero debe adquirir el semáforo (mutex). 
-Solo después de adquirir el semáforo, el hilo puede imprimir su mensaje.
-                                                
-#include &lt;stdio.h&gt;
-#include &lt;pthread.h&gt;
-#include &lt;semaphore.h&gt;
-                    
-sem_t mutex; // Declaración del semáforo
+    //Ejemplo:
+        //Este código demuestra cómo se puede utilizar un semáforo como un mutex para proteger una sección crítica de código. 
+        //Crea un hilo y un semáforo (que actúa como un mutex). 
+        //Cuando cada hilo intenta imprimir su mensaje (la sección crítica),  primero debe adquirir el semáforo (mutex). 
+        //Solo después de adquirir el semáforo, el hilo puede imprimir su mensaje.
+                                                    
+    #include &lt;stdio.h&gt;
+    #include &lt;pthread.h&gt;
+    #include &lt;semaphore.h&gt;
+                        
+    sem_t mutex;                                                        // Declaración del semáforo
 
-void* thread_func(void* arg) {
-    // Espera al semáforo (mutex)
-    sem_wait(&mutex);
-    printf("Sección crítica del hilo\n");
-    // Se libera el semáforo (mutex)
-    sem_post(&mutex);
-    return NULL;
-}
+    void* thread_func(void* arg) {
+                                                                        // Espera al semáforo (mutex)
+        sem_wait(&mutex);
+        printf("Sección crítica del hilo\n");
+                                                                        // Se libera el semáforo (mutex)
+        sem_post(&mutex);
+        return NULL;
+    }
 
-int main() {
-    pthread_t thread;
-    // Se inicializa el semáforo (mutex) con un valor inicial de 1
-    sem_init(&mutex, 0, 1); 
+    int main() {
+        pthread_t thread;
+                                                                        // Se inicializa el semáforo (mutex) con un valor inicial de 1
+        sem_init(&mutex, 0, 1); 
 
-    // Se crea un hilo
-    pthread_create(&thread, NULL, thread_func, NULL); 
-    // Espera al semáforo (mutex) - sección crítica del hilo principal
-    sem_wait(&mutex); 
-    printf("Sección crítica del hilo principal\n");
-    // Se libera el semáforo (mutex)
-    sem_post(&mutex); 
+                                                                        // Se crea un hilo
+        pthread_create(&thread, NULL, thread_func, NULL); 
+                                                                        // Espera al semáforo (mutex) - sección crítica del hilo principal
+        sem_wait(&mutex); 
+        printf("Sección crítica del hilo principal\n");
+                                                                        // Se libera el semáforo (mutex)
+        sem_post(&mutex); 
 
-    // Espera a que termine el hilo
-    pthread_join(thread, NULL);
-    // Se destruye el semáforo (mutex)
-    sem_destroy(&mutex); 
-    return 0;
-}
+                                                                        // Espera a que termine el hilo
+        pthread_join(thread, NULL);
+                                                                        // Se destruye el semáforo (mutex)
+        sem_destroy(&mutex); 
+        return 0;
+    }
                     </pre>
                     
                     </div>

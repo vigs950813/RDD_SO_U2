@@ -103,99 +103,99 @@
 
                     <div class="card-body">
                         <pre class="card-text card-code">
-Ejemplo 1:
-El ejemplo es un código en c con tuberías que para 
-ejemplificar el perfecto de la comunicación entre procesos
-                            
-#include &lt;unistd.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include &lt;time.h&gt;
-        
-int main(void) {
-    // Definir dos descriptores de archivo para las tuberías
-    int fd[2];
-    int fd2[2];
+    //Ejemplo 1: 
+        //El ejemplo es un código en c con tuberías que para ejemplificar el perfecto de la comunicación entre procesos
+                                
+    #include &lt;unistd.h&gt;
+    #include &lt;stdlib.h&gt;
+    #include &lt;string.h&gt;
+    #include &lt;stdio.h&gt;
+    #include &lt;time.h&gt;
+            
+    int main(void) {
+                                                        // Definir dos descriptores de archivo para las tuberías
+        int fd[2];
+        int fd2[2];
 
-    // Definir una variable para el ID del proceso
-    pid_t pid;
+                                                        // Definir una variable para el ID del proceso
+        pid_t pid;
 
-    // Definir los mensajes que se enviarán
-    char saludoPadre[] = "Buenos días hijo.";
-    int tamSaludoPadre = strlen(saludoPadre);
-    char buffer[tamSaludoPadre];
-    char despedidaHijo[] = "Adiós papá.";
-    int tamDespedidaHijo = strlen(despedidaHijo);
-    char buffer2[tamDespedidaHijo];
+                                                        // Definir los mensajes que se enviarán
+        char saludoPadre[] = "Buenos días hijo.";
+        int tamSaludoPadre = strlen(saludoPadre);
+        char buffer[tamSaludoPadre];
+        char despedidaHijo[] = "Adiós papá.";
+        int tamDespedidaHijo = strlen(despedidaHijo);
+        char buffer2[tamDespedidaHijo];
 
-    // Generar un número aleatorio
-    srand(time(NULL));
-    int num = rand() % 101;
-    char numRandom[3];
-    sprintf(numRandom, "%d", num);
-    int tamNumeroRandom = strlen(numRandom);
-    char buffer3[tamNumeroRandom];
+                                                        // Generar un número aleatorio
+        srand(time(NULL));
+        int num = rand() % 101;
+        char numRandom[3];
+        sprintf(numRandom, "%d", num);
+        int tamNumeroRandom = strlen(numRandom);
+        char buffer3[tamNumeroRandom];
 
-    // Crear las tuberías
-    pipe(fd);
-    pipe(fd2);
+                                                        // Crear las tuberías
+        pipe(fd);
+        pipe(fd2);
 
-    // Crear el proceso hijo
-    pid = fork();
+                                                        // Crear el proceso hijo
+        pid = fork();
 
-    switch (pid) {
-        case -1:
-            printf("No se ha podido crear hijo...\n");
-            exit(-1);
-            break;
-        case 0: // Proceso hijo
-            // Cerrar el descriptor de escritura en la tubería del hijo
-            close(fd[1]);
+        switch (pid) {
+            case -1:
+                printf("No se ha podido crear hijo...\n");
+                exit(-1);
+                break;
+            case 0: // Proceso hijo
+                                                        // Cerrar el descriptor de escritura en la tubería del hijo
+                close(fd[1]);
 
-            // Leer el mensaje del padre
-            read(fd[0], buffer, tamSaludoPadre);
-            printf("\t\t%s\n", buffer);
+                                                        // Leer el mensaje del padre
+                read(fd[0], buffer, tamSaludoPadre);
+                printf("\t\t%s\n", buffer);
 
-            // Cerrar el descriptor de lectura en la tubería del hijo
-            close(fd[0]);
+                                                        // Cerrar el descriptor de lectura en la tubería del hijo
+                close(fd[0]);
 
-            // Despedirse del padre
-            write(fd[1], despedidaHijo, tamDespedidaHijo);
+                                                        // Despedirse del proceso padre
+                write(fd[1], despedidaHijo, tamDespedidaHijo);
 
-            // Cerrar el descriptor de lectura en la segunda tubería del hijo
-            close(fd2[0]);
+                                                        // Cerrar el descriptor de lectura en la segunda tubería del hijo
+                close(fd2[0]);
 
-            // Escribir el número aleatorio en la segunda tubería
-            write(fd2[1], numRandom, tamNumeroRandom);
-            break;
-        default: // Proceso padre
-            // Cerrar el descriptor de lectura en la tubería del padre
-            close(fd[0]);
+                                                        // Escribir el número aleatorio en la segunda tubería
+                write(fd2[1], numRandom, tamNumeroRandom);
+                break;
 
-            // Escribir el mensaje de saludo al hijo
-            write(fd[1], saludoPadre, tamSaludoPadre);
+                default:                                // Proceso padre
+                                                        // Cerrar el descriptor de lectura en la tubería del padre
+                close(fd[0]);
 
-            // Esperar a que el hijo termine
-            wait(NULL);
+                                                        // Escribir el mensaje de saludo al hijo
+                write(fd[1], saludoPadre, tamSaludoPadre);
 
-            // Cerrar el descriptor de escritura en la tubería del padre
-            close(fd[1]);
+                                                        // Esperar a que el hijo termine
+                wait(NULL);
 
-            // Leer el mensaje de despedida del hijo
-            read(fd[0], buffer2, tamDespedidaHijo);
-            printf("\t\t%s\n", buffer2);
+                                                        // Cerrar el descriptor de escritura en la tubería del padre
+                close(fd[1]);
 
-            // Cerrar el descriptor de escritura en la segunda tubería del padre
-            close(fd2[1]);
+                                                        // Leer el mensaje de despedida del hijo
+                read(fd[0], buffer2, tamDespedidaHijo);
+                printf("\t\t%s\n", buffer2);
 
-            // Leer el número aleatorio del hijo
-            read(fd2[0], buffer3, tamNumeroRandom);
-            printf("\t\t%s\n", buffer3);
-            break;
+                                                        // Cerrar el descriptor de escritura en la segunda tubería del padre
+                close(fd2[1]);
+
+                                                        // Leer el número aleatorio del hijo
+                read(fd2[0], buffer3, tamNumeroRandom);
+                printf("\t\t%s\n", buffer3);
+                break;
+        }
+        return 0;
     }
-    return 0;
-}
                             
                     </pre>
                        
