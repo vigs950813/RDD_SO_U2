@@ -104,35 +104,37 @@
 
 
                         <pre class="card-text card-code">       
-                //Ejemplo 1:
-                //En este modelo, varios hilos de usuario se mapean a un número menor de hilos del sistema operativo,
-                // permitiendo una implementación más eficiente y adaptativa de hilos.   
+//Ejemplo 1:
+//En este modelo, varios hilos de usuario se 
+//mapean a un número menor de hilos del sistema operativo,
+//permitiendo una implementación más eficiente y 
+//adaptativa de hilos.   
 
-                #include <stdio.h>
-                #include <pthread.h>
+#include &lt;stdio.h&gt;
+#include &lt;pthread.h&gt;
 
-                // Función que será ejecutada por cada hilo
-                void *funcion_hilo(void *arg) {
-                    printf("Hilo ejecutado: %d\n", *((int *) arg)); // Imprimir el ID del hilo
-                    pthread_exit(NULL); // Terminar el hilo
-                    }
+// Función que será ejecutada por cada hilo
+void *funcion_hilo(void *arg) {
+printf("Hilo ejecutado: %d\n", *((int *) arg)); // Imprimir el ID del hilo
+pthread_exit(NULL); // Terminar el hilo
+}
 
-                    int main() {
-                    pthread_t hilos[4]; // Array para almacenar los identificadores de los hilos
-                    int ids[] = {1, 2, 3, 4}; // Array de IDs de los hilos
+int main() {
+    pthread_t hilos[4]; // Array para almacenar los identificadores de los hilos
+    int ids[] = {1, 2, 3, 4}; // Array de IDs de los hilos
 
-                    // Crear hilos
-                    for (int i = 0; i < 4; i++) {
-                    pthread_create(&hilos[i], NULL, funcion_hilo, (void *) &ids[i]); // Crear un nuevo hilo
-                    }
+    // Crear hilos
+    for (int i = 0; i < 4; i++) {
+    pthread_create(&hilos[i], NULL, funcion_hilo, (void *) &ids[i]); // Crear un nuevo hilo
+    }
 
-                    // Esperar la finalización de los hilos
-                    for (int i = 0; i < 4; i++) {
-                    pthread_join(hilos[i], NULL); // Esperar a que el hilo con el ID correspondiente termine
-                    }
+    // Esperar la finalización de los hilos
+    for (int i = 0; i < 4; i++) {
+    pthread_join(hilos[i], NULL); // Esperar a que el hilo con el ID correspondiente termine
+    }
 
-                    return 0;
-                }
+    return 0;
+}
 
 </pre>
 
@@ -142,35 +144,37 @@
 
                         <pre class="card-text card-code">
 
-                //Ejemplo 2:
+//Ejemplo 2:
                 
-                //En este modelo, los hilos son gestionados y soportados directamente por el sistema operativo a nivel de kernel, 
-                //proporcionando un mayor nivel de control y cooperación entre hilos y procesos.
-                #include <stdio.h>
-                #include <pthread.h>
+//En este modelo, los hilos son gestionados y soportados
+// directamente por el sistema operativo a nivel de kernel, 
+//proporcionando un mayor nivel de control y 
+//cooperación entre hilos y procesos.
+#include &lt;stdio.h&gt;
+#include &lt;pthread.h&gt;
 
-                // Función que será ejecutada por cada hilo ligero
-                void *funcion_hilo_ligero(void *arg) {
-                    printf("Hilo ligero ejecutado: %d\n", *((int *) arg)); // Imprimir el ID del hilo ligero
-                    pthread_exit(NULL); // Terminar el hilo ligero
-                    }
+// Función que será ejecutada por cada hilo ligero
+void *funcion_hilo_ligero(void *arg) {
+    printf("Hilo ligero ejecutado: %d\n", *((int *) arg)); // Imprimir el ID del hilo ligero
+    pthread_exit(NULL); // Terminar el hilo ligero
+    }
 
-                    int main() {
-                    pthread_t hilos[2]; // Array para almacenar los identificadores de los hilos ligeros
-                    int ids[] = {1, 2}; // Array de IDs de los hilos ligeros
+    int main() {
+    pthread_t hilos[2]; // Array para almacenar los identificadores de los hilos ligeros
+    int ids[] = {1, 2}; // Array de IDs de los hilos ligeros
 
-                    // Crear hilos ligeros
-                    for (int i = 0; i < 2; i++) {
-                    pthread_create(&hilos[i], NULL, funcion_hilo_ligero, (void *) &ids[i]); // Crear un nuevo hilo ligero
-                    }
+    // Crear hilos ligeros
+    for (int i = 0; i < 2; i++) {
+    pthread_create(&hilos[i], NULL, funcion_hilo_ligero, (void *) &ids[i]); // Crear un nuevo hilo ligero
+    }
 
-                    // Esperar la finalización de los hilos ligeros
-                    for (int i = 0; i < 2; i++) {
-                    pthread_join(hilos[i], NULL); // Esperar a que el hilo ligero con el ID correspondiente termine
-                    }
+    // Esperar la finalización de los hilos ligeros
+    for (int i = 0; i < 2; i++) {
+    pthread_join(hilos[i], NULL); // Esperar a que el hilo ligero con el ID correspondiente termine
+    }
 
-                    return 0;
-                }
+    return 0;
+}
 </pre>
 
                         <p class="text-center">
@@ -179,35 +183,37 @@
 
                         <pre class="card-text card-code">
 
-                //Ejemplo 3:
+//Ejemplo 3:
                 
-                //En este modelo, los hilos son gestionados completamente a nivel de usuario sin soporte directo del sistema operativo, 
-                //proporcionando una implementación más ligera y eficiente de hilos.
+//En este modelo, los hilos son gestionados completamente 
+//a nivel de usuario sin soporte directo del sistema operativo, 
+//proporcionando una implementación más ligera y eficiente de hilos.
 
-                #include <stdio.h>
-                #include <pthread.h>
+#include &lt;stdio.h&gt;
+#include &lt;pthread.h&gt;
  
-                void *funcion_hilo_pesado(void *arg) {
-                    printf("Hilo pesado ejecutado: %d\n", *((int *) arg));
-	                pthread_exit(NULL);
-                }
- 
-                int main() {
-	                pthread_t hilos[3];
-	                int ids[] = {1, 2, 3};
- 
-	                // Crear hilos pesados
-	                for (int i = 0; i < 3; i++) {
-                        pthread_create(&hilos[i], NULL, funcion_hilo_pesado, (void *) &ids[i]);
-	                }
- 
-	                // Esperar la finalización de los hilos
-	                for (int i = 0; i < 3; i++) {
-    	                pthread_join(hilos[i], NULL);
-	                }
- 
-	                return 0;
-                }
+// Función que será ejecutada por cada hilo pesado
+void *funcion_hilo_pesado(void *arg) {
+    printf("Hilo pesado ejecutado: %d\n", *((int *) arg)); // Imprimir el ID del hilo pesado
+    pthread_exit(NULL); // Terminar el hilo pesado
+}
+
+int main() {
+    pthread_t hilos[3]; // Array para almacenar los identificadores de los hilos pesados
+    int ids[] = {1, 2, 3}; // Array de IDs de los hilos pesados
+
+    // Crear hilos pesados
+    for (int i = 0; i < 3; i++) {
+        pthread_create(&hilos[i], NULL, funcion_hilo_pesado, (void *) &ids[i]); // Crear un nuevo hilo pesado
+    }
+
+    // Esperar la finalización de los hilos
+    for (int i = 0; i < 3; i++) {
+        pthread_join(hilos[i], NULL); // Esperar a que el hilo pesado con el ID correspondiente termine
+    }
+
+    return 0;
+}
 
             </pre>
 

@@ -139,71 +139,74 @@
 
           <div class="card-body">
           
-            <pre class="card-text card-code">
-                          Ejemplo 1:
+              <pre class="card-text card-code">
+Ejemplo 1:
           
-                          El ejemplo siguiente es un programa en c que tiene dos procesos: un padre y un hijo con tuberías 
-                          donde se ejemplifica correctamente las tuberías con memoria compartida.
+El ejemplo siguiente es un programa en c que 
+tiene dos procesos: un padre y un hijo con tuberías 
+donde se ejemplifica correctamente las tuberías con 
+memoria compartida.
           
-                          #include &lt;stdio.h&gt;
-                          #include &lt;stdlib.h&gt;
-                          #include &lt;unistd.h&gt;
-                          #include &lt;sys /shm.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys /shm.h&gt;
            
-                          int main() {
-          	                int fd[2];
-          	                pid_t pid;
-          	                char *shared_memory;
-          	                int shmid;
-          	                char message[] = "Hola, mundo!";
-           
-          	                // Creo la tubería
-          	                if (pipe(fd) == -1) {
-              	                perror("pipe");
-              	                exit(EXIT_FAILURE);
-          	                }
-           
-          	                // Creo la memoria compartida
-          	                shmid = shmget(IPC_PRIVATE, 1024, IPC_CREAT | 0666);
-          	                if (shmid &lt; 0) {
-              	                perror("shmget");
-              	                exit(EXIT_FAILURE);
-          	                }
-           
-          	                // Creo el proceso hijo
-          	                pid = fork();
-          	                if (pid &lt; 0) {
-              	                perror("fork");
-              	                exit(EXIT_FAILURE);
-          	                }
-           
-          	                if (pid > 0) {  // Proceso padre
-              	                close(fd[0]);  // Cierro el extremo de lectura de la tubería
-           
-              	                // Escribo el mensaje en la tubería
-              	                write(fd[1], message, sizeof(message)+1);
-              	                close(fd[1]);
-           
-              	                // Espero a que el hijo termine
-              	                wait(NULL);
-           
-              	                // Leo el mensaje de la memoria compartida
-              	                shared_memory = shmat(shmid, NULL, 0);
-              	                printf("Mensaje recibido: %s\n", shared_memory);
-          	                } else {  // Proceso hijo
-              	                close(fd[1]);  // Cierro el extremo de escritura de la tubería
-           
-              	                // Leo el mensaje de la tubería
-              	                read(fd[0], message, sizeof(message));
-              	                close(fd[0]);
-           
-              	                // Escribo el mensaje en la memoria compartida
-              	                shared_memory = shmat(shmid, NULL, 0);
-              	                sprintf(shared_memory, "%s", message);
-          	                }
-           
-          	                return 0;
-                          }
+int main() {
+    int fd[2]; // Descriptores de archivo para la tubería
+    pid_t pid; // ID del proceso
+    char *shared_memory; // Puntero a la memoria compartida
+    int shmid; // ID de la memoria compartida
+    char message[] = "Hola, mundo!"; // Mensaje a transmitir
+
+    // Crear la tubería
+    if (pipe(fd) == -1) {
+        perror("pipe"); // Imprimir error si falla la creación de la tubería
+        exit(EXIT_FAILURE);
+    }
+
+    // Crear la memoria compartida
+    shmid = shmget(IPC_PRIVATE, 1024, IPC_CREAT | 0666);
+    if (shmid < 0) {
+        perror("shmget"); // Imprimir error si falla la creación de la memoria compartida
+        exit(EXIT_FAILURE);
+    }
+
+    // Crear el proceso hijo
+    pid = fork();
+    if (pid < 0) {
+        perror("fork"); // Imprimir error si falla la creación del proceso hijo
+        exit(EXIT_FAILURE);
+    }
+
+    if (pid > 0) { // Proceso padre
+        close(fd[0]); // Cerrar el extremo de lectura de la tubería
+
+        // Escribir el mensaje en la tubería
+        write(fd[1], message, sizeof(message) + 1);
+        close(fd[1]);
+
+        // Esperar a que el hijo termine
+        wait(NULL);
+
+        // Leer el mensaje de la memoria compartida
+        shared_memory = shmat(shmid, NULL, 0);
+        printf("Mensaje recibido: %s\n", shared_memory);
+
+    } else { // Proceso hijo
+        close(fd[1]); // Cerrar el extremo de escritura de la tubería
+
+        // Leer el mensaje de la tubería
+        read(fd[0], message, sizeof(message));
+        close(fd[0]);
+
+        // Escribir el mensaje en la memoria compartida
+        shared_memory = shmat(shmid, NULL, 0);
+        sprintf(shared_memory, "%s", message);
+    }
+
+    return 0;
+}
           
           </pre>
      
