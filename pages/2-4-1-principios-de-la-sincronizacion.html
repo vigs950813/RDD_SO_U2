@@ -75,15 +75,15 @@
 
                     <ol class="card-text">
                         <li>
-                            <b>Acceso concurrente</b>: Dos o más procesos o hilos intentan acceder simultáneamente a un
+                            <b><i>Acceso concurrente</i></b>: Dos o más procesos o hilos intentan acceder simultáneamente a un
                             recurso compartido.
                         </li>
                         <li>
-                            <b>Al menos una operación de escritura</b>: Al menos uno de los procesos realiza una
+                            <b><i>Al menos una operación de escritura</i></b>: Al menos uno de los procesos realiza una
                             operación de escritura (modificación) en el recurso compartido.
                         </li>
                         <li>
-                            <b>No hay sincronización</b>: No se han implementado mecanismos de sincronización adecuados
+                            <b><i>No hay sincronización</i></b>: No se han implementado mecanismos de sincronización adecuados
                             para controlar el acceso concurrente al recurso compartido.
                         </li>
                     </ol>
@@ -129,12 +129,12 @@
 
                     <ol class="card-text">
                         <li>
-                            <b>Compartibles</b>: Pueden ser empleados por varios
+                            <b><i>Compartibles</i></b>: Pueden ser empleados por varios
                             procesos de forma concurrente. Ejemplos: CPU, archivos de lectura, áreas de memoria no
                             modificables.
                         </li>
                         <li>
-                            <b>No compartibles</b>: Su uso se restringe a un único proceso por:
+                            <b><i>No compartibles</i></b>: Su uso se restringe a un único proceso por:
                             <ul class="card-text">
                                 <li>
                                     <b>La naturaleza física del recurso</b>: Ejemplos: Unidad de cinta magnética,
@@ -258,35 +258,35 @@
 
 
                     <ul class="card-text">
-                        <li><b>Operaciones Atómicas:</b> Una operación atómica es aquella que se ejecuta de manera
+                        <li><b><i>Operaciones atómicas</i>:</b> Una operación atómica es aquella que se ejecuta de manera
                             completa e indivisible.
                             Ya sea que consista en una única instrucción o en un conjunto de instrucciones, una
                             operación atómica se
                             considera como si se ejecutara en un solo paso. Si se interrumpe una operación atómica, no
                             dejará el sistema en
                             un estado inconsistente.</li>
-                        <li><b>Evitar Condiciones de Carrera:</b> La atomicidad es crucial para evitar condiciones de
+                        <li><b><i>Evitar condiciones de carrera</i>:</b> La atomicidad es crucial para evitar condiciones de
                             carrera, que ocurren
                             cuando dos o más procesos intentan modificar un recurso compartido al mismo tiempo,
                             resultando en
                             comportamientos no deseados o inconsistentes.</li>
-                        <li><b>Mecanismos de Sincronización:</b> Los mecanismos de sincronización, como los mutexes, son
+                        <li><b><i>Mecanismos de sincronización</i>:</b> Los mecanismos de sincronización, como los mutexes, son
                             utilizados para
                             lograr la atomicidad. Al bloquear el acceso al recurso compartido mientras una operación se
                             está realizando, se
                             asegura que ningún otro proceso pueda interferir hasta que la operación se complete.</li>
-                        <li><b>Transacciones en Bases de Datos:</b> En el contexto de las bases de datos, la atomicidad
+                        <li><b><i>Transacciones en bases de datos</i>:</b> En el contexto de las bases de datos, la atomicidad
                             se refiere a las
                             transacciones atómicas. Una transacción es un conjunto de operaciones que deben ejecutarse
                             en su totalidad o no
                             ejecutarse en absoluto. Si alguna parte de la transacción falla, se revierten todas las
                             operaciones a un estado
                             consistente, manteniendo la integridad de la base de datos.</li>
-                        <li><b>Rollback y Commit:</b> Las transacciones en bases de datos suelen incluir dos conceptos
+                        <li><b><i>Rollback y Commit</i>:</b> Las transacciones en bases de datos suelen incluir dos conceptos
                             relacionados: el
-                            "commit" (confirmación) y el "rollback" (reversión). El "commit" confirma que todas las
+                            <i>commit</i> (confirmación) y el <i>rollback</i> (reversión). El <i>commit</i> confirma que todas las
                             operaciones de la
-                            transacción se han realizado con éxito, mientras que el "rollback" deshace todas las
+                            transacción se han realizado con éxito, mientras que el <i>rollback</i> deshace todas las
                             operaciones en caso de un
                             fallo.</li>
                     </ul>
@@ -307,7 +307,7 @@
                     </p>
 
                     <p class="card-text">
-                        El "abrazo mortal" o deadlock es una situación problemática en sistemas concurrentes donde dos o
+                        El "abrazo mortal" o <i>deadlock</i> es una situación problemática en sistemas concurrentes donde dos o
                         más procesos o hilos quedan atrapados indefinidamente porque cada uno está esperando que el otro
                         libere un recurso necesario para avanzar. En otras palabras, hay un bloqueo circular de
                         dependencias entre los procesos, y ninguno puede continuar su ejecución.
@@ -316,7 +316,7 @@
                     <br>
 
                     <p class="card-text">
-                        Características clave del deadlock:
+                        Características clave del <i>deadlock</i>:
                     </p>
 
                     <ol class="card-text">
@@ -326,7 +326,7 @@
                             para el otro.</li>
                         <li><b>Espera Circular:</b> Existe un ciclo en el que cada proceso está esperando que el
                             siguiente libere un
-                            recurso. Esta cadena de espera circular es esencial para la existencia del deadlock.</li>
+                            recurso. Esta cadena de espera circular es esencial para la existencia del <i>deadlock</i>.</li>
                         <li><b>Recursos No Liberados:</b> Los recursos que los procesos han adquirido no se liberan
                             adecuadamente. Esto
                             puede deberse a errores en el código, falta de sincronización o problemas de planificación.
@@ -336,30 +336,30 @@
                     <br>
 
                     <p class="card-text">
-                        Para evitar deadlocks y mitigar sus efectos, se implementan diversas estrategias:
+                        Para evitar <i>deadlocks</i> y mitigar sus efectos, se implementan diversas estrategias:
                     </p>
 
                     <ol class="card-text">
-                        <li><b>Asignación Ordenada de Recursos:</b> Asignar recursos a los procesos de una manera
+                        <li><b><i>Asignación ordenada de recursos</i>:</b> Asignar recursos a los procesos de una manera
                             ordenada y garantizar que
-                            todos los procesos sigan el mismo orden al adquirir recursos ayuda a prevenir deadlocks.
+                            todos los procesos sigan el mismo orden al adquirir recursos ayuda a prevenir <i>deadlocks</i>.
                         </li>
-                        <li><b>Detección y Recuperación:</b> Los sistemas operativos pueden implementar algoritmos de
-                            detección de deadlock
-                            para identificar si un deadlock ha ocurrido. Luego, se pueden tomar medidas, como liberar
+                        <li><b>iDetección y recuperación:</b> Los sistemas operativos pueden implementar algoritmos de
+                            detección de <i>deadlock</i>
+                            para identificar si un <i>deadlock</i> ha ocurrido. Luego, se pueden tomar medidas, como liberar
                             recursos o terminar
                             procesos, para recuperarse de la situación.</li>
-                        <li><b>Jerarquía de Recursos:</b> Establecer una jerarquía de recursos y requerir que los
+                        <li><b><i>Jerarquía de recursos</i>:</b> Establecer una jerarquía de recursos y requerir que los
                             procesos adquieran
-                            recursos en un orden específico puede prevenir deadlocks.</li>
-                        <li><b>Timeouts y Liberación Forzada:</b> Si un proceso detecta que ha estado esperando
+                            recursos en un orden específico puede prevenir <i>deadlocks</i>.</li>
+                        <li><b><i>Timeouts y liberación forzada</i>:</b> Si un proceso detecta que ha estado esperando
                             demasiado tiempo por un
                             recurso, puede liberar los recursos adquiridos y volver a intentar adquirirlos más tarde.
                             Esto evita la
-                            permanencia indefinida en un deadlock.</li>
-                        <li><b>Exclusión Mútua:</b> Limitar el acceso a recursos críticos mediante el uso de mutexes o
+                            permanencia indefinida en un <i>deadlock</i>.</li>
+                        <li><b><i>Exclusión mútua</i>:</b> Limitar el acceso a recursos críticos mediante el uso de mutexes o
                             semáforos puede
-                            prevenir situaciones de deadlock, pero también puede reducir la concurrencia.</li>
+                            prevenir situaciones de <i>deadlock</i>, pero también puede reducir la concurrencia.</li>
                     </ol>
 
 

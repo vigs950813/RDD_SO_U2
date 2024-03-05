@@ -50,7 +50,7 @@
     <main>
         <section>
             <div class="card">
-                <h5 class="card-header">2.4.2 Semáforos y mutex</h5>
+                <h5 class="card-header">2.4.2 Semáforos y mútex</h5>
                 <div class="card-body">
 
                     <p class="card-text">
@@ -68,22 +68,25 @@
                     <br>
 
                     <p class="card-text">
-                        De acuerdo con Allen B. Downey, un semáforo es como un número entero, con tres diferencias:
+                        Un semáforo se asemeja a un número entero en tres aspectos:
                     </p>
 
 
                     <ol class="card-text">
                         <li>
-                            Cuando creas el semáforo, puedes inicializar su valor a cualquier número entero, pero después de eso, las únicas
-                            operaciones que puedes realizar son incrementar (aumentar en uno) y disminuir (disminuir en uno). No puedes leer
-                            el valor actual del semáforo.
+                            Al crear el semáforo, se tiene la posibilidad de iniciar su valor con cualquier número entero. Sin embargo, una
+                            vez establecido, las únicas operaciones permitidas son incrementar (aumentar en uno) y disminuir (reducir en
+                            uno). No se permite la lectura directa del valor actual del semáforo.
+                    
                         </li>
                         <li>
-                            Cuando un hilo disminuye el semáforo, si el resultado es negativo, el hilo se bloquea y no puede continuar hasta
-                            que otro hilo aumente el semáforo.
+                            Al disminuir el semáforo, si el resultado es negativo, el hilo que realiza la operación queda bloqueado y no
+                            puede proseguir hasta que otro hilo incrementa el semáforo.
+                    
                         </li>
                         <li>
-                            Cuando un hilo incrementa el semáforo, si hay otros hilos esperando, uno de los hilos en espera se desbloquea.
+                            Al incrementar el semáforo, si existen otros hilos en espera, uno de ellos se desbloquea.
+                    
                         </li>
                     </ol>
 

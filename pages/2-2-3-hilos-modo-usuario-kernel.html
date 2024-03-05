@@ -84,7 +84,7 @@
                     <p class="card-text">
                         Todas las operaciones descritas se llevan a cabo en el espacio de usuario de un mismo proceso.
                         El kernel continúa planificando el proceso como una unidad y asignándole un único estado (listo,
-                        bloqueado, etc.)
+                        bloqueado, etcétera.)
                     </p>
 
                     <br>
@@ -98,7 +98,7 @@
                             El intercambio de los hilos no necesita los privilegios del modo kernel, porque todas las
                             estructuras de datos están en el espacio de direcciones de usuario de un mismo proceso. Por lo
                             tanto, el proceso no debe cambiar a modo kernel para gestionar hilos. Se evita la sobrecarga de
-                            cambio de modo y con esto el sobrecoste u overhead.
+                            cambio de modo y con esto el sobrecoste u <i>overhead</i>.
                         </li>
                         <li>
                             Se puede realizar una planificación específica. Dependiendo de qué aplicación sea, se puede decidir
@@ -118,12 +118,12 @@
 
                     <ul class="card-text">
                         <li>
-                            En la mayoría de los sistemas operativos las llamadas al sistema (System calls) son bloqueantes.
+                            En la mayoría de los sistemas operativos las llamadas al sistema (<i>system calls</i>) son bloqueantes.
                             Cuando un hilo realiza una llamada al sistema, se bloquea el mismo y también el resto de los hilos
                             del proceso.
                         </li>
                         <li>
-                            En una estrategia ULT pura, una aplicación multihilo no puede aprovechar las ventajas de los
+                            Una aplicación multihilo no puede aprovechar las ventajas de los
                             multiprocesadores. El núcleo asigna un solo proceso a un solo procesador, ya que como el núcleo no
                             interviene y ve al conjunto de hilos como un solo proceso.
                         </li>
@@ -132,7 +132,7 @@
                     <br>
 
                     <p class="card-text">
-                        Una solución al bloqueo mediante llamadas al sistema es usando la técnica de jacketing, que es convertir
+                        Una solución al bloqueo mediante llamadas al sistema es usando la técnica de <i>jacketing</i>, que es convertir
                         una llamada bloqueante en no bloqueante.
                     </p>
 

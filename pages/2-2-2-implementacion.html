@@ -53,41 +53,48 @@
                 <div class="card-body">
 
                     <p class="card-text">
-                        Cada Sistema operativo implementa los hilos del sistema utilizando tres estándares en donde las librerías nativas son:
+                        Cada Sistema operativo implementa los hilos del sistema utilizando tres estándares en donde las librerías nativas
+                        son:
                     </p>
-
+                    
                     <ol class="card-text" type="a">
                         <li>Win32.</li>
                         <li>OS/2.</li>
                         <li>POSIX.</li>
                     </ol>
-
+                    
                     <p class="card-text">
                         Las dos primeras son propietarias y sólo corren bajo sus respectivas plataformas (NT, Win95, OS/2).
                     </p>
-
+                    
                     <br>
-
+                    
                     <p class="card-text">
-                        La especificación POSIX (IEEE 1003.1c) conocida como pthreads [Butenhof, 1997] está pensada para todas las plataformas y está disponible para la mayoría de las implementaciones UNIX y Linux, así como VMS y AS/400.
+                        La especificación POSIX (IEEE 1003.1c) conocida como pthreads [Butenhof, 1997] está pensada para todas las
+                        plataformas y está disponible para la mayoría de las implementaciones UNIX y Linux, así como VMS y AS/400.
                     </p>
-
+                    
                     <br>
-
+                    
                     <p class="card-text">
-                        Algunas de las implementaciones del estándar POSIX son del primer tipo, mientras que tanto OS/2 como Win32 son del segundo tipo. Ambos métodos pueden ser usados para implementar exactamente el mismo API.
+                        Algunas de las versiones del estándar POSIX pertenecen al primer tipo, mientras que tanto OS/2 como Win32 pertenecen al segundo tipo. Ambos enfoques pueden ser empleados para desplegar exactamente el mismo API.
                     </p>
-
+                    
                     <br>
-
+                    
                     <p class="card-text">
-                        Existen dos formas de implementación de los hilos en el sistema operativo:
+                        Se pueden identificar dos modalidades de implementación de los hilos en el sistema operativo:
                     </p>
-
-
+                    
+                    
                     <ol class="card-text" type="a">
-                        <li>Es escribir una librería al nivel de usuario en donde todas las estructuras y el código de la librería estarán en espacio de usuario, por lo que la mayoría de las llamadas que se hagan desde la librería se ejecutarán en el espacio de usuario y no hará más uso de las rutinas del sistema que cualquier otra librería o programa de usuario.</li>
-                        <li>La implementación al nivel de núcleo que es donde la mayoría de las llamadas de la librería requerirán llamadas al sistema.</li>
+                        <li>La creación de una biblioteca a nivel de usuario, donde todas las estructuras y códigos residirán en el espacio de
+                            usuario. En consecuencia, la mayoría de las llamadas realizadas desde la biblioteca se ejecutarán en dicho espacio y
+                            no requerirán más recursos del sistema que cualquier otra biblioteca o programa de usuario.
+                        </li>
+                        <li>La implementación a nivel de núcleo, donde la mayoría de las llamadas de la biblioteca exigirán invocaciones al
+                            sistema.
+                        </li>
                     </ol>
 
                     <p class="text-center">

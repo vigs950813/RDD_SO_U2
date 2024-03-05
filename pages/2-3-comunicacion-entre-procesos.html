@@ -57,7 +57,7 @@
 
           <p class="card-text">
             Todos los procesos requieren comunicarse con otros procesos, dado que se necesita de una canalización del
-            shell en el cual la salida del primer proceso se debe pasar al segundo proceso y así sucesivamente. Por lo
+            <i>shell</i> en el cual la salida del primer proceso se debe pasar al segundo proceso y así sucesivamente. Por lo
             que existe una necesidad de comunicación entre ellos, de tal forma que esto sucede estructuradamente sin
             utilizar interrupciones, es por ello que la comunicación entre proceso requiere de un origen a un destino.
           </p>
@@ -85,9 +85,9 @@
           </p>
 
           <ol class="card-text">
-            <li>Listo (ready): El proceso está listo para ejecutarse, pero está esperando su turno en la cola.</li>
-            <li>Ejecución (running): El proceso está actualmente siendo ejecutado por la CPU.</li>
-            <li>Bloqueado (blocked): El proceso está temporalmente detenido, es cuando está esperando la finalización de
+            <li>Listo (<i>ready</i>): El proceso está listo para ejecutarse, pero está esperando su turno en la cola.</li>
+            <li>Ejecución (<i>running</i>): El proceso está actualmente siendo ejecutado por la CPU.</li>
+            <li>Bloqueado (<i>blocked</i>): El proceso está temporalmente detenido, es cuando está esperando la finalización de
               una operación de entrada/salida.</li>
             <li>La función de los estados de cola es coordinar la ejecución de procesos, optimizar la utilización de la
               CPU y garantizar una transición eficiente entre las diversas etapas del ciclo de vida de un proceso.</li>
@@ -129,7 +129,7 @@
           <br>
 
           <p class="card-text">
-            Las colas de mensajes son un mecanismo muy similar a las FIFO. Una cola se puede ver como una lista enlazada
+            Las colas de mensajes son un mecanismo muy similar a las  (<i>First In First Out</i>). Una cola se puede ver como una lista enlazada
             de mensajes dentro del espacio de direccionamiento del núcleo.
           </p>
 
